@@ -1,0 +1,154 @@
+/* Global Styles */
+.servicesTable {
+  max-width: 100vw; /* Prevents overflow */
+  overflow-x: hidden; /* Hides horizontal overflow */
+  margin: auto;
+  position: relative; /* Add this for positioning pseudo-element */
+  background: linear-gradient(
+    135deg,
+    rgb(171, 171, 171),
+    rgb(206, 206, 206),
+    rgb(177, 177, 177),
+    rgb(255, 255, 255)
+  );
+  z-index: 1;
+}
+
+.servicesTable .row {
+  display: inline-flex;
+  justify-content: center;
+  row-gap: 0rem;
+  column-gap: 0rem;
+  margin: 0;
+  background: url("webb.png");
+  padding-top: 1em;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.check-icon {
+  color: green;
+  margin-right: 0.2em;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 10px;
+  padding: 0.1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em;
+  border-radius: 8px; /* Smoothed corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  padding: 0.5em;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Raise the card slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* List Styles */
+.service-card-inclusions {
+  list-style: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default padding */
+  margin: 0px; /* Remove default margin */
+  text-align: center;
+  justify-content: center;
+}
+
+.ServiceCardItems {
+  margin-bottom: 0; /* Consistent margin for list items */
+  font-size: 1em; /* Readable font size */
+  line-height: 1.8; /* Adequate line height for readability */
+  top: 0;
+  list-style: none;
+  text-align: center;
+  color: #313131;
+  font-weight: 400;
+}
+
+/* Header Styles */
+.servicesTable h4 {
+  font-size: 2em; /* Maintained a large font size for impact */
+  margin: 0;
+  color: #0056b3; /* Using the accent color for the title */
+  font-weight: 500; /* Optional: Adjust weight as needed */
+}
+
+.HeaderSubtitle2 {
+  background-color: #4b4b4b;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  opacity: 1;
+  max-height: 200px; /* Adjust as needed */
+  position: relative;
+  border-radius: 10rem;
+  max-width: fit-content;
+}
+
+.sale-price {
+  color: #0004ff; /* Sale price color */
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #797979; /* Muted color for original price */
+  margin-left: 1px;
+}
+
+.most-popular-banner {
+  position: absolute;
+  top: -25px; /* Adjusts the banner to sit above the card */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the banner horizontally */
+  background-color: #00bfff; /* Light blue background */
+  color: white;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  font-weight: bold;
+  padding-right: 0.1em;
+  padding-left: 0.1em;
+}
+
+/* Add a special styling for the most popular card */
+.card.most-popular {
+  border: 2px solid #add8e6; /* Light blue border for emphasis */
+}
+.bottom {
+  list-style: none;
+}
+.custom-alert {
+  background-color: #ffffffd3; /* Light blue background */
+  color: #4b4b4b; /* Dark blue text */
+  border-color: #ffffff; /* Lighter blue border */
+  font-size: 1.2rem;
+  width: fit-content;
+  margin-top: 1em;
+  border-radius: 2em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  position: inherit;
+  align-items: center;
+}
+
+.compare-button {
+  text-align: center;
+  z-index: 1000;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-left: 0.2em;
+}
+.service-compare {
+  z-index: 1;
+  opacity: 1;
+  margin: 0;
+}

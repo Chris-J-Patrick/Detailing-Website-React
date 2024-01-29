@@ -1,0 +1,138 @@
+/* Variables for easier theming and adjustments */
+:root {
+  --navbar-background: #333;
+  --navbar-text-color: #f0f0f0;
+  --navbar-hover-color: #007acc;
+  --navbar-active-color: #006aff;
+  --navbar-divider-color: #565656;
+}
+.NavContainer {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  margin: 0;
+}
+.navbar,
+.navbarshrink {
+  background-color: var(--navbar-background);
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease-out; /* Smooth transition for size change */
+}
+.navbar {
+  background-color: var(--navbar-background);
+  font-size: 1.5em; /* Adjust the base font size here */
+  color: var(--navbar-text-color);
+  padding: 0.2em;
+  position: sticky;
+}
+.navbarshrink {
+  padding: 0;
+  background-color: #333333bd;
+  backdrop-filter: blur(6px); /* Apply blur effect */
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.5em;
+}
+.nav-link,
+.nav-item {
+  margin: 0vw;
+  color: var(--navbar-text-color);
+  display: flex;
+  justify-content: left;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--navbar-hover-color);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border-color: var(
+    --navbar-background
+  ); /* Set the border color to match navbar text color */
+  background-color: var(--navbar-text-color);
+}
+
+.navbar-toggler-icon {
+  color: var(
+    --navbar-text-color
+  ); /* Set the icon color to match navbar text color */
+}
+
+.navbar-brand .active {
+  color: var(--navbar-text-color);
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-brand:focus .active {
+  color: var(--navbar-hover-color);
+}
+.navbar-nav .nav-link.active {
+  color: var(--navbar-active-color);
+  position: relative;
+  font-weight: 600;
+}
+.logoTextshrink {
+  font-size: 1em;
+}
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 0.08em;
+  background-color: var(--navbar-active-color);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--navbar-hover-color);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.nav-item:not(:first-child)::before {
+  content: "|"; /* This is the divider */
+  color: var(--navbar-divider-color);
+  font-size: 1em; /* Adjust font size as needed */
+  padding-right: 0.5em; /* Space before the divider */
+  padding-left: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarshrink .nav-item:not(:first-child)::before {
+  content: "|"; /* This is the divider */
+  color: var(--navbar-divider-color);
+  padding-right: 0.2em; /* Space before the divider */
+  padding-left: 0.2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  margin: 0;
+}
+
+/* Media query to hide dividers on mobile screens */
+@media screen and (max-width: 990px) {
+  /* Adjust 768px to your mobile breakpoint */
+  .nav-item:not(:first-child)::before {
+    content: none; /* This hides the divider */
+  }
+  .nav-link {
+    justify-content: space-between;
+  }
+}
+.navbarshrink {
+  font-size: 1em;
+}
+
+.NavContainer-shrink {
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+}

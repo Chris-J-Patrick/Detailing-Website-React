@@ -1,0 +1,13 @@
+.header {
+  font-size: 2.5em; /* Maintained a large font size for impact */
+  margin: 10px 0 20px; /* Adjusted margins for spacing */
+  color: #333; /* Darker color for better readability */
+  font-weight: normal; /* Optional: Adjust weight as needed */
+  text-align: center;
+}
+
+.contact {
+  min-height: 100vh;
+}
+.form {
+}

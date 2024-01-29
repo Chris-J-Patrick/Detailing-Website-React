@@ -1,0 +1,15 @@
+.image-comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust the space between images */
+  padding: 20px; /* Adds some space inside the container */
+  border-radius: 15px; /* Rounded corners for the container */
+}
+
+.comparison-image {
+  max-width: 100%; /* Adjust the width as needed */
+  height: 70vh;
+  display: block; /* This ensures the image takes up the entire width assigned */
+  border-radius: 10px; /* Optional for rounded corners */
+}

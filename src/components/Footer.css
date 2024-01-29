@@ -1,0 +1,18 @@
+.custom-footer {
+  background: #333;
+  color: #b0b4b8;
+  position: sticky; /* changed from sticky to fixed */
+  bottom: 0;
+  left: 0; /* ensures the footer extends from the left edge */
+  right: 0; /* ensures the footer extends to the right edge */
+  width: 100%; /* ensures the footer takes full width */
+  padding: 1em;
+  margin: 0;
+}
+.custom-footer {
+}
+.footer-content {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 0px;
+}
