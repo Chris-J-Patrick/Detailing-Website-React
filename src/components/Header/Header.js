@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, NavLink } from "react-router-dom";
-import LogoDiamond from "./LogoDiamond";
+import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import { Link } from "react-scroll";
 import "./Header.css";
 

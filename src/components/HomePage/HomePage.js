@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
-import LogoDiamond from "./LogoDiamond";
+import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import { useState } from "react"; // Import useState here
-import ParticlesBackground from "./ParticlesBackground";
-import ImageCompareSlider from "./ImageCompareSlider";
-import beforeafter2 from "./beforeafter2.jpeg";
-import beforeafter from "./beforeafter.jpeg";
+import ParticlesBackground from "../ParticlesBackground";
+import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
+import beforeafter2 from "../beforeafter2.jpeg";
+import beforeafter from "../beforeafter.jpeg";
 
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);

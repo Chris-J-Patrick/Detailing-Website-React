@@ -2,8 +2,7 @@ import React, { useState } from "react"; // Combine imports
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import styles from "./About.module.css";
-import LogoDiamond from "./LogoDiamond";
-import ParticlesBackground from "./ParticlesBackground";
+import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import "./About.css";
 import {
   VerticalTimeline,

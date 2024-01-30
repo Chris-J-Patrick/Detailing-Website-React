@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceTable from "./ServiceTable"; // Importing the new ServicesTable component
+import ServiceTable from "../ServiceTable/ServiceTable"; // Importing the new ServicesTable component
 import "./Services.css";
 import { FaIcons } from "react-icons/fa";
 import {

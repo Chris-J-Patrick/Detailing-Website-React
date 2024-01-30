@@ -3,6 +3,8 @@ import Modal from "react-modal";
 import "./ShApp.css";
 
 const ShApp = ({ serviceUrl, buttonText }) => {
+  Modal.setAppElement("#root");
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleBodyScroll = (shouldScroll) => {

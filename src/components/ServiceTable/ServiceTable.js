@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./ServiceTable.css";
-import ShApp from "./ShApp";
+import ShApp from "../ShApp/ShApp";
 import SmoothScroll from "smooth-scroll";
-import ServicesCompare from "./ServiceCompare";
+import ServicesCompare from "../ServiceCompare/ServiceCompare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,7 +19,7 @@ function ServiceTable({ services }) {
 
   return (
     <div className="servicesTable row justify-content-center align-items-center">
-      <div class="alert custom-alert" role="alert">
+      <div class="alert custom-alert " role="alert">
         <strong>Advancing to a higher tier? </strong>Rest assured, all the
         services from the lower tiers come with you.
         <a
@@ -31,9 +31,12 @@ function ServiceTable({ services }) {
         </a>
       </div>
 
-      <div className="row">
+      <div className="row ">
         {services.map((service, idx) => (
-          <div key={idx} className="card col-12 col-sm-12 col-md-8 col-lg-2">
+          <div
+            key={idx}
+            className="container card col-12 col-sm-5 col-md-4 col-lg-3"
+          >
             {service.isMostPopular && (
               <div className="most-popular-banner">Most Popular</div>
             )}
@@ -71,7 +74,7 @@ function ServiceTable({ services }) {
               serviceUrl={
                 "https://app.acuityscheduling.com/schedule.php?owner=31108192"
               }
-              buttonText="Schedule"
+              buttonText={"Schedule"}
             />
           </div>
         ))}

@@ -1,7 +1,6 @@
 /* Global Styles */
 .servicesTable {
   max-width: 100vw; /* Prevents overflow */
-  overflow-x: hidden; /* Hides horizontal overflow */
   margin: auto;
   position: relative; /* Add this for positioning pseudo-element */
   background: linear-gradient(
@@ -11,12 +10,12 @@
     rgb(177, 177, 177),
     rgb(255, 255, 255)
   );
-  z-index: 1;
 }
 
 .servicesTable .row {
   display: inline-flex;
   justify-content: center;
+  position: relative;
   row-gap: 0rem;
   column-gap: 0rem;
   margin: 0;
@@ -34,17 +33,16 @@
 /* Card Styles */
 .card {
   border-radius: 10px;
-  padding: 0.1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 1em;
   border-radius: 8px; /* Smoothed corners */
   transition: all 0.3s ease; /* Smooth transition for hover effects */
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .card:hover {
@@ -107,8 +105,9 @@
 
 .most-popular-banner {
   position: absolute;
-  top: -25px; /* Adjusts the banner to sit above the card */
+  top: -25px; /* djusts the banner to sit above the card */
   left: 50%;
+  width: fit-content;
   transform: translateX(-50%); /* Centers the banner horizontally */
   background-color: #00bfff; /* Light blue background */
   color: white;
