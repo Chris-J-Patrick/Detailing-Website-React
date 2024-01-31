@@ -49,7 +49,7 @@ function HomePage() {
             textFontSizeUnit="vw"
           />
         </div>
-        <p className="HeaderSubtitle m-0">
+        <p className="HeaderSubtitle">
           Your destination for{" "}
           <span className="Highlight">premier car detailing</span>. Experience{" "}
           <span className="Highlight">unparalleled shine</span>, inside and out!
@@ -98,15 +98,15 @@ function HomePage() {
             </span>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="">
           <Link to="/services" className="btn btn-primary btn-lg ">
             View Our Services
           </Link>{" "}
-          <h6 className="mt-1 bold">
+          <h6 className="">
             <strong>Starting at ONLY $149.99</strong>
           </h6>
-        </div>{" "}
-      </div>{" "}
+        </div>
+      </div>
       <div className="why-choose-us m-0">
         <h3 className="text-center mt-2 mb-3">
           See the difference our detailing makes!

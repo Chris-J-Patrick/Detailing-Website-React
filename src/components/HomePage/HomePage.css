@@ -4,6 +4,7 @@
 .homepage-content {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
 }
 .homelogo {
   flex-wrap: nowrap;
@@ -24,15 +25,14 @@
   background-image: linear-gradient(to bottom, #a4eeff, #2193b0);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: local;
   border-bottom: 1px solid rgba(255, 255, 255, 0.97);
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: all 0.5s ease; /* Smooth transition for hover effects */
-  text-align: center;
-  padding-block: 0em;
-
-  padding-block: 3vh;
 }
 
 .Welcome::before,

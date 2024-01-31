@@ -3,13 +3,8 @@
   max-width: 100vw; /* Prevents overflow */
   margin: auto;
   position: relative; /* Add this for positioning pseudo-element */
-  background: linear-gradient(
-    135deg,
-    rgb(171, 171, 171),
-    rgb(206, 206, 206),
-    rgb(177, 177, 177),
-    rgb(255, 255, 255)
-  );
+
+  background: url("webb.png");
 }
 
 .servicesTable .row {
@@ -19,10 +14,8 @@
   row-gap: 0rem;
   column-gap: 0rem;
   margin: 0;
-  background: url("webb.png");
   padding-top: 1em;
   width: 100%;
-  border-radius: 1em;
 }
 
 .check-icon {
@@ -30,7 +23,6 @@
   margin-right: 0.2em;
 }
 
-/* Card Styles */
 .card {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
