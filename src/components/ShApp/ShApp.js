@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // Import useEffect here
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./ShApp.css";
 
@@ -21,14 +21,12 @@ const ShApp = ({ serviceUrl, buttonText }) => {
     toggleBodyScroll(true);
   };
 
-  // Remember to enable scrolling back when the component unmounts
   useEffect(() => {
     return () => toggleBodyScroll(true);
   }, []);
 
   return (
     <div className="mt-2">
-      {/* Button to Open Modal */}
       <button
         className="btn btn-primary"
         onClick={openModal}
@@ -41,7 +39,6 @@ const ShApp = ({ serviceUrl, buttonText }) => {
         {buttonText || "Schedule"}
       </button>
 
-      {/* Modal with Iframe */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

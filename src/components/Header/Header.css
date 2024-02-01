@@ -1,4 +1,3 @@
-/* Variables for easier theming and adjustments */
 :root {
   --navbar-background: #333;
   --navbar-text-color: #f0f0f0;
@@ -17,11 +16,11 @@
   background-color: var(--navbar-background);
   position: sticky;
   top: 0;
-  transition: all 0.3s ease-out; /* Smooth transition for size change */
+  transition: all 0.3s ease-out;
 }
 .navbar {
   background-color: var(--navbar-background);
-  font-size: 1.5em; /* Adjust the base font size here */
+  font-size: 1.5em;
   color: var(--navbar-text-color);
   padding: 0.2em;
   position: sticky;
@@ -29,7 +28,7 @@
 .navbarshrink {
   padding: 0;
   background-color: #333333bd;
-  backdrop-filter: blur(6px); /* Apply blur effect */
+  backdrop-filter: blur(6px);
 }
 .navbar-nav {
   display: flex;
@@ -50,16 +49,12 @@
 }
 
 .navbar-toggler {
-  border-color: var(
-    --navbar-background
-  ); /* Set the border color to match navbar text color */
+  border-color: var(--navbar-background);
   background-color: var(--navbar-text-color);
 }
 
 .navbar-toggler-icon {
-  color: var(
-    --navbar-text-color
-  ); /* Set the icon color to match navbar text color */
+  color: var(--navbar-text-color);
 }
 .navbar-brand {
   position: relative;
@@ -96,19 +91,19 @@
   text-decoration: none;
 }
 .nav-item:not(:first-child)::before {
-  content: "|"; /* This is the divider */
+  content: "|";
   color: var(--navbar-divider-color);
-  font-size: 1em; /* Adjust font size as needed */
-  padding-right: 0.5em; /* Space before the divider */
+  font-size: 1em;
+  padding-right: 0.5em;
   padding-left: 0.5em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 .navbarshrink .nav-item:not(:first-child)::before {
-  content: "|"; /* This is the divider */
+  content: "|";
   color: var(--navbar-divider-color);
-  padding-right: 0.2em; /* Space before the divider */
+  padding-right: 0.2em;
   padding-left: 0.2em;
   display: inline-flex;
   align-items: center;
@@ -117,11 +112,9 @@
   margin: 0;
 }
 
-/* Media query to hide dividers on mobile screens */
 @media screen and (max-width: 990px) {
-  /* Adjust 768px to your mobile breakpoint */
   .nav-item:not(:first-child)::before {
-    content: none; /* This hides the divider */
+    content: none;
   }
   .nav-link {
     justify-content: space-between;

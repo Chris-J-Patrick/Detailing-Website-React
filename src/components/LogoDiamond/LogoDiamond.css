@@ -16,11 +16,11 @@
 .logoIcon,
 .logoIcon-shrink {
   margin-right: 0;
-  transition: all 0.3s ease-out; /* Smooth transition for size change */
+  transition: all 0.3s ease-out;
 }
 .logoText {
   display: inline-flex;
-  align-items: center; /* Align text and icon */
+  align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.6em;
@@ -53,9 +53,9 @@
 }
 
 .navbar .navbar-brand.active {
-  border-bottom: none !important; /* Removing the bottom border */
+  border-bottom: none !important;
 }
 
 .navbar .navbar-brand.active::after {
-  border-bottom: none !important; /* Removing the bottom border */
+  border-bottom: none !important;
 }

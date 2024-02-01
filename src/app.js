@@ -24,19 +24,16 @@ function App() {
       <Scroll />
       <div className="AppContainer">
         <div className="NavContainer">
-          {/* Navigation */}
           <Header />
         </div>
 
         <div className="ContentContainer">
-          {/* Routes */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/services" element={<Services />} />
-            {/* ... other routes */}
           </Routes>
         </div>
         <div className="FooterContainer">

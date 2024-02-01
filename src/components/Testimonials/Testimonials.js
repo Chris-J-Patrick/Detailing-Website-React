@@ -58,7 +58,6 @@ const testimonialsData = [
     avatar:
       "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  // Add more testimonials as needed, with respective avatars or placeholders
 ];
 
 function TestimonialCard({ testimonial }) {
@@ -68,7 +67,7 @@ function TestimonialCard({ testimonial }) {
         src={testimonial.avatar}
         alt={`${testimonial.name}'s avatar`}
         className="testimonial-avatar"
-        onError={(e) => (e.target.src = "path/to/default-avatar.jpg")} // Fallback for missing avatar
+        onError={(e) => (e.target.src = "path/to/default-avatar.jpg")}
       />
       <p className="testimonial-comment">{testimonial.comment}</p>
       <p className="testimonial-name">- {testimonial.name}</p>

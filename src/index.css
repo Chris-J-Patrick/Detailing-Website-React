@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-/* Reset & Globals */
 *,
 *::before,
 *::after {
@@ -28,7 +27,6 @@ body {
   position: relative;
 }
 
-/* Links & Transitions */
 a {
   color: var(--primary-color);
   transition: color 0.3s, transform 0.2s;
@@ -38,34 +36,18 @@ a:hover {
   color: var(--hover-color);
 }
 
-/* Structure & Layout */
 .AppContainer {
   margin: 0 0vw;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 section {
   padding: 0;
 }
 
-/* Components & Styles */
-
 .AppContainer {
   margin: 0vw;
 }
 
-/* Typography */
-
 .FooterContainer {
   margin-top: 0.1em;
 }
-
-/* Additional Sections (for future use or clarification) */
-/* Navbar & Logo */
-/* Footer Styles */
-/* Service Table */
-/* Services Section */
-/* Image Comparison Section */
-/* Why Choose Us Section */
-/* Logo Image */
-/* Testimonial Section */

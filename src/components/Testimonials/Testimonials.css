@@ -1,6 +1,5 @@
-/* General Styles for Testimonial Section */
 .testimonial-section {
-  background-color: #f8f8f8; /* Subtle background color */
+  background-color: #f8f8f8;
   text-align: center;
   padding: 1em;
 }
@@ -9,9 +8,9 @@
   font-size: 2.2em;
   color: #333;
   margin-bottom: 30px;
-  border-bottom: 2px solid #eaeaea; /* Decorative underline */
-  display: inline-block; /* Aligns the underline with text */
-  padding-bottom: 10px; /* Padding above the underline */
+  border-bottom: 2px solid #eaeaea;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 .testimonials-container {
@@ -21,7 +20,6 @@
   gap: 20px;
 }
 
-/* Styles for Each Testimonial Card */
 .testimonial-card {
   background-color: white;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
@@ -36,7 +34,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Styles for Avatar Images */
 .testimonial-avatar {
   border-radius: 50%;
   width: 90px;
@@ -46,16 +43,14 @@
   border: 4px solid #ddd;
 }
 
-/* Comment Styling */
 .testimonial-comment {
   font-size: 1em;
   color: #555;
   margin-bottom: 20px;
-  min-height: 120px; /* Adjusted for uniform size */
-  text-align: left; /* Left align the text */
+  min-height: 120px;
+  text-align: left;
 }
 
-/* Name Styling */
 .testimonial-name {
   font-size: 1.2em;
   color: #333;

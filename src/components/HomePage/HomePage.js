@@ -14,8 +14,8 @@ function HomePage() {
   const [bannerTransition, setBannerTransition] = useState(false);
 
   const handleCloseBanner = () => {
-    setBannerTransition(true); // Start the transition
-    setTimeout(() => setShowBanner(false), 300); // Hide banner after transition duration
+    setBannerTransition(true);
+    setTimeout(() => setShowBanner(false), 300);
   };
   return (
     <div className="homepage-content">

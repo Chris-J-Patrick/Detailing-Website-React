@@ -52,10 +52,8 @@ const ServicesCompare = () => {
         "Five Year Warranty on Ceramic Coatings",
       ],
     },
-    // ... Add other services with their respective levels and unique inclusions
   ];
 
-  // Function to check if a service includes a particular feature
   const includesFeature = (service, feature) => {
     for (let i = service.level - 1; i >= 0; i--) {
       if (services[i].inclusions.includes(feature)) {
@@ -65,7 +63,6 @@ const ServicesCompare = () => {
     return false;
   };
 
-  // Get a unique list of all inclusions
   const allInclusions = [
     ...new Set(services.flatMap((service) => service.inclusions)),
   ];

@@ -1,26 +1,20 @@
-/* Root Variables */
 :root {
   --transition-speed: 0.3s;
-  --button-padding: 1px 1px; /* Uniform button padding */
+  --button-padding: 1px 1px;
 }
 
-/* Parent Component - Services Section Styles */
 .services {
   flex-wrap: wrap;
   display: inline-flex;
   flex-direction: column;
 }
 
-/* Services Table Styles */
 .services-table {
-  padding: 0; /* Increased padding for a spacious look */
-  margin: 0 0; /* Increased margin for separation */
-  border: none; /* Removed the border for a cleaner look */
-  border-radius: 10px; /* Slightly larger rounded corners */
+  padding: 0;
+  margin: 0 0;
+  border: none;
+  border-radius: 10px;
   flex-wrap: wrap;
   display: inline-flex;
   flex-direction: column;
 }
-
-/* Annotations */
-/* TODO: Future improvements, if any, can be noted here */

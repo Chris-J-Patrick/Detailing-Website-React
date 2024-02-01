@@ -7,7 +7,6 @@ function ContactForm() {
     <section id="contact" className="contact container">
       <h2 className="header form text-center">Contact Us</h2>
       <div className="row">
-        {/* Contact Form Column */}
         <div className="form col-md-6">
           <form>
             <div className="form-group m-2">
@@ -36,7 +35,6 @@ function ContactForm() {
           </form>
         </div>
 
-        {/* Support Information Column */}
         <div className="col-md-6">
           <div className="support-info">
             <h2 className="my-2 form">24/7 Sales & Support</h2>

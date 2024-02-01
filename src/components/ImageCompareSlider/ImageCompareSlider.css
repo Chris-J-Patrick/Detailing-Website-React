@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* Adjust the space between images */
-  padding: 20px; /* Adds some space inside the container */
-  border-radius: 15px; /* Rounded corners for the container */
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .comparison-image {
-  max-width: 100%; /* Adjust the width as needed */
+  max-width: 100%;
   height: 70vh;
-  display: block; /* This ensures the image takes up the entire width assigned */
-  border-radius: 10px; /* Optional for rounded corners */
+  display: block;
+  border-radius: 10px;
 }

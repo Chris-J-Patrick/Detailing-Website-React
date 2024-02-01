@@ -14,7 +14,7 @@
 .services-comparison-table th,
 .services-comparison-table td {
   border: 1px solid #ddd;
-  padding: 0.2em; /* Increased padding for better readability */
+  padding: 0.2em;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   background-color: #f4f4f4;
   color: #333;
   box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase; /* Makes header text uppercase */
+  text-transform: uppercase;
 }
 
 .services-comparison-table tr:nth-child(odd) {
@@ -33,7 +33,7 @@
   background-color: #ffffff;
 }
 .services-comparison-table tr:hover {
-  background-color: #aeebfc; /* Hover effect for rows */
+  background-color: #aeebfc;
 }
 .check-icon-compare {
   color: green;

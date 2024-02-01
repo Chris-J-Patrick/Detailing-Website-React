@@ -64,7 +64,6 @@ function About() {
           className="vertical-timeline-element--work"
           date="January 2022 - Business Start"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          // icon={<WorkIcon />} // Optional: You can use a custom icon here
         >
           <h3 className="vertical-timeline-element-title">
             Business Inception
@@ -79,7 +78,6 @@ function About() {
           className="vertical-timeline-element--work"
           date="March 2024 - Grand Opening"
           iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          // icon={<WebIcon />} // Optional: You can use a custom icon here
         >
           <h3 className="vertical-timeline-element-title">
             Online Grand Opening
@@ -94,7 +92,6 @@ function About() {
           className="vertical-timeline-element--work"
           date="May 2024 - Anticipated Rewards Program Launch"
           iconStyle={{ background: "rgb(243, 179, 33)", color: "fff" }}
-          // icon={<WebIcon />} // Optional: You can use a custom icon here
         >
           <h3 className="vertical-timeline-element-title">
             Anticipated Rewards Program Launch Date
@@ -104,8 +101,6 @@ function About() {
             (When it launches - early 2024){" "}
           </p>
         </VerticalTimelineElement>
-
-        {/* You can add more timeline elements here as your business grows */}
       </VerticalTimeline>
       <section className={styles.section}>
         <h3 className={styles.h3}>Exceptional Value, Uncompromised Quality</h3>

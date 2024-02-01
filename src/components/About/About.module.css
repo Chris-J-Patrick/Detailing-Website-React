@@ -1,34 +1,31 @@
-/* General Style for the About Page */
 .aboutsection {
   padding: 1em;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 0em;
-  max-width: 100%; /* Limit the width for better readability */
-  margin: auto; /* Center the section */
+  max-width: 100%;
+  margin: auto;
   background-color: #f1f1f1;
 }
-
-/* Header Style */
 .aboutheader {
   text-align: center;
   padding-bottom: 0.5em;
-  margin-bottom: 0; /* Space between header and sections */
+  margin-bottom: 0;
 }
 
 .aboutheader h1 {
   font-size: 2.5em;
   margin: 0em;
-  color: #1a5276; /* Engaging color */
+  color: #1a5276;
   font-weight: bold;
 }
 .h2 {
   font-size: 2.5em;
-  color: #1a5276; /* Engaging color */
+  color: #1a5276;
   font-weight: bold;
   text-align: center;
   padding-bottom: 0.5em;
-  margin-bottom: 0.2em; /* Space between header and sections */
+  margin-bottom: 0.2em;
 }
 .aboutheader p {
   font-style: italic;
@@ -36,7 +33,6 @@
   margin-bottom: 1em;
 }
 
-/* Section Headers */
 section h3 {
   font-size: 1.8em;
   color: #1a5276;
@@ -47,16 +43,14 @@ section h3 {
   text-align: left;
 }
 
-/* Paragraphs */
 section p {
   font-size: 1em;
   color: #333;
   line-height: 1.8;
   margin-bottom: 0.5em;
-  text-align: justify; /* Justify text for better alignment */
+  text-align: justify;
 }
 
-/* Counters Section */
 .counterssection {
   background-color: #caecff;
   border-radius: 2em;
@@ -75,19 +69,15 @@ section p {
   margin-top: 5px;
 }
 
-/* Additional Styling for Enhancing Readability */
-/* Increase space between sections */
 section + section {
   margin-top: 3em;
 }
 
-/* Highlighting Key Points */
 .important {
   font-weight: bold;
   color: #1a5276;
 }
 
-/* Adding a subtle hover effect on links for interactivity */
 a:hover {
   color: #0b5394;
   text-decoration: underline;

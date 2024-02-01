@@ -11,7 +11,7 @@
   text-align: center;
   position: relative;
   display: flex;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
 }
 
 .beforeafter {
@@ -33,7 +33,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: space-evenly;
-  transition: all 0.5s ease; /* Smooth transition for hover effects */
+  transition: all 0.5s ease;
   min-height: 60vh;
 }
 
@@ -43,33 +43,34 @@
   position: absolute;
   height: 100%;
   opacity: 0.8;
-  transition: all 0.5s ease; /* Smooth transition for hover effects */
-  z-index: 1; /* Ensure it stays below interactive elements */
+  transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .Welcome::before {
   top: 0;
   right: 0;
-  width: 25%; /* Adjust the width for better spacing */
+  width: 25%;
   background: linear-gradient(to left, #ffb75e, #ffffff);
   clip-path: polygon(100% 0, 80% 50%, 100% 100%);
-  box-shadow: -10px 0 15px rgba(255, 11, 11, 0.2); /* Left shadow for depth */
-  z-index: 0; /* Ensure it stays below interactive elements */
+  box-shadow: -10px 0 15px rgba(255, 11, 11, 0.2);
+  z-index: 0;
 }
+
 .Welcome::after {
   bottom: 0;
   left: 0;
-  width: 25%; /* Match the width for symmetry */
+  width: 25%;
   background: linear-gradient(to right, #a2e6ff, #ffffff);
   clip-path: polygon(0 100%, 20% 50%, 0 0);
-  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2); /* Right shadow for depth */
-  z-index: 0; /* Ensure it stays below interactive elements */
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 0;
 }
 
 @media (max-width: 768px) {
   .Welcome::before,
   .Welcome::after {
-    width: 35%; /* Larger shapes for smaller screens */
+    width: 35%;
   }
 }
 
@@ -100,7 +101,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden; /* For hover effect */
+  overflow: hidden;
 }
 
 .feature-item:hover {
@@ -109,16 +110,15 @@
 }
 
 .feature-item h5 {
-  color: #2193b0; /* Add brand color for titles */
+  color: #2193b0;
   margin-bottom: 15px;
   font-size: 1.2em;
 }
 
 .feature-item p {
-  color: #333; /* Darker text color for readability */
+  color: #333;
 }
 
-/* Hover effect for a fun element */
 .feature-item::before {
   content: "";
   position: absolute;
@@ -133,39 +133,36 @@
 @media (max-width: 768px) {
   .features {
     flex-direction: column;
-    align-items: center; /* Center align items in the column */
+    align-items: center;
   }
 
   .feature-item {
     flex-basis: 100%;
-    /* Ensure margins are auto to center align the items */
   }
 }
 
-/* Additional styles for .CheckMarkFitContainer and .checkmark-feature-item */
-
 .CheckMarkFitContainer {
   display: flex;
-  flex-direction: row; /* Align children in a row */
-  flex-wrap: wrap; /* If necessary, items will wrap to the next line */
-  justify-content: center; /* Center items in the container */
-  align-items: center; /* Align items vertically */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .checkmark-feature-item {
-  border: 2px solid #d3d3d3; /* Slightly thicker and softer grey border */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more pronounced effect */
-  border-radius: 1vw; /* Slightly more rounded corners */
-  padding: 0.5vw; /* Ample padding for inner spacing */
+  border: 2px solid #d3d3d3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 1vw;
+  padding: 0.5vw;
   margin: 0.4em;
   width: fit-content;
   height: fit-content;
-  max-width: 100%; /* Prevents the element from becoming too wide */
-  background: #ffffff; /* White background for contrast */
-  text-align: center; /* Centered text */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions for interaction */
+  max-width: 100%;
+  background: #ffffff;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
   font-size: 1em;
 }
@@ -176,40 +173,38 @@
 }
 
 .checkmark-feature-item .detail {
-  /* Initial styles for the hidden details */
-  text-align: center; /* Centered text */
-  visibility: hidden; /* Hidden but still takes up space */
-  opacity: 0; /* Start fully transparent */
-  transition: visibility 0s, opacity 0.2s linear;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
   position: absolute;
-  bottom: 110%; /* Position it above the item */
-  left: 0; /* Align it with the left edge of the item */
-  width: fit-content; /* Adjust as needed */
-  border: 2px solid #d3d3d3; /* Slightly thicker and softer grey border */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more pronounced effect */
-  border-radius: 1em; /* Slightly more rounded corners */
-  padding: 0.5em; /* Ample padding for inner spacing */
+  bottom: 110%;
+  left: 0;
+  width: fit-content;
+  border: 2px solid #d3d3d3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  padding: 0.5em;
   margin: 0.2em;
-  max-width: 100%; /* Prevents the element from becoming too wide */
-  background: #ffffff; /* White background for contrast */
+  max-width: 100%;
+  background: #ffffff;
   font-size: 0.9em;
   max-height: fit-content;
 }
 
 .checkmark-feature-item:hover .detail {
-  /* Displaying the detail on hover */
-  visibility: visible; /* Now visible */
-  opacity: 1; /* Fade to fully opaque */
+  visibility: visible;
+  opacity: 1;
 }
 
 .checkmark-feature-item .checkmark {
-  color: #28a745; /* A green color for checkmark */
-  margin-right: 5px; /* Space between checkmark and text */
+  color: #28a745;
+  margin-right: 5px;
   font-size: 1rem;
 }
 
 .feature-item img {
-  margin-bottom: 10px; /* Space between image and text */
+  margin-bottom: 10px;
 }
 
 .checkmark {
@@ -218,7 +213,6 @@
   font-size: 1rem;
 }
 
-/* General Styles for Color and Shadow */
 :root {
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -240,7 +234,7 @@
 }
 
 .limited-time-banner {
-  background-color: #fbff00; /* Bootstrap primary color */
+  background-color: #fbff00;
   display: block;
   color: rgb(68, 68, 68);
   padding: 0.5em;
@@ -252,7 +246,6 @@
   font-family: "Roboto";
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .limited-time-banner p {
     font-size: 14px;
@@ -264,7 +257,7 @@
   top: 10px;
   left: 10px;
   border: none;
-  color: #fff; /* Adjust the color based on your banner's background */
+  color: #fff;
   cursor: pointer;
 }
 .banner-hide {

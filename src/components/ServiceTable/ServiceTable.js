@@ -13,7 +13,7 @@ function ServiceTable({ services }) {
       speed: 300,
       speedAsDuration: true,
       easing: "easeInOutCubic",
-      offset: 70, // Offset for fixed header height
+      offset: 70,
     });
   }, []);
 
@@ -92,7 +92,7 @@ ServiceTable.propTypes = {
       description: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired,
       inclusions: PropTypes.arrayOf(PropTypes.string).isRequired,
-      schedulingUrl: PropTypes.string.isRequired, // Ensure this property exists in your services
+      schedulingUrl: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
