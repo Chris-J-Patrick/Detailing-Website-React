@@ -4,16 +4,16 @@
 .homepage-content {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  display: inline-block;
 }
 .homelogo {
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
   position: relative;
-  display: inline-flex;
+  display: flex;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+
 .beforeafter {
   height: 30em;
   margin: 10px;
@@ -31,8 +31,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-evenly;
   transition: all 0.5s ease; /* Smooth transition for hover effects */
+  min-height: 60vh;
 }
 
 .Welcome::before,
@@ -151,7 +153,6 @@
   margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 3em;
 }
 .checkmark-feature-item {
   border: 2px solid #d3d3d3; /* Slightly thicker and softer grey border */

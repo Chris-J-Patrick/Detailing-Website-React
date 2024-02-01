@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg ${isShrunk ? "navbar-shrink" : ""}`}
+      className={`navbar navbar-expand-lg ${isShrunk ? "navbarshrink" : ""}`}
     >
       <button
         className="navbar-toggler"

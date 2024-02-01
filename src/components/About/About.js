@@ -120,7 +120,7 @@ function About() {
       </section>
 
       <section className={styles.section}>
-        <h3 classname={styles.h3}>Transparent, Fair Pricing</h3>
+        <h3 className={styles.h3}>Transparent, Fair Pricing</h3>
 
         <p className={styles.p}>
           We believe in transparent pricing. No surprises, no hidden fees. Our
@@ -131,7 +131,7 @@ function About() {
       </section>
 
       <section className={styles.section}>
-        <h3 classname={styles.h3}>Revolutionizing Booking in Car Detailing</h3>
+        <h3 className={styles.h3}>Revolutionizing Booking in Car Detailing</h3>
         <p className={styles.p}>
           We're proud to offer the only fully online, hassle-free booking system
           in the local car detailing industry. With just a few clicks, you can
@@ -142,14 +142,14 @@ function About() {
       </section>
 
       <section className={styles.section}>
-        <h3 classname={styles.h3}>Our Commitment to Excellence</h3>
-        <p classname={styles.p}>
+        <h3 className={styles.h3}>Our Commitment to Excellence</h3>
+        <p className={styles.p}>
           Our team comprises professionals who are not just skilled but also
           deeply passionate about automobiles. Whether you own a vintage classic
           or a modern marvel, your vehicle will receive the specialized care it
           deserves, enhancing both its aesthetics and longevity.
         </p>
-        <p classname={styles.p}>
+        <p className={styles.p}>
           From ceramic coatings to paint protection, our services are a
           testament to our pursuit of perfection. Step into the world of
           Attention to Detail Auto, and experience car care that goes beyond the

@@ -98,19 +98,15 @@ function HomePage() {
             </span>
           </div>
         </div>
-        <div className="">
-          <Link to="/services" className="btn btn-primary btn-lg ">
+        <div>
+          <Link to="/services" className="btn btn-primary btn-lg">
             View Our Services
           </Link>{" "}
-          <h6 className="">
-            <strong>Starting at ONLY $149.99</strong>
-          </h6>
         </div>
+        <h5>Starting at ONLY $149.99</h5>
       </div>
-      <div className="why-choose-us m-0">
-        <h3 className="text-center mt-2 mb-3">
-          See the difference our detailing makes!
-        </h3>
+      <div className="why-choose-us">
+        <h3 className="text-center">See the difference our detailing makes!</h3>
         <img src={beforeafter} className="beforeafter"></img>
         <img src={beforeafter2} className="beforeafter"></img>
 
