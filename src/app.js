@@ -12,11 +12,6 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import HomePage from "./components/HomePage/HomePage";
-import Particles from "react-tsparticles";
-import ParticlesBackground from "./components/ParticlesBackground";
-import { useEffect, useMemo, useState } from "react";
-
-import { loadFull } from "tsparticles";
 
 function App() {
   return (

@@ -6,10 +6,11 @@
   --navbar-divider-color: #565656;
 }
 .NavContainer {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1001;
   margin: 0;
+  width: 100%;
 }
 .navbar,
 .navbarshrink {

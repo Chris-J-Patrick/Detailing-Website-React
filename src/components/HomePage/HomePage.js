@@ -4,7 +4,6 @@ import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import { useState } from "react"; // Import useState here
-import ParticlesBackground from "../ParticlesBackground";
 import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
 import beforeafter2 from "../beforeafter2.jpeg";
 import beforeafter from "../beforeafter.jpeg";
@@ -107,8 +106,8 @@ function HomePage() {
       </div>
       <div className="why-choose-us">
         <h3 className="text-center">See the difference our detailing makes!</h3>
-        <img src={beforeafter} className="beforeafter"></img>
-        <img src={beforeafter2} className="beforeafter"></img>
+        <img src={beforeafter} className="beforeafter" alt="Before"></img>
+        <img src={beforeafter2} className="beforeafter" alt="After"></img>
 
         <div className="features mt-4">
           <div className="feature-item">

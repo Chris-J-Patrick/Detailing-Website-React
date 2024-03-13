@@ -1,5 +1,4 @@
 import React from "react";
-import ParticlesBackground from "../ParticlesBackground";
 import "./ContactForm.css";
 
 function ContactForm() {
