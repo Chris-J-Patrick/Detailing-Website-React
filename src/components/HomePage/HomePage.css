@@ -1,40 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400;700&display=swap");
 
-.homepage-content {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.homelogo {
-  flex-wrap: nowrap;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  display: flex;
-  transition: all 0.3s ease;
+:root {
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-.beforeafter {
-  height: 30em;
-  margin: 10px;
-  border-radius: 3em;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+/* General page styles */
+.homepage-content {
+  font-family: "Montserrat", sans-serif; /* Unified font family */
+  overflow-x: hidden;
 }
+
+/* Welcome section styles */
 .Welcome {
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, #a4eeff, #2193b0);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: local;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.97);
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-evenly;
-  transition: all 0.5s ease;
   min-height: 60vh;
+  position: relative;
 }
 
 .Welcome::before,
@@ -42,31 +27,26 @@
   content: "";
   position: absolute;
   height: 100%;
-  opacity: 0.8;
-  transition: all 0.5s ease;
-  z-index: 1;
+  width: 15%;
+  opacity: 0.9;
+  z-index: 0;
 }
 
 .Welcome::before {
   top: 0;
   right: 0;
-  width: 25%;
   background: linear-gradient(to left, #ffb75e, #ffffff);
   clip-path: polygon(100% 0, 80% 50%, 100% 100%);
-  box-shadow: -10px 0 15px rgba(255, 11, 11, 0.2);
-  z-index: 0;
 }
 
 .Welcome::after {
   bottom: 0;
   left: 0;
-  width: 25%;
   background: linear-gradient(to right, #a2e6ff, #ffffff);
   clip-path: polygon(0 100%, 20% 50%, 0 0);
-  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
-  z-index: 0;
 }
 
+/* Media queries for Welcome section */
 @media (max-width: 768px) {
   .Welcome::before,
   .Welcome::after {
@@ -74,122 +54,39 @@
   }
 }
 
-.why-choose-us {
-  display: inline-block;
-  padding: 1%;
-  text-align: center;
-  color: #333;
-  font-family: "Arial", sans-serif;
+/* Highlight and Checkmark styles */
+.Highlight {
+  color: rgb(51, 0, 255); /* Highlight color */
+  font-weight: 600;
 }
 
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  text-align: center;
+.checkmark {
+  color: #28a745; /* Standardized green color for checkmarks */
 }
 
-.feature-item {
-  flex: 0 1 28%;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px rgba(28, 28, 28, 0.2);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 0px;
-  background: #ffffff;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.feature-item h5 {
-  color: #2193b0;
-  margin-bottom: 15px;
-  font-size: 1.2em;
-}
-
-.feature-item p {
-  color: #333;
-}
-
-.feature-item::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
-  transition: top 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature-item {
-    flex-basis: 100%;
-  }
-}
-
-.CheckMarkFitContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+/* Feature items and checkmark items */
+.feature-item,
 .checkmark-feature-item {
-  border: 2px solid #d3d3d3;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 1vw;
-  padding: 0.5vw;
-  margin: 0.4em;
-  width: fit-content;
-  height: fit-content;
-  max-width: 100%;
+  border-radius: 1rem;
   background: #ffffff;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease-in-out;
   position: relative;
-  font-size: 1em;
 }
 
+.feature-item:hover,
 .checkmark-feature-item:hover {
   transform: scale(1.05);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px var(--shadow-color);
 }
 
 .checkmark-feature-item .detail {
-  text-align: center;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s linear;
   position: absolute;
   bottom: 110%;
   left: 0;
-  width: fit-content;
-  border: 2px solid #d3d3d3;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 1em;
-  padding: 0.5em;
-  margin: 0.2em;
-  max-width: 100%;
-  background: #ffffff;
-  font-size: 0.9em;
-  max-height: fit-content;
 }
 
 .checkmark-feature-item:hover .detail {
@@ -197,71 +94,4 @@
   opacity: 1;
 }
 
-.checkmark-feature-item .checkmark {
-  color: #28a745;
-  margin-right: 5px;
-  font-size: 1rem;
-}
-
-.feature-item img {
-  margin-bottom: 10px;
-}
-
-.checkmark {
-  color: green;
-  margin: 0.3vw;
-  font-size: 1rem;
-}
-
-:root {
-  --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-.HeaderSubtitle {
-  font-size: 1em;
-  color: #2f2f2f;
-  font-weight: 300;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-top: -2em;
-  margin-bottom: 2em;
-}
-
-.Highlight {
-  color: rgb(51, 0, 255);
-  font-weight: 600;
-  font-size: 1.1em;
-}
-
-.limited-time-banner {
-  background-color: #fbff00;
-  display: block;
-  color: rgb(68, 68, 68);
-  padding: 0.5em;
-  text-align: center;
-  font-weight: 900;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-  opacity: 1;
-  position: relative;
-  font-family: "Roboto";
-}
-
-@media (max-width: 768px) {
-  .limited-time-banner p {
-    font-size: 14px;
-  }
-}
-
-.close-banner {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-.banner-hide {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-}
+/* Utilizing Bootstrap utility classes in JSX for layout, margin, padding, etc. reduces the need for custom CSS */

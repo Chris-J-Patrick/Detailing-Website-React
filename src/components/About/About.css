@@ -1,19 +1,16 @@
-/* General Styles for Accordion */
 .accordion {
   max-width: 95%;
   margin: 1em auto;
   border-radius: 10px;
-  overflow: hidden; /* Ensures rounded corners for all items */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Accordion Item Styling */
 .accordion-item {
   background-color: #fff;
-  margin: 0; /* Removes default margins */
+  margin: 0;
 }
 
-/* Accordion Header Button Styling */
 .accordion-button {
   background-color: #1a5276;
   color: #ffffff;
@@ -41,12 +38,10 @@
   color: #ffffff;
 }
 
-/* Accordion Collapse Styling */
 .accordion-collapse {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-/* Accordion Body Styling */
 .accordion-body {
   font-size: 1.1em;
   line-height: 1.6;
@@ -55,9 +50,6 @@
   background-color: #f1f1f1;
 }
 
-/* FAQ Header Styling */
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .accordion {
     margin: 1em;

@@ -45,16 +45,16 @@ function About() {
 
   return (
     <div className={styles.aboutsection}>
-      <div className={styles.counterssection}>
-        <div className={styles.counteritem}>
+      <div className="row">
+        <div className="col-12 bg-white rounded-5">
           <CountUp end={116} duration={1.5} redraw={true}>
             {({ countUpRef, start }) => (
               <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} className={styles.h2} />
+                <h2 ref={countUpRef} className="display-2 text-center" />
               </VisibilitySensor>
             )}
           </CountUp>
-          <p className={styles.counteritem}>Happy Customers</p>
+          <p className="text-center">Happy Customers</p>
         </div>
       </div>
       <VerticalTimeline>

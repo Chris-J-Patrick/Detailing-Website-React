@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import "./ServiceTable.css";
-import ShApp from "../ShApp/ShApp";
-import SmoothScroll from "smooth-scroll";
-import ServicesCompare from "../ServiceCompare/ServiceCompare";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import ShApp from "../ShApp/ShApp";
+import ServicesCompare from "../ServiceCompare/ServiceCompare";
+import SmoothScroll from "smooth-scroll";
 
 function ServiceTable({ services }) {
   useEffect(() => {
+    // Assuming SmoothScroll is necessary; otherwise, consider Bootstrap scrollspy or smooth scroll
     new SmoothScroll(".scroll-to-compare", {
       speed: 300,
       speedAsDuration: true,
@@ -18,69 +19,67 @@ function ServiceTable({ services }) {
   }, []);
 
   return (
-    <div className="servicesTable row justify-content-center align-items-center">
-      <div class="alert custom-alert " role="alert">
-        <strong>Advancing to a higher tier? </strong>Rest assured, all the
+    <div className="servicesTable container-fluid bg-light py-4 justify-content-center">
+      <div className="alert alert-info text-center" role="alert">
+        <strong>Advancing to a higher tier?</strong> Rest assured, all the
         services from the lower tiers come with you.
-        <a
-          className="compare-button btn btn-primary btn-sm scroll-to-compare"
-          data-scroll
-          href="#service-compare"
+        <NavLink
+          className="btn btn-primary btn-sm ml-3 scroll-to-compare"
+          to="#service-compare"
         >
           Compare All Services
-        </a>
+        </NavLink>
       </div>
 
-      <div className="row ">
+      <div className="row">
         {services.map((service, idx) => (
-          <div
-            key={idx}
-            className="container card col-12 col-sm-5 col-md-4 col-lg-3"
-          >
-            {service.isMostPopular && (
-              <div className="most-popular-banner">Most Popular</div>
-            )}
-            <div className="service-card-header text-center">
-              <h4 className="mb-1">
-                {service.title} {service.icon}
-              </h4>
-              <p>{service.description}</p>
-              <h5 className="mt-0">
-                {service.salePrice ? (
-                  <>
-                    <span className="sale-price">{service.salePrice}</span>{" "}
-                    <span className="original-price">{service.price}</span>
-                  </>
-                ) : (
-                  service.price
-                )}
-              </h5>
+          <div key={idx} className="col-md-6 col-lg-4 mb-4 ">
+            <div
+              className={`card ${
+                service.isMostPopular ? "border-primary" : ""
+              }`}
+            >
+              {service.isMostPopular && (
+                <div className="card-header bg-primary text-white">
+                  Most Popular
+                </div>
+              )}
+              <div className="card-body">
+                <h4 className="card-title">{service.title}</h4>
+                <p className="card-text">{service.description}</p>
+                <h5>
+                  {service.salePrice ? (
+                    <>
+                      <span className="text-danger">{service.salePrice}</span>
+                      <span className="text-muted">
+                        <del>{service.price}</del>
+                      </span>
+                    </>
+                  ) : (
+                    <span>{service.price}</span>
+                  )}
+                </h5>
+                <ul className="list-unstyled">
+                  {service.inclusions.map((inclusion, index) => (
+                    <li className="" key={index}>
+                      <FontAwesomeIcon
+                        icon={faCheckCircle}
+                        className="text-success"
+                      />{" "}
+                      <span>{inclusion}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ShApp
+                  serviceUrl={service.schedulingUrl}
+                  buttonText="Schedule"
+                />
+              </div>
             </div>
-            <ul className="service-card-inclusions">
-              {service.inclusions.map((inclusion, index) => (
-                <li className="ServiceCardItems" key={index}>
-                  <i className="check-icon">
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faCheckCircle}
-                      style={{ color: "green", fontSize: "1em" }}
-                    />
-                  </i>{" "}
-                  {inclusion}
-                </li>
-              ))}
-            </ul>
-            <ShApp
-              serviceUrl={
-                "https://app.acuityscheduling.com/schedule.php?owner=31108192"
-              }
-              buttonText={"Schedule"}
-            />
           </div>
         ))}
+        <ServicesCompare />
       </div>
-
-      <ServicesCompare />
     </div>
   );
 }
@@ -91,6 +90,7 @@ ServiceTable.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired,
+      salePrice: PropTypes.string,
       inclusions: PropTypes.arrayOf(PropTypes.string).isRequired,
       schedulingUrl: PropTypes.string.isRequired,
     })

@@ -1,13 +1,9 @@
-.header {
-  font-size: 2.5em;
-  margin: 10px 0 20px;
-  color: #333;
-  font-weight: normal;
-  text-align: center;
+/* ContactForm.css */
+.support-info p {
+  font-size: 1.2rem; /* Slightly larger font size for readability */
 }
 
 .contact {
   min-height: 100vh;
-}
-.form {
+  padding-top: 50px; /* Ensures that the contact form doesn't overlap with the navbar if it's fixed */
 }

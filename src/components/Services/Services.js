@@ -50,9 +50,8 @@ const servicesData = [
       "Undercarriage wash",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/g3taquupuwf9mc/LZXAGKBY2SVMC", // Replace with the actual URL for this service
+      "https://squareup.com/appointments/buyer/widget/g3taquupuwf9mc/LZXAGKBY2SVMC",
   },
-  // ... more services with their respective schedulingUrl
 
   {
     title: "Premium Detail",
@@ -67,7 +66,7 @@ const servicesData = [
       "Two Year Premium Glass Coating",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/j6oq1du564lybv/LZXAGKBY2SVMC", // Replace with the actual URL for this service
+      "https://squareup.com/appointments/buyer/widget/j6oq1du564lybv/LZXAGKBY2SVMC",
   },
   {
     title: "Ultimate Detail",
@@ -82,7 +81,7 @@ const servicesData = [
       "Five Year Warranty on Ceramic Coatings",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/tzp0t7iur35pz6/LZXAGKBY2SVMC", // Replace with the actual URL for this service
+      "https://squareup.com/appointments/buyer/widget/tzp0t7iur35pz6/LZXAGKBY2SVMC",
   },
   {
     title: "Custom Detail",
@@ -91,7 +90,7 @@ const servicesData = [
     price: "$$$$$$$$",
     inclusions: ["Buffing", "High-quality wax", "Protective sealant"],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/5bc0lgsjfn7l1p/LZXAGKBY2SVMC", // Replace with the actual URL for this service
+      "https://squareup.com/appointments/buyer/widget/5bc0lgsjfn7l1p/LZXAGKBY2SVMC",
   },
 ];
 

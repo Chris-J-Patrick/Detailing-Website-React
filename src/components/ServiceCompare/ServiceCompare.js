@@ -1,8 +1,5 @@
 import React from "react";
-import "./ServiceCompare.css";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { FaCheck } from "react-icons/fa";
 
 const ServicesCompare = () => {
   const services = [
@@ -68,9 +65,9 @@ const ServicesCompare = () => {
   ];
 
   return (
-    <div className="services-comparison-container">
-      <table className="services-comparison-table">
-        <thead>
+    <div className="table-responsive">
+      <table className="table table-sm table-bordered table-hover table-striped">
+        <thead className="thead-light">
           <tr>
             <th>Services</th>
             {services.map((service, index) => (
@@ -85,10 +82,7 @@ const ServicesCompare = () => {
               {services.map((service, serviceIndex) => (
                 <td key={serviceIndex}>
                   {includesFeature(service, inclusion) ? (
-                    <FontAwesomeIcon
-                      icon={faCheckCircle}
-                      className="check-icon-compare"
-                    />
+                    <FaCheck className="text-success me-2" />
                   ) : (
                     ""
                   )}

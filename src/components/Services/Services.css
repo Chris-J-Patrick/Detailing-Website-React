@@ -4,9 +4,9 @@
 }
 
 .services {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .services-table {
@@ -14,7 +14,7 @@
   margin: 0 0;
   border: none;
   border-radius: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   display: inline-flex;
   flex-direction: column;
 }

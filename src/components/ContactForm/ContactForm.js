@@ -1,34 +1,39 @@
 import React from "react";
-import "./ContactForm.css";
 
 function ContactForm() {
   return (
-    <section id="contact" className="contact container">
-      <h2 className="header form text-center">Contact Us</h2>
-      <div className="row">
-        <div className="form col-md-6">
+    <section id="contact" className="contact container my-5">
+      <h2 className="text-center mb-4 m-5">Contact Us</h2>
+      <div className="row justify-content-center">
+        <div className="col-md-6">
           <form>
-            <div className="form-group m-2">
-              <label htmlFor="name">Name:</label>
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">
+                Name:
+              </label>
               <input type="text" className="form-control" id="name" />
             </div>
-            <div className="form-group m-2">
-              <label htmlFor="email">Email:</label>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">
+                Email:
+              </label>
               <input type="email" className="form-control" id="email" />
             </div>
-            <div className="form-group m-2">
-              <label htmlFor="message">Message:</label>
+            <div className="mb-3">
+              <label htmlFor="message" className="form-label">
+                Message:
+              </label>
               <textarea
                 className="form-control"
                 id="message"
-                rows="3"
+                rows="4"
               ></textarea>
-              <p className="my-1">
+              <div className="form-text">
                 Submit a message and we will email you back{" "}
                 <strong>FAST</strong>!
-              </p>
+              </div>
             </div>
-            <button type="submit" className="btn btn-primary m-2">
+            <button type="submit" className="btn btn-primary mb-3">
               Send
             </button>
           </form>
@@ -36,11 +41,11 @@ function ContactForm() {
 
         <div className="col-md-6">
           <div className="support-info">
-            <h2 className="my-2 form">24/7 Sales & Support</h2>
-            <p className="form">
+            <h3 className="mb-3">24/7 Sales & Support</h3>
+            <p>
               <strong>Phone:</strong> +1 234 567 890
             </p>
-            <p className="form">
+            <p>
               <strong>Email:</strong> support@example.com
             </p>
           </div>

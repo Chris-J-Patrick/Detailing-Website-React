@@ -1,12 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
-import { useState } from "react"; // Import useState here
-import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
-import beforeafter2 from "../beforeafter2.jpeg";
-import beforeafter from "../beforeafter.jpeg";
 
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);
@@ -16,138 +12,131 @@ function HomePage() {
     setBannerTransition(true);
     setTimeout(() => setShowBanner(false), 300);
   };
+
   return (
-    <div className="homepage-content">
+    <div className=" homepage-content">
       {showBanner && (
         <div
-          className={`limited-time-banner${
-            bannerTransition ? "banner-hide" : ""
+          className={`alert col m-1 alert-warning alert-dismissible fade ${
+            bannerTransition ? "fade-out" : "show"
           }`}
+          role="alert"
         >
-          <p className="m-3">
-            Limited Time Sale + Enter Code: "Grand10" For An Extra 10% Off -
-            GRAND OPENING!
-          </p>
+          <strong>Limited Time Sale!</strong> Enter Code: "Grand10" for an extra
+          10% off - GRAND OPENING!
           <button
+            type="button"
+            className="btn-close"
             onClick={handleCloseBanner}
-            className="btn btn-info close-banner"
-          >
-            x
-          </button>
+            aria-label="Close"
+          ></button>
         </div>
       )}
-      <div className="Welcome">
-        <div className="homelogo">
-          {" "}
+
+      <div className="Welcome rounded-1">
+        <div className="text-center mb-1">
           <LogoDiamond
-            size={7}
-            sizeUnit="vw"
+            size={6}
+            sizeUnit="dvw"
             color="white"
             textColor="white"
-            textFontSize={7}
-            textFontSizeUnit="vw"
+            textFontSize={6}
+            textFontSizeUnit="dvw"
           />
         </div>
-        <p className="HeaderSubtitle">
+        <p className="fs-5 text-center mb-4">
           Your destination for{" "}
           <span className="Highlight">premier car detailing</span>. Experience{" "}
           <span className="Highlight">unparalleled shine</span>, inside and out!
         </p>
-        <div className="CheckMarkFitContainer">
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Hassle-Free Online Booking
-            <span className="detail">Book in less than 30 seconds!</span>
-          </div>
-
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Flat Rates
-            <span className="detail">
-              Same price for all sizes! Cars & Trucks.
-            </span>
-          </div>
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Price Match Guarantee
-            <span className="detail">
-              Best Price & Service Guarantee - if you find a better price, we
-              will beat it!
-            </span>
-          </div>
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Fully Insured
-            <span className="detail">
-              Full Coverage Insurance for your peace of mind
-            </span>
-          </div>
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Paint Correction
-            <span className="detail">
-              Process of removing imperfections to create the ultimate shine.
-            </span>
-          </div>
-          <div className="checkmark-feature-item">
-            <FaCheck className="checkmark" />
-            Ceramic Coatings
-            <span className="detail">
-              Offering Industry leading paint protection
-            </span>
-          </div>
+        <div className="d-flex flex-wrap justify-content-center m-4">
+          {[
+            {
+              title: "Hassle-Free Online Booking",
+              detail: "Book in less than 30 seconds!",
+            },
+            {
+              title: "Flat Rates",
+              detail: "Same price for all sizes! Cars & Trucks.",
+            },
+            {
+              title: "Price Match Guarantee",
+              detail:
+                "Best Price & Service Guarantee - if you find a better price, we will beat it!",
+            },
+            {
+              title: "Fully Insured",
+              detail: "Full Coverage Insurance for your peace of mind",
+            },
+            {
+              title: "Paint Correction",
+              detail:
+                "Process of removing imperfections to create the ultimate shine.",
+            },
+            {
+              title: "Ceramic Coatings",
+              detail: "Offering Industry leading paint protection",
+            },
+          ].map((feature, index) => (
+            <div
+              className="m-2 p-2 border rounded text-center bg-white"
+              key={index}
+            >
+              <FaCheck className="text-success me-2" />
+              <strong>{feature.title}</strong>
+              <div>{feature.detail}</div>
+            </div>
+          ))}
         </div>
-        <div>
+        <div className="text-center mb-1">
           <Link to="/services" className="btn btn-primary btn-lg">
             View Our Services
-          </Link>{" "}
+          </Link>
         </div>
-        <h5>Starting at ONLY $149.99</h5>
+        <h5 className="text-center">Starting at ONLY $149.99</h5>
       </div>
-      <div className="why-choose-us">
-        <h3 className="text-center">See the difference our detailing makes!</h3>
-        <img src={beforeafter} className="beforeafter" alt="Before"></img>
-        <img src={beforeafter2} className="beforeafter" alt="After"></img>
 
-        <div className="features mt-4">
-          <div className="feature-item">
-            <h5>Unparalleled Value</h5>
-            <p>
-              Delivering top-quality service at competitive prices, we ensure
-              excellence without overspending. Our services are designed to
-              exceed expectations affordably.
-            </p>
-          </div>
-          <div className="feature-item">
-            <h5>Easiest Scheduling in the Industry!</h5>
-            <p>
-              With our user-friendly online platform, booking services is quick
-              and hassle-free. Enjoy efficient scheduling in under a minute.
-            </p>
-          </div>
-          <div className="feature-item">
-            <h5>Passion and Enthusiasm</h5>
-            <p>
-              More than a business, our passionate team is committed to
-              excellence, offering detailed, creative solutions for unparalleled
-              customer satisfaction.
-            </p>
-          </div>
-          <div className="feature-item">
-            <h5>Embracing Sustainability</h5>
-            <p>
-              Committed to eco-friendly practices, we use sustainable products
-              and methods to provide services that respect the environment.
-            </p>
-          </div>
-          <div className="feature-item">
-            <h5>Expert Team with Exceptional Skill</h5>
-            <p>
-              Our expert team brings unparalleled skill and industry knowledge,
-              ensuring top-quality results and setting the standard in our
-              field.
-            </p>
-          </div>
+      <div className="my-5">
+        <h3 className="text-center mb-4">
+          See the difference our detailing makes!
+        </h3>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {[
+            {
+              title: "Unparalleled Value",
+              description:
+                "Delivering top-quality service at competitive prices, we ensure excellence without overspending. Our services are designed to exceed expectations affordably.",
+            },
+            {
+              title: "Easiest Scheduling in the Industry!",
+              description:
+                "With our user-friendly online platform, booking services is quick and hassle-free. Enjoy efficient scheduling in under a minute.",
+            },
+            {
+              title: "Passion and Enthusiasm",
+              description:
+                "More than a business, our passionate team is committed to excellence, offering detailed, creative solutions for unparalleled customer satisfaction.",
+            },
+            {
+              title: "Embracing Sustainability",
+              description:
+                "Committed to eco-friendly practices, we use sustainable products and methods to provide services that respect the environment.",
+            },
+            {
+              title: "Expert Team with Exceptional Skill",
+              description:
+                "Our expert team brings unparalleled skill and industry knowledge, ensuring top-quality results and setting the standard in our field.",
+            },
+          ].map((feature, index) => (
+            <div className="col" key={index}>
+              <div className="card h-100">
+                <div className="card-body">
+                  <h5 className="card-title">{feature.title}</h5>
+                  <p className="card-text">{feature.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
