@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
-
+import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);
   const [bannerTransition, setBannerTransition] = useState(false);
@@ -100,6 +100,8 @@ function HomePage() {
         <h3 className="text-center mb-4">
           See the difference our detailing makes!
         </h3>
+        <ImageCompareSlider />
+
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {[
             {
