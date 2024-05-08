@@ -9,7 +9,6 @@ import SmoothScroll from "smooth-scroll";
 
 function ServiceTable({ services }) {
   useEffect(() => {
-    // Assuming SmoothScroll is necessary; otherwise, consider Bootstrap scrollspy or smooth scroll
     new SmoothScroll(".scroll-to-compare", {
       speed: 300,
       speedAsDuration: true,
