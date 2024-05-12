@@ -10,6 +10,7 @@ function Header() {
     { path: "/testimonials", text: "Testimonials" },
     { path: "/contact", text: "Contact" },
     { path: "/services", text: "Services" },
+    { path: "/rewards", text: "Rewards" },
   ];
 
   const [isShrunk, setIsShrunk] = useState(false);

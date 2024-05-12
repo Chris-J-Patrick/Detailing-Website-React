@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
+
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);
   const [bannerTransition, setBannerTransition] = useState(false);
@@ -14,7 +15,7 @@ function HomePage() {
   };
 
   return (
-    <div className=" homepage-content">
+    <div className="homepage-content">
       {showBanner && (
         <div
           className={`alert col m-1 alert-warning alert-dismissible fade ${
@@ -33,8 +34,8 @@ function HomePage() {
         </div>
       )}
 
-      <div className="Welcome rounded-1">
-        <div className="text-center mb-1">
+      <div className="Welcome rounded-1 d-flex flex-column justify-content-around align-items-center py-4">
+        <div className="text-center mb-4">
           <LogoDiamond
             size={6}
             sizeUnit="dvw"
@@ -49,7 +50,7 @@ function HomePage() {
           <span className="Highlight">premier car detailing</span>. Experience{" "}
           <span className="Highlight">unparalleled shine</span>, inside and out!
         </p>
-        <div className="d-flex flex-wrap justify-content-center m-4">
+        <div className="d-flex flex-wrap justify-content-center m-4 feature-container">
           {[
             {
               title: "Hassle-Free Online Booking",
@@ -79,16 +80,16 @@ function HomePage() {
             },
           ].map((feature, index) => (
             <div
-              className="m-2 p-2 border rounded text-center bg-white"
+              className="m-2 p-3 border rounded text-center bg-white feature-item"
               key={index}
             >
-              <FaCheck className="text-success me-2" />
+              <FaCheck className="text-success mb-2" />
               <strong>{feature.title}</strong>
               <div>{feature.detail}</div>
             </div>
           ))}
         </div>
-        <div className="text-center mb-1">
+        <div className="text-center mb-4">
           <Link to="/services" className="btn btn-primary btn-lg">
             View Our Services
           </Link>
@@ -131,7 +132,7 @@ function HomePage() {
             },
           ].map((feature, index) => (
             <div className="col" key={index}>
-              <div className="card h-100">
+              <div className="card h-100 shadow-sm feature-card">
                 <div className="card-body">
                   <h5 className="card-title">{feature.title}</h5>
                   <p className="card-text">{feature.description}</p>

@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import HomePage from "./components/HomePage/HomePage";
 import ServicesCompare from "./components/ServiceCompare/ServiceCompare";
+import Rewards from "./components/Rewards/Rewards";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/rewards" element={<Rewards />} />
           </Routes>
         </div>
         <div className="FooterContainer">

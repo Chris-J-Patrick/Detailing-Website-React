@@ -1,51 +1,29 @@
+/* Import Google Fonts if needed */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&family=Roboto:wght@400;100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 
-.logoContainer,
-.logoContainer-shrink {
+/* Logo Container Styles */
+.logoContainer {
   display: inline-flex;
   align-items: center;
-  margin-right: 0vw;
-  padding: 0;
   margin: 0;
-  flex-wrap: nowrap;
+  padding: 0;
 }
-.logoText,
-.logoIcon,
-.logoIcon-shrink {
-  margin-right: 0;
-  transition: all 0.3s ease-out;
-}
+
+/* Logo Text Styles */
 .logoText {
-  display: inline-flex;
-  align-items: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6em;
   font-weight: 400;
-}
-
-.logoTextshrink {
-  font-size: 1em;
   margin: 0;
   padding: 0;
 }
 
+/* Logo Icon Styles */
 .logoIcon {
-  margin-left: 0.2vw;
-  margin-top: 0;
-  top: 0;
-  display: inline;
+  margin-left: 0.5rem;
 }
 
-.logoIcon-shrink {
-  font-size: 0.5em;
-  margin: 0;
-  padding: 0;
-}
-
+/* Adjustments for Navbar Brand */
 .navbar .navbar-brand.active {
   border-bottom: none !important;
 }

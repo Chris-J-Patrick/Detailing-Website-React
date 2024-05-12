@@ -5,21 +5,21 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* General page styles */
 .homepage-content {
-  font-family: "Montserrat", sans-serif; /* Unified font family */
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
 
-/* Welcome section styles */
 .Welcome {
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, #a4eeff, #2193b0);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: local;
-  min-height: 60vh;
+  min-height: 70vh;
   position: relative;
+  margin-top: 0.1em;
+  border-radius: 1em;
 }
 
 .Welcome::before,
@@ -46,7 +46,6 @@
   clip-path: polygon(0 100%, 20% 50%, 0 0);
 }
 
-/* Media queries for Welcome section */
 @media (max-width: 768px) {
   .Welcome::before,
   .Welcome::after {
@@ -54,17 +53,15 @@
   }
 }
 
-/* Highlight and Checkmark styles */
 .Highlight {
-  color: rgb(51, 0, 255); /* Highlight color */
+  color: rgb(51, 0, 255);
   font-weight: 600;
 }
 
 .checkmark {
-  color: #28a745; /* Standardized green color for checkmarks */
+  color: #28a745;
 }
 
-/* Feature items and checkmark items */
 .feature-item,
 .checkmark-feature-item {
   border-radius: 1rem;
@@ -93,5 +90,3 @@
   visibility: visible;
   opacity: 1;
 }
-
-/* Utilizing Bootstrap utility classes in JSX for layout, margin, padding, etc. reduces the need for custom CSS */

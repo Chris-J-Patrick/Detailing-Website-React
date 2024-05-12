@@ -1,6 +1,7 @@
 import React from "react";
 import { IoDiamondOutline } from "react-icons/io5";
-import "./LogoDiamond.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./LogoDiamond.css"; // Ensure this is pointing to your updated CSS file
 
 function LogoDiamond({
   size,
