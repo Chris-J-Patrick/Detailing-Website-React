@@ -50,7 +50,9 @@ function About() {
           <CountUp end={116} duration={1.5} redraw={true}>
             {({ countUpRef, start }) => (
               <VisibilitySensor onChange={start} delayedCall>
-                <h2 ref={countUpRef} className="display-2 text-center" />
+                <h2 ref={countUpRef} className="display-2 text-center">
+                  {" "}
+                </h2>
               </VisibilitySensor>
             )}
           </CountUp>
