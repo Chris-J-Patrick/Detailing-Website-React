@@ -12,7 +12,6 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import HomePage from "./components/HomePage/HomePage";
-import ServicesCompare from "./components/ServiceCompare/ServiceCompare";
 import Rewards from "./components/Rewards/Rewards";
 
 function App() {

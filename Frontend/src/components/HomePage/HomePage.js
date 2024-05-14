@@ -18,7 +18,7 @@ function HomePage() {
     <div className="homepage-content">
       {showBanner && (
         <div
-          className={`alert col m-1 alert-warning alert-dismissible fade ${
+          className={`alert col my-0 alert-warning alert-dismissible fade ${
             bannerTransition ? "fade-out" : "show"
           }`}
           role="alert"
@@ -34,7 +34,7 @@ function HomePage() {
         </div>
       )}
 
-      <div className="Welcome rounded-1 d-flex flex-column justify-content-around align-items-center py-4">
+      <div className="Welcome rounded-1 d-flex flex-column justify-content-around align-items-center py-1">
         <div className="text-center mb-4">
           <LogoDiamond
             size={6}
@@ -45,12 +45,12 @@ function HomePage() {
             textFontSizeUnit="dvw"
           />
         </div>
-        <p className="fs-5 text-center mb-4">
+        <p className="fs-6 text-center m-4">
           Your destination for{" "}
           <span className="Highlight">premier car detailing</span>. Experience{" "}
           <span className="Highlight">unparalleled shine</span>, inside and out!
         </p>
-        <div className="d-flex flex-wrap justify-content-center m-4 feature-container">
+        <div className="d-flex flex-wrap justify-content-center m-5 feature-container">
           {[
             {
               title: "Hassle-Free Online Booking",
@@ -80,10 +80,10 @@ function HomePage() {
             },
           ].map((feature, index) => (
             <div
-              className="m-2 p-3 border rounded text-center bg-white feature-item"
+              className="m-2 p-1 border rounded text-center bg-white feature-item"
               key={index}
             >
-              <FaCheck className="text-success mb-2" />
+              <FaCheck className="text-success m-1" />
               <strong>{feature.title}</strong>
               <div>{feature.detail}</div>
             </div>
@@ -97,13 +97,13 @@ function HomePage() {
         <h5 className="text-center">Starting at ONLY $149.99</h5>
       </div>
 
-      <div className="my-5">
-        <h3 className="text-center mb-4">
+      <div className="text-center bg-light">
+        <h3 class="py-2 text-white font-weight-bold rounded-lg shadow-sm bg-dark">
           See the difference our detailing makes!
         </h3>
         <ImageCompareSlider />
 
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-1">
           {[
             {
               title: "Unparalleled Value",
@@ -131,11 +131,11 @@ function HomePage() {
                 "Our expert team brings unparalleled skill and industry knowledge, ensuring top-quality results and setting the standard in our field.",
             },
           ].map((feature, index) => (
-            <div className="col" key={index}>
-              <div className="card h-100 shadow-sm feature-card">
-                <div className="card-body">
-                  <h5 className="card-title">{feature.title}</h5>
-                  <p className="card-text">{feature.description}</p>
+            <div class="col my-1" key={index}>
+              <div class="card h-100 shadow feature-card rounded-lg">
+                <div class="card-body bg-light">
+                  <h5 className="text-info">{feature.title}</h5>
+                  <p class="card-text">{feature.description}</p>
                 </div>
               </div>
             </div>

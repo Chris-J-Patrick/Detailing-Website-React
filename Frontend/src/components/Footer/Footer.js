@@ -1,10 +1,10 @@
 import React from "react";
-import "./Footer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer() {
   return (
-    <footer className="custom-footer">
-      <div className="footer-content">
+    <footer className="bg-dark text-white text-center py-3 mt-0">
+      <div className="container">
         © 2024 Attention to Detail Auto. All Rights Reserved.
       </div>
     </footer>

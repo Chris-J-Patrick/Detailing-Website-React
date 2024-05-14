@@ -46,8 +46,8 @@ function About() {
   return (
     <div className={styles.aboutsection}>
       <div className="row">
-        <div className="col-12 bg-white rounded-5">
-          <CountUp end={116} duration={1.5} redraw={true}>
+        {/* <div className="col-12 bg-white rounded-5">
+           <CountUp end={116} duration={1.5} redraw={true}>
             {({ countUpRef, start }) => (
               <VisibilitySensor onChange={start} delayedCall>
                 <h2 ref={countUpRef} className="display-2 text-center">
@@ -55,8 +55,15 @@ function About() {
                 </h2>
               </VisibilitySensor>
             )}
-          </CountUp>
-          <p className="text-center">Happy Customers</p>
+          </CountUp> */}
+        <div className="text-center py-3 bg-light border rounded">
+          <h4 className="mb-2">We're Almost There!</h4>
+          <p className="mb-0">
+            Finalizing details and getting ready to serve you with the best car
+            detailing experience.
+          </p>
+          {/*</div>
+           <p className="text-center">Happy Customers</p> */}
         </div>
       </div>
       <VerticalTimeline>

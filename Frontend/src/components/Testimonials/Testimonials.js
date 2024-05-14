@@ -1,5 +1,6 @@
 import React from "react";
-import "./Testimonials.css";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const testimonialsData = [
   {
@@ -42,7 +43,7 @@ const testimonialsData = [
     name: "Jane Smith",
     comment: "Professional and quick. Highly recommend.",
     avatar:
-      "https://images.unsplash.com/photo-1613401665466-6b16e47bc7a0?q=80&w=2738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // URL of the image
+      "https://images.unsplash.com/photo-1613401665466-6b16e47bc7a0?q=80&w=2738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 7,
@@ -62,28 +63,37 @@ const testimonialsData = [
 
 function TestimonialCard({ testimonial }) {
   return (
-    <div className="testimonial-card">
-      <img
-        src={testimonial.avatar}
-        alt={`${testimonial.name}'s avatar`}
-        className="testimonial-avatar"
-        onError={(e) => (e.target.src = "path/to/default-avatar.jpg")}
-      />
-      <p className="testimonial-comment">{testimonial.comment}</p>
-      <p className="testimonial-name">- {testimonial.name}</p>
-    </div>
+    <Col className="mb-4">
+      <Card className="testimonial-card h-100 shadow-sm">
+        <Card.Img
+          variant="top"
+          src={testimonial.avatar}
+          alt={`${testimonial.name}'s avatar`}
+          className="testimonial-avatar"
+          onError={(e) => (e.target.src = "path/to/default-avatar.jpg")}
+        />
+        <Card.Body>
+          <Card.Text className="testimonial-comment">
+            {testimonial.comment}
+          </Card.Text>
+          <Card.Text className="text-muted">- {testimonial.name}</Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }
 
 function Testimonials() {
   return (
     <div className="testimonial-section">
-      <h2 className="header">What Our Customers Say</h2>
-      <div className="testimonials-container">
-        {testimonialsData.map((testimonial) => (
-          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-        ))}
-      </div>
+      <Container>
+        <h2 className="text-center m-2 p-3">What Our Customers Say</h2>
+        <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          {testimonialsData.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }

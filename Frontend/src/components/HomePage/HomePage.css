@@ -16,7 +16,7 @@
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: local;
-  min-height: 70vh;
+  min-height: 70dvh;
   position: relative;
   margin-top: 0.1em;
   border-radius: 1em;
@@ -44,49 +44,4 @@
   left: 0;
   background: linear-gradient(to right, #a2e6ff, #ffffff);
   clip-path: polygon(0 100%, 20% 50%, 0 0);
-}
-
-@media (max-width: 768px) {
-  .Welcome::before,
-  .Welcome::after {
-    width: 35%;
-  }
-}
-
-.Highlight {
-  color: rgb(51, 0, 255);
-  font-weight: 600;
-}
-
-.checkmark {
-  color: #28a745;
-}
-
-.feature-item,
-.checkmark-feature-item {
-  border-radius: 1rem;
-  background: #ffffff;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
-
-.feature-item:hover,
-.checkmark-feature-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 10px var(--shadow-color);
-}
-
-.checkmark-feature-item .detail {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.2s, opacity 0.2s linear;
-  position: absolute;
-  bottom: 110%;
-  left: 0;
-}
-
-.checkmark-feature-item:hover .detail {
-  visibility: visible;
-  opacity: 1;
 }
