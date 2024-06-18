@@ -1,7 +1,5 @@
-/* Import Google Fonts if needed */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-/* Logo Container Styles */
 .logoContainer {
   display: inline-flex;
   align-items: center;
@@ -9,7 +7,6 @@
   padding: 0;
 }
 
-/* Logo Text Styles */
 .logoText {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6em;
@@ -18,12 +15,10 @@
   padding: 0;
 }
 
-/* Logo Icon Styles */
 .logoIcon {
   margin-left: 0.5rem;
 }
 
-/* Adjustments for Navbar Brand */
 .navbar .navbar-brand.active {
   border-bottom: none !important;
 }

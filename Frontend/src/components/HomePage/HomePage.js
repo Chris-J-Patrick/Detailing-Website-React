@@ -4,11 +4,14 @@ import { FaCheck } from "react-icons/fa";
 import "./HomePage.css";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
-
+import before from "../../before.jpeg";
+import after from "../../after.jpeg";
+import { Container } from "react-bootstrap";
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);
   const [bannerTransition, setBannerTransition] = useState(false);
-
+  const firstImage = before;
+  const secondImage = after;
   const handleCloseBanner = () => {
     setBannerTransition(true);
     setTimeout(() => setShowBanner(false), 300);
@@ -18,7 +21,7 @@ function HomePage() {
     <div className="homepage-content">
       {showBanner && (
         <div
-          className={`alert col my-0 alert-warning alert-dismissible fade ${
+          className={`alert col my-1 alert-warning alert-dismissible fade ${
             bannerTransition ? "fade-out" : "show"
           }`}
           role="alert"
@@ -34,25 +37,23 @@ function HomePage() {
         </div>
       )}
 
-      <div className="Welcome rounded-1 d-flex flex-column justify-content-around align-items-center py-1">
+      <div className="Welcome d-flex flex-column justify-content-evenly align-items-center ">
         <div className="text-center">
           <LogoDiamond
-            size={6}
-            sizeUnit="dvw"
+            size={3}
+            sizeUnit="em"
             color="white"
             textColor="white"
-            textFontSize={6}
-            textFontSizeUnit="dvw"
+            textFontSize={3}
+            textFontSizeUnit="em"
           />
-          <p className="fs-5 text-center">
-            Your destination for{" "}
-            <span className="Highlight">premier car detailing</span>. Experience{" "}
-            <span className="Highlight">unparalleled shine</span>, inside and
-            out!
-          </p>
         </div>
-
-        <div className="d-flex flex-wrap justify-content-center m-5 feature-container">
+        <p className="fs-5 text-center">
+          South Jersey's destination for{" "}
+          <span className="Highlight">premier car detailing</span>. Experience{" "}
+          <span className="Highlight">unparalleled shine</span>, inside and out!
+        </p>
+        <div className="Container d-flex flex-wrap justify-content-center m-2 feature-container">
           {[
             {
               title: "Hassle-Free Online Booking",
@@ -91,7 +92,7 @@ function HomePage() {
             </div>
           ))}
         </div>
-        <div className="text-center">
+        <div className="text-center mb-4">
           <Link to="/services" className="btn btn-primary btn-lg">
             View Our Services
           </Link>
@@ -103,7 +104,7 @@ function HomePage() {
         <h3 class="py-2 text-white font-weight-bold rounded-lg shadow-sm bg-dark">
           See the difference our detailing makes!
         </h3>
-        <ImageCompareSlider />
+        <ImageCompareSlider firstImage={firstImage} secondImage={secondImage} />
 
         <div class="row row-cols-1 row-cols-md-3 g-4 m-1">
           {[
@@ -147,5 +148,4 @@ function HomePage() {
     </div>
   );
 }
-
 export default HomePage;

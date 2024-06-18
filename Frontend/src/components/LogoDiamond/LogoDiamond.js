@@ -1,8 +1,7 @@
 import React from "react";
 import { IoDiamondOutline } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./LogoDiamond.css"; // Ensure this is pointing to your updated CSS file
-
+import "./LogoDiamond.css";
 function LogoDiamond({
   size,
   sizeUnit = "em",

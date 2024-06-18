@@ -50,9 +50,9 @@ const Rewards = () => {
       fluid
       className="d-flex align-items-center justify-content-center"
       style={{
-        height: "84dvh",
+        height: "85dvh",
         background: "linear-gradient(to right, #4f83cc, #6baed6)",
-        padding: "2rem",
+        padding: "0rem",
         color: "#fff",
         fontFamily: "Arial, sans-serif",
       }}

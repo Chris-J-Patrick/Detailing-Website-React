@@ -1,0 +1,15 @@
+.image-compare-slider {
+  padding: 2rem 0;
+}
+
+.image-compare-slider .before-after-slider {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-compare-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,25 +1,29 @@
-import React, { useState, useRef } from "react";
-import "./ImageCompareSlider.css";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
-function ImageCompareSlider() {
+import "./ImageCompareSlider.css";
+
+function ImageCompareSlider({ firstImage, secondImage }) {
   const FIRST_IMAGE = {
-    imageUrl: "after.jpeg",
+    imageUrl: firstImage,
   };
   const SECOND_IMAGE = {
-    imageUrl: "before.jpeg",
+    imageUrl: secondImage,
   };
+
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-4 mx-auto h-100">
+    <Container fluid className="image-compare-slider">
+      <Row>
+        <Col xs={10} md={7} lg={4} className="mx-auto">
           <ReactBeforeSliderComponent
             firstImage={FIRST_IMAGE}
             secondImage={SECOND_IMAGE}
           />
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
+
 export default ImageCompareSlider;

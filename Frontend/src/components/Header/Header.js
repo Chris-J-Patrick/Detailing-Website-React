@@ -43,13 +43,13 @@ function Header() {
       className={`Header ${isShrunk ? "navbar-shrink" : ""}`}
     >
       <Container fluid>
-        <Navbar.Brand as={RouterNavLink} to="/" className="me-3">
+        <Navbar.Brand as={RouterNavLink} to="/">
           <LogoDiamond
-            size={isShrunk ? 0.8 : 1.2}
+            size={isShrunk ? 0.8 : 1.1}
             sizeUnit="em"
             color="#ffffff"
             textColor="#ffffff"
-            textFontSize={isShrunk ? 0.8 : 1.2}
+            textFontSize={isShrunk ? 0.8 : 1.1}
             textFontSizeUnit="em"
           />
         </Navbar.Brand>
@@ -65,7 +65,7 @@ function Header() {
                 as={RouterNavLink}
                 to={link.path}
                 key={index}
-                className="mx-2"
+                className="mx-3"
                 onClick={handleNavLinkClick}
               >
                 {link.text}
@@ -77,4 +77,5 @@ function Header() {
     </Navbar>
   );
 }
+
 export default Header;

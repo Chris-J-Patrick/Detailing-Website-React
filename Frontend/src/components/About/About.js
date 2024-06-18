@@ -98,64 +98,71 @@ function About() {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-      <section className={styles.section}>
-        <h3 className={styles.h3}>Exceptional Value, Uncompromised Quality</h3>
-        <p className={styles.p}>
-          At Attention to Detail Auto, located in Pennsville NJ, we redefine
-          what it means to get top-notch car detailing at an honest value. Our
-          journey began with a clear vision: to offer the highest quality
-          detailing at prices that don't break the bank. With our ceramic
-          coatings starting at only $299.99, including paint correction, we
-          stand out in a market where the average price starts at $1000.
-        </p>
-      </section>
+      <Container fluid>
+        <section className={styles.section}>
+          <h3 className={styles.h3}>
+            Exceptional Value, Uncompromised Quality
+          </h3>
+          <p className={styles.p}>
+            At Attention to Detail Auto, located in Pennsville NJ, we redefine
+            what it means to get top-notch car detailing at an honest value. Our
+            journey began with a clear vision: to offer the highest quality
+            detailing at prices that don't break the bank. With our ceramic
+            coatings starting at only $299.99, including paint correction, we
+            stand out in a market where the average price starts at $1000.
+          </p>
+        </section>
 
-      <section className={styles.section}>
-        <h3 className={styles.h3}>Transparent, Fair Pricing</h3>
-        <p className={styles.p}>
-          We believe in transparent pricing. No surprises, no hidden fees. Our
-          rates are clear and available – you book, you pay, and you get the
-          exceptional results you expect. No need for on-site quotations; we
-          value your time as much as your trust in our services.
-        </p>
-      </section>
+        <section className={styles.section}>
+          <h3 className={styles.h3}>Transparent, Fair Pricing</h3>
+          <p className={styles.p}>
+            We believe in transparent pricing. No surprises, no hidden fees. Our
+            rates are clear and available – you book, you pay, and you get the
+            exceptional results you expect. No need for on-site quotations; we
+            value your time as much as your trust in our services.
+          </p>
+        </section>
 
-      <section className={styles.section}>
-        <h3 className={styles.h3}>Revolutionizing Booking in Car Detailing</h3>
-        <p className={styles.p}>
-          We're proud to offer the only fully online, hassle-free booking system
-          in the local car detailing industry. With just a few clicks, you can
-          schedule your car's transformation from the comfort of your home. This
-          ease of access, combined with our commitment to quality, sets us apart
-          and reflects our dedication to customer satisfaction.
-        </p>
-      </section>
+        <section className={styles.section}>
+          <h3 className={styles.h3}>
+            Revolutionizing Booking in Car Detailing
+          </h3>
+          <p className={styles.p}>
+            We're proud to offer the only fully online, hassle-free booking
+            system in the local car detailing industry. With just a few clicks,
+            you can schedule your car's transformation from the comfort of your
+            home. This ease of access, combined with our commitment to quality,
+            sets us apart and reflects our dedication to customer satisfaction.
+          </p>
+        </section>
 
-      <section className={styles.section}>
-        <h3 className={styles.h3}>Our Commitment to Excellence</h3>
-        <p className={styles.p}>
-          Our team comprises professionals who are not just skilled but also
-          deeply passionate about automobiles. Whether you own a vintage classic
-          or a modern marvel, your vehicle will receive the specialized care it
-          deserves, enhancing both its aesthetics and longevity.
-        </p>
-        <p className={styles.p}>
-          From ceramic coatings to paint protection, our services are a
-          testament to our pursuit of perfection. Step into the world of
-          Attention to Detail Auto, and experience car care that goes beyond the
-          conventional - it's an investment in your vehicle’s future.
-        </p>
-      </section>
+        <section className={styles.section}>
+          <h3 className={styles.h3}>Our Commitment to Excellence</h3>
+          <p className={styles.p}>
+            Our team comprises professionals who are not just skilled but also
+            deeply passionate about automobiles. Whether you own a vintage
+            classic or a modern marvel, your vehicle will receive the
+            specialized care it deserves, enhancing both its aesthetics and
+            longevity.
+          </p>
+          <p className={styles.p}>
+            From ceramic coatings to paint protection, our services are a
+            testament to our pursuit of perfection. Step into the world of
+            Attention to Detail Auto, and experience car care that goes beyond
+            the conventional - it's an investment in your vehicle’s future.
+          </p>
+        </section>
 
-      <section className={styles.section}>
-        <h3 className={styles.h3}>Join Our Satisfied Customers</h3>
-        <p className={styles.p}>
-          We invite you to join the ranks of our satisfied customers. Experience
-          the unparalleled value and care that Attention to Detail Auto
-          provides. It’s not just detailing; it’s a commitment to preserving and
-          elevating your vehicle's beauty and value.
-        </p>
-      </section>
+        <section className={styles.section}>
+          <h3 className={styles.h3}>Join Our Satisfied Customers</h3>
+          <p className={styles.p}>
+            We invite you to join the ranks of our satisfied customers.
+            Experience the unparalleled value and care that Attention to Detail
+            Auto provides. It’s not just detailing; it’s a commitment to
+            preserving and elevating your vehicle's beauty and value.
+          </p>
+        </section>
+      </Container>
       <h2 className={styles.h2}>FAQ</h2>
       <Accordion defaultActiveKey="none">
         {faqData.map((faq, index) => (
