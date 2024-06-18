@@ -40,12 +40,12 @@ function HomePage() {
       <div className="Welcome d-flex flex-column justify-content-evenly align-items-center ">
         <div className="text-center">
           <LogoDiamond
-            size={3}
-            sizeUnit="em"
+            size={2.5}
+            sizeUnit="rem"
             color="white"
             textColor="white"
-            textFontSize={3}
-            textFontSizeUnit="em"
+            textFontSize={2.5}
+            textFontSizeUnit="rem"
           />
         </div>
         <p className="fs-5 text-center">
