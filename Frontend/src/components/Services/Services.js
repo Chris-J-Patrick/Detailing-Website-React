@@ -63,6 +63,7 @@ const servicesData = [
     price: "$499.99",
     salePrice: "$399.99",
     inclusions: [
+      "Deluxe Detail",
       "Two-Step Paint Correction",
       "Two Year Premium Ceramic Coating",
       "Two Year Premium Glass Coating",
@@ -77,6 +78,7 @@ const servicesData = [
     price: "$999.99",
     salePrice: "$799.99",
     inclusions: [
+      "Premium Detail",
       "Three-Step Paint Correction",
       "Five Year Premium Ceramic Coating",
       "Five Year Premium Ceramic Glass Coating",

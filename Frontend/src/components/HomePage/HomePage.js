@@ -21,7 +21,7 @@ function HomePage() {
     <div className="homepage-content">
       {showBanner && (
         <div
-          className={`alert col my-1 alert-warning alert-dismissible fade ${
+          className={`alert col m-auto alert-warning alert-dismissible fade ${
             bannerTransition ? "fade-out" : "show"
           }`}
           role="alert"
@@ -100,8 +100,8 @@ function HomePage() {
         <h5 className="text-center">Starting at ONLY $149.99</h5>
       </div>
 
-      <div className="text-center bg-light">
-        <h3 class="py-2 text-white font-weight-bold rounded-lg shadow-sm bg-dark">
+      <div className="text-center">
+        <h3 class="py-3 text-white font-weight-bold rounded-lg shadow-sm bg-dark">
           See the difference our detailing makes!
         </h3>
         <ImageCompareSlider firstImage={firstImage} secondImage={secondImage} />

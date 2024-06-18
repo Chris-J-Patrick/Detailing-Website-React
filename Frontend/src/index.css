@@ -19,6 +19,7 @@ body {
   opacity: 1;
   overflow-x: hidden;
   z-index: 10;
+  background: linear-gradient(to right, #f0f2f5, #cfd9df);
 }
 
 a {
@@ -33,7 +34,7 @@ a:hover {
 .AppContainer {
 }
 .NavContainer {
-  margin-bottom: 3.89rem;
+  margin-bottom: 3.7rem;
 }
 
 .AppContainer {

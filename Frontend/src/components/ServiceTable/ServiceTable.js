@@ -15,7 +15,7 @@ import {
 import ShApp from "../ShApp/ShApp";
 import ServicesCompare from "../ServiceCompare/ServiceCompare";
 import SmoothScroll from "smooth-scroll";
-import "./ServiceTable.css"; // Add your custom CSS here
+import "./ServiceTable.css";
 
 function ServiceTable({ services }) {
   useEffect(() => {
@@ -28,50 +28,36 @@ function ServiceTable({ services }) {
   }, []);
 
   return (
-    <Container className=" py-1 justify-content-center">
-      <Alert variant="info" className="text-center">
-        <strong>Advancing to a higher tier?</strong> Rest assured, all the
-        services from the lower tiers come with you.
-        <NavLink
-          as={Button}
-          variant="primary"
-          size="sm"
-          className="ml-3 scroll-to-compare"
-          to="#ServicesCompare"
-        >
-          Compare All Services
-        </NavLink>
-      </Alert>
-
+    <Container fluid className="justify-content-center">
       <Row>
         {services.map((service, idx) => (
-          <Col key={idx} md={6} lg={4} className="mb-4">
+          <Col key={idx} md={6} lg={4} className="mb-1 py-2">
             <Card
-              className="h-100 d-flex flex-column justify-content-between"
+              className="h-100 d-flex flex-column justify-content-around"
               border={service.isMostPopular ? "primary" : ""}
             >
               {service.isMostPopular && (
-                <Card.Header className="bg-primary text-white">
+                <Card.Header className="bg-primary fs-4 text-white">
                   Most Popular
                 </Card.Header>
               )}
               <Card.Body className="d-flex flex-column">
                 <div className="flex-grow-1">
-                  <Card.Title>{service.title}</Card.Title>
-                  <Card.Text>{service.description}</Card.Text>
+                  <Card.Title className="fw-bold">{service.title}</Card.Title>
+                  <Card.Subtitle>{service.description}</Card.Subtitle>
                   <h5>
                     {service.salePrice ? (
                       <>
-                        <span className="text-danger">{service.salePrice}</span>
-                        <span className="text-muted">
+                        <div className="text-danger">
                           <del>{service.price}</del>
-                        </span>
+                        </div>
+                        <div className="fw-bold">{service.salePrice}</div>
                       </>
                     ) : (
                       <span>{service.price}</span>
                     )}
                   </h5>
-                  <ListGroup variant="flush" className="mb-3">
+                  <ListGroup variant="flush" className="mb-1">
                     {service.inclusions.map((inclusion, index) => (
                       <ListGroup.Item className="" key={index}>
                         <FontAwesomeIcon
