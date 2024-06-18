@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import "./Header.css";
 
@@ -14,7 +15,7 @@ function Header() {
   ];
 
   const [isShrunk, setIsShrunk] = useState(false);
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,65 +29,52 @@ function Header() {
     };
   }, []);
 
-  const toggleNavbar = () => {
-    setIsNavCollapsed(!isNavCollapsed);
-  };
-
-  const closeNavbar = () => {
-    setIsNavCollapsed(true);
+  const handleNavLinkClick = () => {
+    setExpanded(false);
   };
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg ${
-        isShrunk ? "navbar-shrink" : ""
-      } fixed-top`}
+    <Navbar
+      expand="lg"
+      fixed="top"
+      variant="dark"
+      expanded={expanded}
+      onToggle={setExpanded}
+      className={`Header ${isShrunk ? "navbar-shrink" : ""}`}
     >
-      <div
-        className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-        id="navbarNav"
-      >
-        <ul className="navbar-nav">
-          {NAV_LINKS.map((link, index) => (
-            <li className="nav-item" key={index}>
-              <NavLink
+      <Container fluid>
+        <Navbar.Brand as={RouterNavLink} to="/" className="me-3">
+          <LogoDiamond
+            size={isShrunk ? 0.8 : 1.2}
+            sizeUnit="em"
+            color="#ffffff"
+            textColor="#ffffff"
+            textFontSize={isShrunk ? 0.8 : 1.2}
+            textFontSizeUnit="em"
+          />
+        </Navbar.Brand>
+
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => setExpanded(!expanded)}
+        />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            {NAV_LINKS.map((link, index) => (
+              <Nav.Link
+                as={RouterNavLink}
                 to={link.path}
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-                onClick={closeNavbar}
+                key={index}
+                className="mx-2"
+                onClick={handleNavLinkClick}
               >
                 {link.text}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <NavLink className="navbar-brand" to="/" onClick={closeNavbar}>
-        {" "}
-        <LogoDiamond
-          size={isShrunk ? 0.8 : 1.2}
-          sizeUnit="em"
-          color="#ffffff"
-          textColor="#ffffff"
-          textFontSize={isShrunk ? 0.8 : 1.2}
-          textFontSizeUnit="em"
-        />
-      </NavLink>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded={!isNavCollapsed}
-        aria-label="Toggle navigation"
-        onClick={toggleNavbar}
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-    </nav>
+              </Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
-
 export default Header;

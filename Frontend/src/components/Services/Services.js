@@ -18,8 +18,8 @@ const servicesData = [
     title: "Basic Detail",
     icon: <FaCarSide />,
     description: "Thorough cleaning and 6-12 Months of Protection",
-    price: "$149.99",
-    salePrice: "$129.99",
+    price: "$169.99",
+    salePrice: "$149.99",
     inclusions: [
       "Pressure Wash",
       "Foam Soak",
@@ -33,16 +33,19 @@ const servicesData = [
       "Glass Coating",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/4zswtc5co77mu8/LZXAGKBY2SVMC", // Replace with the actual URL for this service
+      "https://AttentiontoDetailAuto.as.me/?appointmentType=56802077",
   },
   {
     title: "Deluxe Detail",
     icon: <FaWater />,
     description:
       "Advanced cleaning techniques and 12 Months of increased Gloss and Protection.",
-    price: "$299.99",
-    salePrice: "$249.99",
+    price: "$399.99",
+    isMostPopular: true,
+
+    salePrice: "$299.99",
     inclusions: [
+      "Basic Detail",
       "Clay Bar treatment to remove embedded paint contaminates",
       "One-Step Paint Correction",
       "12 Month Ceramic Coating or Hand Wax",
@@ -50,30 +53,29 @@ const servicesData = [
       "Undercarriage wash",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/g3taquupuwf9mc/LZXAGKBY2SVMC",
+      "https://AttentiontoDetailAuto.as.me/?appointmentType=56802692",
   },
 
   {
     title: "Premium Detail",
     icon: <FaPaintBrush />,
     description: "2 Years of Extreme Gloss and Protection",
-    price: "$399.99",
-    salePrice: "$299.99",
-    isMostPopular: true,
+    price: "$499.99",
+    salePrice: "$399.99",
     inclusions: [
       "Two-Step Paint Correction",
       "Two Year Premium Ceramic Coating",
       "Two Year Premium Glass Coating",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/j6oq1du564lybv/LZXAGKBY2SVMC",
+      "https://AttentiontoDetailAuto.as.me/?appointmentType=56802718",
   },
   {
     title: "Ultimate Detail",
     icon: <FaMedal />,
     description: "5 Years of ULTIMATE Gloss and Protection",
-    price: "$849.99",
-    salePrice: "$649.99",
+    price: "$999.99",
+    salePrice: "$799.99",
     inclusions: [
       "Three-Step Paint Correction",
       "Five Year Premium Ceramic Coating",
@@ -81,7 +83,7 @@ const servicesData = [
       "Five Year Warranty on Ceramic Coatings",
     ],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/tzp0t7iur35pz6/LZXAGKBY2SVMC",
+      "https://AttentiontoDetailAuto.as.me/?appointmentType=56802761",
   },
   {
     title: "Custom Detail",
@@ -90,7 +92,7 @@ const servicesData = [
     price: "$$$$$$$$",
     inclusions: ["Buffing", "High-quality wax", "Protective sealant"],
     schedulingUrl:
-      "https://squareup.com/appointments/buyer/widget/5bc0lgsjfn7l1p/LZXAGKBY2SVMC",
+      "https://app.acuityscheduling.com/schedule.php?owner=31108192&ref=booking_button",
   },
 ];
 

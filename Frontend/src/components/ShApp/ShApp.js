@@ -72,7 +72,6 @@ const ShApp = ({ serviceUrl, buttonText }) => {
           title="Schedule Appointment"
           width="100%"
           height="100%"
-          frameBorder="0"
         ></iframe>
       </Modal>
     </div>

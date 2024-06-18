@@ -3,9 +3,19 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Alert,
+  ListGroup,
+} from "react-bootstrap";
 import ShApp from "../ShApp/ShApp";
 import ServicesCompare from "../ServiceCompare/ServiceCompare";
 import SmoothScroll from "smooth-scroll";
+import "./ServiceTable.css"; // Add your custom CSS here
 
 function ServiceTable({ services }) {
   useEffect(() => {
@@ -18,68 +28,72 @@ function ServiceTable({ services }) {
   }, []);
 
   return (
-    <div className="servicesTable container-fluid bg-light py-4 justify-content-center">
-      <div className="alert alert-info text-center" role="alert">
+    <Container className=" py-1 justify-content-center">
+      <Alert variant="info" className="text-center">
         <strong>Advancing to a higher tier?</strong> Rest assured, all the
         services from the lower tiers come with you.
         <NavLink
-          className="btn btn-primary btn-sm ml-3 scroll-to-compare"
-          to="#service-compare"
+          as={Button}
+          variant="primary"
+          size="sm"
+          className="ml-3 scroll-to-compare"
+          to="#ServicesCompare"
         >
           Compare All Services
         </NavLink>
-      </div>
+      </Alert>
 
-      <div className="row">
+      <Row>
         {services.map((service, idx) => (
-          <div key={idx} className="col-md-6 col-lg-4 mb-4 ">
-            <div
-              className={`card ${
-                service.isMostPopular ? "border-primary" : ""
-              }`}
+          <Col key={idx} md={6} lg={4} className="mb-4">
+            <Card
+              className="h-100 d-flex flex-column justify-content-between"
+              border={service.isMostPopular ? "primary" : ""}
             >
               {service.isMostPopular && (
-                <div className="card-header bg-primary text-white">
+                <Card.Header className="bg-primary text-white">
                   Most Popular
-                </div>
+                </Card.Header>
               )}
-              <div className="card-body">
-                <h4 className="card-title">{service.title}</h4>
-                <p className="card-text">{service.description}</p>
-                <h5>
-                  {service.salePrice ? (
-                    <>
-                      <span className="text-danger">{service.salePrice}</span>
-                      <span className="text-muted">
-                        <del>{service.price}</del>
-                      </span>
-                    </>
-                  ) : (
-                    <span>{service.price}</span>
-                  )}
-                </h5>
-                <ul className="list-unstyled">
-                  {service.inclusions.map((inclusion, index) => (
-                    <li className="" key={index}>
-                      <FontAwesomeIcon
-                        icon={faCheckCircle}
-                        className="text-success"
-                      />{" "}
-                      <span>{inclusion}</span>
-                    </li>
-                  ))}
-                </ul>
+              <Card.Body className="d-flex flex-column">
+                <div className="flex-grow-1">
+                  <Card.Title>{service.title}</Card.Title>
+                  <Card.Text>{service.description}</Card.Text>
+                  <h5>
+                    {service.salePrice ? (
+                      <>
+                        <span className="text-danger">{service.salePrice}</span>
+                        <span className="text-muted">
+                          <del>{service.price}</del>
+                        </span>
+                      </>
+                    ) : (
+                      <span>{service.price}</span>
+                    )}
+                  </h5>
+                  <ListGroup variant="flush" className="mb-3">
+                    {service.inclusions.map((inclusion, index) => (
+                      <ListGroup.Item className="" key={index}>
+                        <FontAwesomeIcon
+                          icon={faCheckCircle}
+                          className="text-success"
+                        />{" "}
+                        <span>{inclusion}</span>
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                </div>
                 <ShApp
                   serviceUrl={service.schedulingUrl}
                   buttonText="Schedule"
                 />
-              </div>
-            </div>
-          </div>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
         <ServicesCompare />
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 }
 

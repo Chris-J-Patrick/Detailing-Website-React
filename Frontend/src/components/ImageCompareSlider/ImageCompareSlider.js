@@ -12,7 +12,7 @@ function ImageCompareSlider() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-6 mx-auto h-100">
+        <div className="col-4 mx-auto h-100">
           <ReactBeforeSliderComponent
             firstImage={FIRST_IMAGE}
             secondImage={SECOND_IMAGE}

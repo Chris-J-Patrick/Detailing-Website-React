@@ -35,7 +35,7 @@ function HomePage() {
       )}
 
       <div className="Welcome rounded-1 d-flex flex-column justify-content-around align-items-center py-1">
-        <div className="text-center mb-4">
+        <div className="text-center">
           <LogoDiamond
             size={6}
             sizeUnit="dvw"
@@ -44,12 +44,14 @@ function HomePage() {
             textFontSize={6}
             textFontSizeUnit="dvw"
           />
+          <p className="fs-5 text-center">
+            Your destination for{" "}
+            <span className="Highlight">premier car detailing</span>. Experience{" "}
+            <span className="Highlight">unparalleled shine</span>, inside and
+            out!
+          </p>
         </div>
-        <p className="fs-6 text-center m-4">
-          Your destination for{" "}
-          <span className="Highlight">premier car detailing</span>. Experience{" "}
-          <span className="Highlight">unparalleled shine</span>, inside and out!
-        </p>
+
         <div className="d-flex flex-wrap justify-content-center m-5 feature-container">
           {[
             {
@@ -89,7 +91,7 @@ function HomePage() {
             </div>
           ))}
         </div>
-        <div className="text-center mb-4">
+        <div className="text-center">
           <Link to="/services" className="btn btn-primary btn-lg">
             View Our Services
           </Link>

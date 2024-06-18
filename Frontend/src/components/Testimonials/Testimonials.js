@@ -1,66 +1,8 @@
 import React from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const testimonialsData = [
-  {
-    id: 1,
-    name: "John Doe",
-    comment: "Great service! My car has never looked better.",
-    avatar:
-      "https://images.unsplash.com/photo-1502767882403-636aee14f873?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1530065928592-fb0dc85d2f27?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1516534775068-ba3e7458af70?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 5,
-    name: "John Doe",
-    comment: "Great service! My car has never looked better.",
-    avatar:
-      "https://images.unsplash.com/photo-1473655587843-eda8944061e8?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 6,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1613401665466-6b16e47bc7a0?q=80&w=2738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 7,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg",
-  },
-  {
-    id: 8,
-    name: "Jane Smith",
-    comment: "Professional and quick. Highly recommend.",
-    avatar:
-      "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
-
+const testimonialsData = [];
 function TestimonialCard({ testimonial }) {
   return (
     <Col className="mb-4">
@@ -88,11 +30,61 @@ function Testimonials() {
     <div className="testimonial-section">
       <Container>
         <h2 className="text-center m-2 p-3">What Our Customers Say</h2>
-        <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {testimonialsData.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
-        </Row>
+        {testimonialsData.length > 0 ? (
+          <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {testimonialsData.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </Row>
+        ) : (
+          <div className="text-center">
+            <p className="mb-4">
+              We currently have no testimonials. Be the first to leave a review!
+            </p>
+            <Row className="justify-content-center mb-3">
+              <Col md={4} className="mb-2">
+                <Button
+                  variant="primary"
+                  block
+                  href="https://www.google.com/maps/place/Your+Business+Name"
+                  target="_blank"
+                >
+                  Review on Google
+                </Button>
+              </Col>
+              <Col md={4} className="mb-2">
+                <Button
+                  variant="primary"
+                  block
+                  href="https://www.facebook.com/YourBusinessName/reviews"
+                  target="_blank"
+                >
+                  Review on Facebook
+                </Button>
+              </Col>
+              <Col md={4} className="mb-2">
+                <Button
+                  variant="primary"
+                  block
+                  href="https://www.yelp.com/biz/YourBusinessName"
+                  target="_blank"
+                >
+                  Review on Yelp
+                </Button>
+              </Col>
+              <Col md={4} className="mb-2">
+                <Button
+                  variant="primary"
+                  block
+                  href="https://www.tripadvisor.com/Attraction_Review-gYourBusinessName"
+                  target="_blank"
+                >
+                  Review on TripAdvisor
+                </Button>
+              </Col>
+            </Row>
+          </div>
+        )}
       </Container>
     </div>
   );

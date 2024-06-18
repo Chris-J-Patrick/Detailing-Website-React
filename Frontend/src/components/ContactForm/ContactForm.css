@@ -1,9 +1,39 @@
-/* ContactForm.css */
-.support-info p {
-  font-size: 1.2rem; /* Slightly larger font size for readability */
+.contact-form-container {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.contact {
-  min-height: 100vh;
-  padding-top: 50px; /* Ensures that the contact form doesn't overlap with the navbar if it's fixed */
+.contact-form-container h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-form-container .card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.contact-form-container .card-title {
+  color: #007bff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-form-container .form-label {
+  font-weight: bold;
+}
+
+.contact-form-container .form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+
+.contact-form-container .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.contact-form-container .btn-primary:hover {
+  background-color: #0056b3;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { Container, Row, Col, Card, Accordion } from "react-bootstrap";
 import styles from "./About.module.css";
 import "./About.css";
 import {
@@ -44,28 +45,16 @@ function About() {
   ];
 
   return (
-    <div className={styles.aboutsection}>
-      <div className="row">
-        {/* <div className="col-12 bg-white rounded-5">
-           <CountUp end={116} duration={1.5} redraw={true}>
-            {({ countUpRef, start }) => (
-              <VisibilitySensor onChange={start} delayedCall>
-                <h2 ref={countUpRef} className="display-2 text-center">
-                  {" "}
-                </h2>
-              </VisibilitySensor>
-            )}
-          </CountUp> */}
-        <div className="text-center py-3 bg-light border rounded">
+    <Container fluid className={styles.aboutsection}>
+      <Row>
+        <Col className="text-center py-3 bg-light border rounded">
           <h4 className="mb-2">We're Almost There!</h4>
           <p className="mb-0">
             Finalizing details and getting ready to serve you with the best car
             detailing experience.
           </p>
-          {/*</div>
-           <p className="text-center">Happy Customers</p> */}
-        </div>
-      </div>
+        </Col>
+      </Row>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -98,14 +87,14 @@ function About() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="May 2024 - Anticipated Rewards Program Launch"
-          iconStyle={{ background: "rgb(243, 179, 33)", color: "fff" }}
+          iconStyle={{ background: "rgb(243, 179, 33)", color: "#fff" }}
         >
           <h3 className="vertical-timeline-element-title">
             Anticipated Rewards Program Launch Date
           </h3>
           <p>
-            All purchases from 12/12/2023 forward will quality for rewards.
-            (When it launches - early 2024){" "}
+            All purchases from 12/12/2023 forward will qualify for rewards.
+            (When it launches - early 2024)
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
@@ -123,7 +112,6 @@ function About() {
 
       <section className={styles.section}>
         <h3 className={styles.h3}>Transparent, Fair Pricing</h3>
-
         <p className={styles.p}>
           We believe in transparent pricing. No surprises, no hidden fees. Our
           rates are clear and available – you book, you pay, and you get the
@@ -169,34 +157,18 @@ function About() {
         </p>
       </section>
       <h2 className={styles.h2}>FAQ</h2>
-      <div className="accordion" id="accordionExample">
-        {faqData.map((faq) => (
-          <div className="accordion-item" key={faq.id}>
-            <h2 className="accordion-header" id={`heading${faq.id}`}>
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target={`#collapse${faq.id}`}
-                aria-expanded="false"
-                aria-controls={`collapse${faq.id}`}
-              >
-                {faq.question}
-              </button>
-            </h2>
-            <div
-              id={`collapse${faq.id}`}
-              className="accordion-collapse collapse"
-              aria-labelledby={`heading${faq.id}`}
-            >
-              <div className="accordion-body">
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          </div>
+      <Accordion defaultActiveKey="none">
+        {faqData.map((faq, index) => (
+          <Accordion.Item eventKey={index.toString()} key={faq.id}>
+            <Accordion.Header>{faq.question}</Accordion.Header>
+            <Accordion.Body>
+              <p>{faq.answer}</p>
+            </Accordion.Body>
+          </Accordion.Item>
         ))}
-      </div>
-    </div>
+      </Accordion>
+    </Container>
   );
 }
+
 export default About;

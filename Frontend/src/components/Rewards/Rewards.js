@@ -15,7 +15,7 @@ import { FaGift } from "react-icons/fa";
 
 // Mock data for user points
 const mockUser = {
-  points: 250, // Change this value to test different scenarios
+  points: 250,
 };
 
 const Rewards = () => {
@@ -46,6 +46,28 @@ const Rewards = () => {
   const renderTooltip = (discount) => <Tooltip>{discount}</Tooltip>;
 
   return (
+    <Container
+      fluid
+      className="d-flex align-items-center justify-content-center"
+      style={{
+        height: "84dvh",
+        background: "linear-gradient(to right, #4f83cc, #6baed6)",
+        padding: "2rem",
+        color: "#fff",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "4rem",
+          fontWeight: "bold",
+          textShadow: "2px 2px #333",
+        }}
+      >
+        Coming Soon
+      </h1>
+    </Container>
+    /*
     <Container
       fluid
       className="d-flex align-items-center justify-content-center"
@@ -217,6 +239,7 @@ const Rewards = () => {
         </Card.Body>
       </Card>
     </Container>
+    */
   );
 };
 

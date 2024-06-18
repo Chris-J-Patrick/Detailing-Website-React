@@ -1,4 +1,5 @@
 import React from "react";
+import { Table } from "react-bootstrap";
 import { FaCheck } from "react-icons/fa";
 
 const ServicesCompare = () => {
@@ -65,34 +66,32 @@ const ServicesCompare = () => {
   ];
 
   return (
-    <div className="table-responsive">
-      <table className="table table-sm table-bordered table-hover table-striped">
-        <thead className="thead-light">
-          <tr>
-            <th>Services</th>
-            {services.map((service, index) => (
-              <th key={index}>{service.title}</th>
+    <Table responsive="sm" bordered hover striped size="sm">
+      <thead className="thead-light">
+        <tr>
+          <th>Services</th>
+          {services.map((service, index) => (
+            <th key={index}>{service.title}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {allInclusions.map((inclusion, index) => (
+          <tr key={index}>
+            <td>{inclusion}</td>
+            {services.map((service, serviceIndex) => (
+              <td key={serviceIndex}>
+                {includesFeature(service, inclusion) ? (
+                  <FaCheck className="text-success" />
+                ) : (
+                  "-"
+                )}
+              </td>
             ))}
           </tr>
-        </thead>
-        <tbody>
-          {allInclusions.map((inclusion, index) => (
-            <tr key={index}>
-              <td>{inclusion}</td>
-              {services.map((service, serviceIndex) => (
-                <td key={serviceIndex}>
-                  {includesFeature(service, inclusion) ? (
-                    <FaCheck className="text-success me-2" />
-                  ) : (
-                    ""
-                  )}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </Table>
   );
 };
 
