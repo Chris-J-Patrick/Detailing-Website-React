@@ -37,7 +37,10 @@ function HomePage() {
         </div>
       )}
 
-      <div className="Welcome d-flex flex-column justify-content-evenly align-items-center ">
+      <Container
+        fluid
+        className="Welcome d-flex flex-column justify-content-evenly align-items-center "
+      >
         <p className="fs-5 text-center">
           South Jersey's destination for{" "}
           <span className="Highlight">premier car detailing</span>. Experience{" "}
@@ -88,7 +91,7 @@ function HomePage() {
           </Link>
         </div>
         <h5 className="text-center">Starting at ONLY $149.99</h5>
-      </div>
+      </Container>
 
       <div className="text-center">
         <h3 class="py-3 text-white font-weight-bold rounded-lg shadow-sm bg-dark">
