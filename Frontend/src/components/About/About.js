@@ -2,13 +2,13 @@ import React from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { Container, Row, Col, Card, Accordion } from "react-bootstrap";
-import styles from "./About.module.css";
-import "./About.css";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import styles from "./About.module.css";
+import "./About.css";
 
 function About() {
   const faqData = [
@@ -45,9 +45,9 @@ function About() {
   ];
 
   return (
-    <Container fluid className={styles.aboutsection}>
-      <Row>
-        <Col className="text-center py-3 bg-light border rounded">
+    <Container fluid className="about-container">
+      <Row className="mb-4">
+        <Col className="text-center bg-light border rounded p-3">
           <h4 className="mb-2">We're Almost There!</h4>
           <p className="mb-0">
             Finalizing details and getting ready to serve you with the best car
@@ -55,6 +55,7 @@ function About() {
           </p>
         </Col>
       </Row>
+
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -98,7 +99,8 @@ function About() {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-      <Container fluid>
+
+      <Container fluid className="mt-4">
         <section className={styles.section}>
           <h3 className={styles.h3}>
             Exceptional Value, Uncompromised Quality
@@ -163,8 +165,9 @@ function About() {
           </p>
         </section>
       </Container>
+
       <h2 className={styles.h2}>FAQ</h2>
-      <Accordion defaultActiveKey="none">
+      <Accordion defaultActiveKey="none" className="my-4">
         {faqData.map((faq, index) => (
           <Accordion.Item eventKey={index.toString()} key={faq.id}>
             <Accordion.Header>{faq.question}</Accordion.Header>

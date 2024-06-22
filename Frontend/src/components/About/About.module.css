@@ -1,10 +1,4 @@
 .aboutsection {
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0em;
-  max-width: 100%;
-  background-color: #f1f1f1;
 }
 .aboutheader {
   text-align: center;

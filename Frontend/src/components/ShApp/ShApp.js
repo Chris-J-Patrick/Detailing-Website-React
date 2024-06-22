@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Modal from "react-modal";
+import { Button, Modal, Container } from "react-bootstrap";
 import "./ShApp.css";
 
 const ShApp = ({ serviceUrl, buttonText }) => {
-  Modal.setAppElement("#root");
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleBodyScroll = (shouldScroll) => {
@@ -26,55 +24,42 @@ const ShApp = ({ serviceUrl, buttonText }) => {
   }, []);
 
   return (
-    <div className="mt-2">
-      <button
-        className="btn btn-primary"
+    <Container fluid>
+      <Button
+        variant="primary"
         onClick={openModal}
         style={{
           marginBottom: ".1rem",
-          padding: ".4rem .4rem ",
+          padding: ".4rem .4rem",
           fontSize: "1.4rem",
         }}
       >
         {buttonText || "Schedule"}
-      </button>
+      </Button>
 
       <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Appointment Scheduler"
-        style={{
-          content: {
-            top: "50%",
-            left: "50%",
-            right: "auto",
-            bottom: "auto",
-            marginRight: "-50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
-            height: "80%",
-          },
-          overlay: {
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(255, 255, 255, 0.75)",
-          },
-        }}
+        show={modalIsOpen}
+        onHide={closeModal}
+        aria-labelledby="contained-modal-title"
+        backdrop="static"
+        size="fullscreen"
       >
-        <button className="btn btn-primary btn-sm" onClick={closeModal}>
-          X
-        </button>
-        <iframe
-          src={serviceUrl}
-          title="Schedule Appointment"
-          width="100%"
-          height="100%"
-        ></iframe>
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title">
+            Appointment Scheduler
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <iframe
+            src={serviceUrl}
+            title="Schedule Appointment"
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+          ></iframe>
+        </Modal.Body>
       </Modal>
-    </div>
+    </Container>
   );
 };
 
