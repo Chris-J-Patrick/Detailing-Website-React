@@ -5,23 +5,13 @@ import "./ShApp.css";
 const ShApp = ({ serviceUrl, buttonText }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const toggleBodyScroll = (shouldScroll) => {
-    document.body.style.overflow = shouldScroll ? "auto" : "hidden";
-  };
-
   const openModal = () => {
     setModalIsOpen(true);
-    toggleBodyScroll(false);
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
-    toggleBodyScroll(true);
   };
-
-  useEffect(() => {
-    return () => toggleBodyScroll(true);
-  }, []);
 
   return (
     <Container fluid>
