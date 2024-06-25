@@ -91,7 +91,7 @@ function HomePage() {
         </Alert>
       )}
       <Container fluid className="Welcome p-0">
-        <Card className="bg-transparent border-0 py-0 my-0">
+        <Card className="bg-transparent border-0 py-0 my-0 mx-2">
           <Card.Title>
             <LogoDiamond
               size={9}
