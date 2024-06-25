@@ -2,6 +2,7 @@ import React from "react";
 import { IoDiamondOutline } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LogoDiamond.css";
+import { Container, Row, Col } from "react-bootstrap";
 function LogoDiamond({
   size,
   sizeUnit = "em",
@@ -11,7 +12,7 @@ function LogoDiamond({
   textFontSizeUnit = "em",
 }) {
   return (
-    <div className="logoContainer">
+    <Container className="logoContainer">
       <div
         className="logoText"
         style={{
@@ -26,7 +27,7 @@ function LogoDiamond({
         size={`${size}${sizeUnit}`}
         className="logoIcon"
       />
-    </div>
+    </Container>
   );
 }
 

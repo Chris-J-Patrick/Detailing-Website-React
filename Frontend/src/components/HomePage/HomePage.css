@@ -8,7 +8,6 @@
 .homepage-content {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  padding: 0;
 }
 
 .Welcome {
@@ -17,8 +16,11 @@
   background-repeat: no-repeat;
   background-attachment: local;
   position: relative;
-  border-radius: 0em;
-  min-height: 75dvh;
+  text-align: center;
+  min-height: 60vh;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .Welcome::before,

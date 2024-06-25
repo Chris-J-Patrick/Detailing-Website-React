@@ -76,7 +76,7 @@ function HomePage() {
   ];
 
   return (
-    <Container fluid className="homepage-content">
+    <Container fluid className="homepage-content p-0">
       {showBanner && (
         <Alert
           variant="warning"
@@ -90,45 +90,44 @@ function HomePage() {
           10% off - GRAND OPENING!
         </Alert>
       )}
-
-      <Container fluid className="Welcome text-center py-0">
-        <LogoDiamond
-          size={5}
-          sizeUnit="dvh"
-          color="white"
-          textColor="white"
-          textFontSize={5}
-          textFontSizeUnit="dvh"
-        />
-        <p className="fs-5 mb-4">
-          South Jersey's destination for{" "}
-          <span className="Highlight">premier car detailing</span>. Experience{" "}
-          <span className="Highlight">unparalleled shine</span>, inside and out!
-        </p>
-        <Row className="justify-content-center p-0">
+      <Container fluid className="Welcome p-0">
+        <Card className="bg-transparent border-0 py-0 my-0">
+          <Card.Body>
+            <LogoDiamond
+              size={7}
+              sizeUnit="dvw"
+              color="white"
+              textColor="white"
+              textFontSize={7}
+              textFontSizeUnit="dvw"
+              className=""
+            />
+            <Card.Subtitle>
+              South Jersey's destination for{" "}
+              <span className="Highlight">premier car detailing</span>.
+              Experience <span className="Highlight">unparalleled shine</span>,
+              inside and out!
+            </Card.Subtitle>
+          </Card.Body>
+        </Card>
+        <Row className="mx-5">
           {features.map((feature, index) => (
-            <Col key={index} md={4} h-100 className="feature-item m-2">
-              <Card className="h-100 m-0 p-0">
+            <Col key={index} sm={6} xs={12} md={4} lg={2} className="my-1">
+              <Card className="h-100 w-100 justify-content-center">
                 {" "}
-                <Card.Title className="fs-5">
-                  <FaCheck className="text-success fs-6 mx-1 my-0" />
+                <Card.Title className="fs-6">
+                  <FaCheck className="text-success fs-5 m-1 my-0" />
                   {feature.title}
                 </Card.Title>
-                <Card.Body className="fs-6"> {feature.detail}</Card.Body>
+                {/* <Card.Text className="fs-6"> {feature.detail}</Card.Body> */}
               </Card>
             </Col>
           ))}
-        </Row>
-        <Button
-          as={Link}
-          to="/services"
-          variant="primary"
-          size="lg"
-          className="my-4"
-        >
-          View Our Services
-        </Button>
-        <h5 className="">Starting at ONLY $149.99</h5>
+          <Button to="/services" variant="primary" className="my-1">
+            View Our Services
+          </Button>
+          <h5 className="my-1">Starting at ONLY $149.99</h5>
+        </Row>{" "}
       </Container>
 
       <Container fluid className="text-center my-2">
@@ -139,7 +138,7 @@ function HomePage() {
         <Row className="g-4 m-1">
           {additionalFeatures.map((feature, index) => (
             <Col key={index} md={4}>
-              <Card className="h-100 shadow feature-card rounded-lg">
+              <Card className="h-100 shadow feature-card rounded-sm">
                 <Card.Body className="bg-light">
                   <Card.Title className="text-dark">{feature.title}</Card.Title>
                   <Card.Text>{feature.description}</Card.Text>
@@ -152,5 +151,4 @@ function HomePage() {
     </Container>
   );
 }
-
 export default HomePage;
