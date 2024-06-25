@@ -12,7 +12,7 @@ function LogoDiamond({
   textFontSizeUnit = "em",
 }) {
   return (
-    <Container className="logoContainer">
+    <Container fluid className="logoContainer">
       <div
         className="logoText"
         style={{

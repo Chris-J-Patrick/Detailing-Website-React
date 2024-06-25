@@ -19,7 +19,7 @@
   text-align: center;
   min-height: 70dvh;
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
 }
 
