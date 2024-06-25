@@ -92,13 +92,13 @@ function HomePage() {
       )}
       <Container fluid className="Welcome p-0">
         <Card className="bg-transparent border-0 py-0 my-0">
-          <Card.Body>
+          <Card.Title>
             <LogoDiamond
-              size={7}
+              size={9}
               sizeUnit="dvw"
               color="white"
               textColor="white"
-              textFontSize={7}
+              textFontSize={9}
               textFontSizeUnit="dvw"
               className=""
             />
@@ -108,7 +108,7 @@ function HomePage() {
               Experience <span className="Highlight">unparalleled shine</span>,
               inside and out!
             </Card.Subtitle>
-          </Card.Body>
+          </Card.Title>
         </Card>
         <Row className="mx-5">
           {features.map((feature, index) => (
