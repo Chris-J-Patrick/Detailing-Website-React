@@ -94,12 +94,12 @@ function HomePage() {
         <Card className="bg-transparent border-0 py-0 my-0 mx-2">
           <Card.Title>
             <LogoDiamond
-              size={9}
-              sizeUnit="dvw"
+              size={2.3}
+              sizeUnit="rem"
               color="white"
               textColor="white"
-              textFontSize={9}
-              textFontSizeUnit="dvw"
+              textFontSize={2.3}
+              textFontSizeUnit="rem"
               className=""
             />
             <Card.Subtitle>
