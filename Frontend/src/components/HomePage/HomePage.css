@@ -17,9 +17,9 @@
   background-attachment: local;
   position: relative;
   text-align: center;
-  min-height: 60vh;
+  min-height: 70dvh;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
 }
 

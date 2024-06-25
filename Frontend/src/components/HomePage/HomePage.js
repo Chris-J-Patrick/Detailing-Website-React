@@ -91,7 +91,7 @@ function HomePage() {
         </Alert>
       )}
       <Container fluid className="Welcome p-0">
-        <Card className="bg-transparent border-0 py-0 my-0 mx-2">
+        <Card className="bg-transparent border-0 py-0 my-3 mx-2">
           <Card.Title>
             <LogoDiamond
               size={2.3}
@@ -102,7 +102,7 @@ function HomePage() {
               textFontSizeUnit="rem"
               className=""
             />
-            <Card.Subtitle>
+            <Card.Subtitle className="my-1">
               South Jersey's destination for{" "}
               <span className="Highlight">premier car detailing</span>.
               Experience <span className="Highlight">unparalleled shine</span>,
