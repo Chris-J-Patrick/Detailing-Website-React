@@ -17,12 +17,14 @@
   background-attachment: local;
   position: relative;
   text-align: center;
-  min-height: 70dvh;
   display: inline-flex;
-  justify-content: space-between;
+  min-height: 85dvh;
+  margin: 0;
+  padding: 0em;
   flex-direction: column;
+  justify-content: space-between;
 }
-
+/*
 .Welcome::before,
 .Welcome::after {
   content: "";
@@ -48,8 +50,12 @@
   clip-path: polygon(0 100%, 20% 50%, 0 0);
   z-index: 0;
 }
-
+*/
 .Highlight {
   color: rgb(0, 4, 255);
   font-weight: 600;
+}
+
+.compareContainer {
+  flex-direction: row;
 }
