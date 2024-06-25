@@ -119,11 +119,11 @@ function HomePage() {
             </Card.Subtitle>
           </Card.Title>
         </Card>
-        <Carousel fade className="rounded-0">
+        <Carousel fade className="rounded-0 my-2">
           <CarouselItem>
             <img
               src="../../beforeafter.jpg"
-              width="50%"
+              width="70%"
               className="img-fluid rounded"
               alt="beforeandafter"
             />
@@ -131,7 +131,7 @@ function HomePage() {
           <Carousel.Item>
             <img
               src="../../beforeafter3.jpg"
-              width="50%"
+              width="70%"
               className="img-fluid rounded"
               alt="beforeandafter"
             />
@@ -139,7 +139,7 @@ function HomePage() {
           <CarouselItem>
             <img
               src="../../beforeafter2.jpg"
-              width="50%"
+              width="70%"
               className="img-fluid rounded"
               alt="beforeandafter"
             />
@@ -147,7 +147,7 @@ function HomePage() {
           <CarouselItem>
             <img
               src="../../beforeafter4.jpg"
-              width="50%"
+              width="70%"
               className="img-fluid rounded"
               alt="beforeandafter"
             />
