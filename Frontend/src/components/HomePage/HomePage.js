@@ -1,18 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
-import {
-  Container,
-  Row,
-  Col,
-  Alert,
-  Button,
-  Card,
-  Carousel,
-  CarouselItem,
-} from "react-bootstrap";
+import { Container, Row, Col, Alert, Button, Card } from "react-bootstrap";
+import CarouselComp from "../CarouselComp.js";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
-import ImageCompareSlider from "../ImageCompareSlider/ImageCompareSlider";
 import before from "../../before.jpeg";
 import after from "../../after.jpeg";
 import "./HomePage.css";
@@ -20,8 +11,6 @@ import "./HomePage.css";
 function HomePage() {
   const [showBanner, setShowBanner] = useState(true);
   const [bannerTransition, setBannerTransition] = useState(false);
-  const firstImage = before;
-  const secondImage = after;
 
   const handleCloseBanner = () => {
     setBannerTransition(true);
@@ -100,7 +89,7 @@ function HomePage() {
         </Alert>
       )}
       <Container fluid className="Welcome p-0">
-        <Card className="bg-transparent border-0 py-1 mx-2">
+        <Card className="bg-transparent border-0 py-0 mx-2">
           <Card.Title>
             <LogoDiamond
               size={2.3}
@@ -119,40 +108,7 @@ function HomePage() {
             </Card.Subtitle>
           </Card.Title>
         </Card>
-        <Carousel fade className="rounded-0 my-2">
-          <CarouselItem>
-            <img
-              src="../../beforeafter.jpg"
-              width="70%"
-              className="img-fluid rounded"
-              alt="beforeandafter"
-            />
-          </CarouselItem>
-          <Carousel.Item>
-            <img
-              src="../../beforeafter3.jpg"
-              width="70%"
-              className="img-fluid rounded"
-              alt="beforeandafter"
-            />
-          </Carousel.Item>
-          <CarouselItem>
-            <img
-              src="../../beforeafter2.jpg"
-              width="70%"
-              className="img-fluid rounded"
-              alt="beforeandafter"
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <img
-              src="../../beforeafter4.jpg"
-              width="70%"
-              className="img-fluid rounded"
-              alt="beforeandafter"
-            />
-          </CarouselItem>
-        </Carousel>
+        <CarouselComp />
         <Row className="mx-5">
           {features.map((feature, index) => (
             <Col key={index} sm={6} xs={12} md={4} lg={2} className="my-1">
@@ -182,10 +138,6 @@ function HomePage() {
       </Container>
 
       <Container fluid className="text-center my-2">
-        <h3 className="py-3 text-white font-weight-bold rounded-lg shadow-lg bg-dark">
-          See the difference our detailing makes!
-        </h3>
-        <ImageCompareSlider firstImage={firstImage} secondImage={secondImage} />
         <Row className="g-4 m-1">
           {additionalFeatures.map((feature, index) => (
             <Col key={index} md={4}>

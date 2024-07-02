@@ -6,7 +6,7 @@
 }
 
 .homepage-content {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
@@ -18,12 +18,10 @@
   position: relative;
   text-align: center;
   display: inline-flex;
-  min-height: 85dvh;
-  margin: 0;
-  padding: 0em;
   flex-direction: column;
   justify-content: space-between;
 }
+
 /*
 .Welcome::before,
 .Welcome::after {

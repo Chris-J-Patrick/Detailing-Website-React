@@ -12,8 +12,10 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import { FaGift } from "react-icons/fa";
+import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
+import Profile from "../Profile";
 
-// Mock data for user points
 const mockUser = {
   points: 250,
 };
@@ -57,15 +59,16 @@ const Rewards = () => {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <LoginButton />
+      <LogoutButton />
+      <Profile />
       <h1
         style={{
           fontSize: "4rem",
           fontWeight: "bold",
           textShadow: "2px 2px #333",
         }}
-      >
-        Coming Soon
-      </h1>
+      ></h1>
     </Container>
     /*
     <Container
