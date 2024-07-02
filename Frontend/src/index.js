@@ -11,7 +11,7 @@ root.render(
     domain="dev-8axoaj12hkg375lw.us.auth0.com"
     clientId="YjUXTDjeKwvj5C471rsak54365k0V0Wi"
     authorizationParams={{
-      redirect_uri: window.location.origin + "/rewards",
+      redirect_uri: window.location.origin,
     }}
   >
     <App />
