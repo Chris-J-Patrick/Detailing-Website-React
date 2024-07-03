@@ -59,9 +59,12 @@ const Rewards = () => {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <LoginButton />
-      <LogoutButton />
-      <Profile />
+      <Container className="text-center">
+        <Profile />
+        <LoginButton />
+        <LogoutButton />
+      </Container>
+
       <h1
         style={{
           fontSize: "4rem",
