@@ -1,3 +1,4 @@
+// index.js
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -24,11 +25,9 @@ mongoose
   });
 
 const userRoutes = require("./routes/userRoutes");
-const rewardRoutes = require("./routes/rewardRoutes");
 const webhookRoutes = require("./routes/webhookRoutes");
 
 app.use("/api/users", userRoutes);
-app.use("/api/rewards", rewardRoutes);
 app.use("/api/webhooks", webhookRoutes);
 
 app.listen(PORT, () => {
