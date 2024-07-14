@@ -11,11 +11,11 @@ import {
 
 function CarouselComp() {
   return (
-    <Container className="my-0">
+    <Container fluid className="my-3">
       <Carousel>
         <Carousel.Item>
           <img
-            width="500px"
+            width="700px"
             src="../../beforeafter.jpg"
             className="img-fluid rounded-5"
             alt="beforeandafter"
@@ -24,7 +24,7 @@ function CarouselComp() {
         <Carousel.Item>
           <img
             src="../../beforeafter3.jpg"
-            width="500px"
+            width="700px"
             className="img-fluid rounded-5"
             alt="beforeandafter"
           />
@@ -32,7 +32,7 @@ function CarouselComp() {
         <CarouselItem>
           <img
             src="../../beforeafter2.jpg"
-            width="500px"
+            width="700px"
             className="img-fluid rounded-5"
             alt="beforeandafter"
           />
@@ -40,7 +40,7 @@ function CarouselComp() {
         <CarouselItem>
           <img
             src="../../beforeafter4.jpg"
-            width="500px"
+            width="700px"
             className="img-fluid rounded-5"
             alt="beforeandafter"
           />

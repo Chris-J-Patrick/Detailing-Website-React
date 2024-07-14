@@ -19,7 +19,7 @@ body {
   opacity: 1;
   overflow-x: hidden;
   z-index: 1;
-  background: linear-gradient(to right, #f0f2f5, #cfd9df);
+  background: linear-gradient(to right, #cdd0d4, #a3b0b8);
 }
 
 a {
@@ -31,11 +31,9 @@ a:hover {
   color: var(--hover-color);
 }
 
-.AppContainer {
-}
 .NavContainer {
   margin-bottom: 3.7rem;
 }
 
-.AppContainer {
+.ContentContainer {
 }
