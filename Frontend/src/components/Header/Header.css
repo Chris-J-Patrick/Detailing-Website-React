@@ -5,6 +5,7 @@
   --navbar-text-color: #f0f0f0;
   --navbar-hover-color: #007acc;
   --navbar-active-color: #006aff;
+  --navbar-border-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   background-color: var(--navbar-background);
   font-size: large;
   margin: 0;
+  border-bottom: 1px solid var(--navbar-border-color);
 }
 
 .navbar-shrink {
@@ -34,6 +36,7 @@ body {
   color: var(--navbar-text-color);
   margin-left: 0em;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .nav-link:hover,
@@ -64,4 +67,8 @@ body {
     text-align: left;
     padding: 0.5rem 0.1rem;
   }
+}
+
+.ms-auto {
+  margin-left: auto !important;
 }

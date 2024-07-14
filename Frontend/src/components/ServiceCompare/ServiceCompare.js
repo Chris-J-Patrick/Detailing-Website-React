@@ -1,8 +1,9 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import { FaCheck } from "react-icons/fa";
+import "./ServiceCompare.css";
 
-const ServicesCompare = () => {
+const ServiceCompare = () => {
   const services = [
     {
       title: "Basic Detail",
@@ -66,33 +67,42 @@ const ServicesCompare = () => {
   ];
 
   return (
-    <Table responsive="sm" bordered hover striped size="sm">
-      <thead className="thead-light">
-        <tr>
-          <th>Services</th>
-          {services.map((service, index) => (
-            <th key={index}>{service.title}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {allInclusions.map((inclusion, index) => (
-          <tr key={index}>
-            <td>{inclusion}</td>
-            {services.map((service, serviceIndex) => (
-              <td key={serviceIndex}>
-                {includesFeature(service, inclusion) ? (
-                  <FaCheck className="text-success" />
-                ) : (
-                  "-"
-                )}
-              </td>
+    <Container fluid className="services-compare-container">
+      <h2 className="text-center mb-2">Service Comparison</h2>
+      <Table
+        responsive
+        striped
+        bordered
+        hover
+        className="services-compare-table"
+      >
+        <thead className="thead-dark">
+          <tr>
+            <th>Features</th>
+            {services.map((service, index) => (
+              <th key={index}>{service.title}</th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {allInclusions.map((inclusion, index) => (
+            <tr key={index}>
+              <td>{inclusion}</td>
+              {services.map((service, serviceIndex) => (
+                <td key={serviceIndex} className="text-center">
+                  {includesFeature(service, inclusion) ? (
+                    <FaCheck className="text-success" />
+                  ) : (
+                    "-"
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Container>
   );
 };
 
-export default ServicesCompare;
+export default ServiceCompare;

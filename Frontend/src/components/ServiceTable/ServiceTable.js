@@ -1,17 +1,8 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  Alert,
-  ListGroup,
-} from "react-bootstrap";
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 import ShApp from "../ShApp/ShApp";
 import ServicesCompare from "../ServiceCompare/ServiceCompare";
 import SmoothScroll from "smooth-scroll";
@@ -28,43 +19,48 @@ function ServiceTable({ services }) {
   }, []);
 
   return (
-    <Container fluid className="justify-content-center">
-      <Row>
+    <Container fluid className="service-table-container">
+      <Row className="justify-content-center">
         {services.map((service, idx) => (
-          <Col key={idx} md={6} lg={4} className="mb-1 py-2">
+          <Col key={idx} md={6} lg={4} className="mb-4">
             <Card
-              className="h-100 d-flex flex-column justify-content-around"
-              border={service.isMostPopular ? "primary" : ""}
+              className={`h-100 service-card ${
+                service.isMostPopular ? "border-primary" : ""
+              }`}
             >
               {service.isMostPopular && (
-                <Card.Header className="bg-primary fs-4 text-white">
+                <Card.Header className="bg-primary text-white text-center fs-5">
                   Most Popular
                 </Card.Header>
               )}
               <Card.Body className="d-flex flex-column">
-                <div className="flex-grow-1">
+                <div className="flex-grow-1 mb-2">
                   <Card.Title className="fw-bold">{service.title}</Card.Title>
-                  <Card.Subtitle>{service.description}</Card.Subtitle>
-                  <h5>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {service.description}
+                  </Card.Subtitle>
+                  <h5 className="my-3">
                     {service.salePrice ? (
                       <>
-                        <div className="text-danger">
-                          <del>{service.price}</del>
-                        </div>
-                        <div className="fw-bold">{service.salePrice}</div>
+                        <span className="text-muted text-decoration-line-through">
+                          {service.price}
+                        </span>
+                        <span className="fw-bold text-danger ms-2">
+                          {service.salePrice}
+                        </span>
                       </>
                     ) : (
-                      <span>{service.price}</span>
+                      <span className="fw-bold">{service.price}</span>
                     )}
                   </h5>
-                  <ListGroup variant="flush" className="mb-1">
+                  <ListGroup variant="flush">
                     {service.inclusions.map((inclusion, index) => (
-                      <ListGroup.Item className="" key={index}>
+                      <ListGroup.Item key={index} className="border-0">
                         <FontAwesomeIcon
                           icon={faCheckCircle}
-                          className="text-success"
-                        />{" "}
-                        <span>{inclusion}</span>
+                          className="text-success me-2"
+                        />
+                        {inclusion}
                       </ListGroup.Item>
                     ))}
                   </ListGroup>
@@ -77,7 +73,11 @@ function ServiceTable({ services }) {
             </Card>
           </Col>
         ))}
-        <ServicesCompare />
+      </Row>
+      <Row className="mt-3">
+        <Col>
+          <ServicesCompare />
+        </Col>
       </Row>
     </Container>
   );

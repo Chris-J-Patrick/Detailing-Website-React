@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.service-table-container {
+  padding: 15px;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .card-header {
+  border-bottom: none;
+  font-weight: 700;
+}
+
+.service-card .card-body {
+  padding: 20px;
+}
+
+.service-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card .card-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h5 {
+  font-size: 1.5rem;
+}
+
+.service-card .list-group-item {
+  padding: 5px 0;
+}
+
+.service-card .list-group-item:not(:last-child) {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
+.ms-2 {
+  margin-left: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}

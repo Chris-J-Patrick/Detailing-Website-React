@@ -16,7 +16,7 @@
   background-image: url("../../../public/mbenz.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 60vh;
+  min-height: 80vh;
   display: inline-flex;
   flex-direction: column;
   position: relative;
@@ -75,11 +75,10 @@
 }
 
 .testimonials-carousel .carousel-item {
-  padding: 2rem 0;
+  padding: 2.2rem 0;
 }
 
 .testimonials-carousel .card {
-  background-color: #fff;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -91,6 +90,45 @@
 
 .bg-light {
   background-color: #f8f9fa !important;
+}
+.features-container {
+  padding: 20px;
+  background-color: transparent;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+  background-color: #e9f7ef;
+  border-radius: 50%;
+  display: inline-flex;
+  padding: 10px;
+}
+
+.feature-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-detail {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6c757d;
 }
 
 @media (max-width: 768px) {

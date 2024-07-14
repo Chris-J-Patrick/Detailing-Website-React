@@ -113,11 +113,11 @@ function HomePage() {
               inside and out!
             </h5>
           </Container>
-          <Container className="text-center w-50 align-self-center">
-            <Carousel className="testimonials-carousel">
+          <Container className="text-center align-self-center">
+            <Carousel data-bs-theme="dark" className="testimonials-carousel">
               <Carousel.Item>
                 <Card>
-                  <Card.Body>
+                  <Card.Body className="text-center bg-white text-dark">
                     "Attention to Detail Auto did an amazing job on my car! It
                     looks brand new."
                   </Card.Body>
@@ -129,7 +129,7 @@ function HomePage() {
               </Carousel.Item>
               <Carousel.Item>
                 <Card>
-                  <Card.Body className="text-center">
+                  <Card.Body className="text-center bg-white text-dark">
                     "I highly recommend their services. Professional and
                     thorough."
                   </Card.Body>
@@ -141,7 +141,7 @@ function HomePage() {
               </Carousel.Item>
               <Carousel.Item>
                 <Card>
-                  <Card.Body>
+                  <Card.Body className="text-center bg-white text-dark">
                     "Excellent service and great attention to detail. My car
                     looks fantastic!"
                   </Card.Body>
@@ -167,24 +167,36 @@ function HomePage() {
           </Container>
         </div>
       </Container>
-
-      <Container className="my-5">
-        <Row className="text-center">
+      <Container className="my-5 features-container">
+        <Row className="text-center justify-content-center">
           {features.map((feature, index) => (
-            <Col key={index} sm={6} xs={12} md={4} lg={2} className="mb-3">
+            <Col
+              key={index}
+              sm={6}
+              xs={12}
+              md={4}
+              lg={3}
+              xl={2}
+              className="mb-4"
+            >
               <Card className="feature-card h-100">
                 <Card.Body>
-                  <FaCheck className="text-success fs-5 mb-2" />
-                  <Card.Title>{feature.title}</Card.Title>
-                  <Card.Text>{feature.detail}</Card.Text>
+                  <div className="icon-wrapper mb-3">
+                    <FaCheck className="text-success fs-1" />
+                  </div>
+                  <Card.Title className="feature-title">
+                    {feature.title}
+                  </Card.Title>
+                  <Card.Text className="feature-detail">
+                    {feature.detail}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
       </Container>
-
-      <Container fluid className="text-center my-5 bg-light py-5">
+      {/*   <Container fluid className="text-center my-5 bg-transparent py-1">
         <Row className="g-4">
           {additionalFeatures.map((feature, index) => (
             <Col key={index} md={4}>
@@ -197,7 +209,7 @@ function HomePage() {
             </Col>
           ))}
         </Row>
-      </Container>
+      </Container>*/}
     </Container>
   );
 }
