@@ -1,20 +1,44 @@
+const fetch = require("node-fetch");
 const User = require("../models/User");
 
 const handleAcuityWebhook = async (req, res) => {
-  const { firstname, lastname, email, phone, amountspent, appointmentDate } =
-    req.body;
+  const { id } = req.body;
+
+  const acuityUserId = process.env.ACUITY_USER_ID;
+  const acuityApiKey = process.env.ACUITY_API_KEY;
+
+  const acuityAppointmentUrl = `https://acuityscheduling.com/api/v1/appointments/${id}`;
 
   try {
-    const validAmountSpent = parseFloat(amountspent);
+    const appointmentResponse = await fetch(acuityAppointmentUrl, {
+      method: "GET",
+      headers: {
+        Authorization: `Basic ${Buffer.from(
+          `${acuityUserId}:${acuityApiKey}`
+        ).toString("base64")}`,
+        Accept: "application/json",
+      },
+    });
+
+    if (!appointmentResponse.ok) {
+      throw new Error(
+        `Failed to fetch appointment: ${appointmentResponse.status} ${appointmentResponse.statusText}`
+      );
+    }
+
+    const appointment = await appointmentResponse.json();
+
+    const { firstName, lastName, email, phone, price } = appointment;
+
+    const validAmountSpent = parseFloat(price);
     if (isNaN(validAmountSpent)) {
-      throw new Error("Invalid amountSpent value");
+      throw new Error("Invalid price value");
     }
 
     let user = await User.findOne({ email });
-
     if (!user) {
       user = new User({
-        name: `${firstname} ${lastname}`,
+        name: `${firstName} ${lastName}`,
         email,
         phone,
         rewardsPoints: 0,
@@ -27,11 +51,11 @@ const handleAcuityWebhook = async (req, res) => {
     await user.save();
 
     res.status(200).json({
-      message: `User ${firstname} ${lastname} and rewards ${validAmountSpent} updated successfully`,
+      message: `User ${firstName} ${lastName} and rewards points updated successfully`,
     });
   } catch (err) {
     console.error("Error handling Acuity webhook:", err);
-    res.status(500).json({ message: "Error handling webhook" });
+    res.status(500).json({ message: "Error handling webhook: " + err.message });
   }
 };
 
