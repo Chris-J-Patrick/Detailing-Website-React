@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Card, Spinner, Container } from "react-bootstrap";
+import LogoutButton from "./LogoutButton";
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -27,11 +28,11 @@ const Profile = () => {
   }
 
   return (
-    <Container>
+    <Container className="">
       <Card
         style={{
-          width: "18rem",
           textAlign: "center",
+          justifySelf: "Center",
           border: "none",
           boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
         }}
@@ -44,7 +45,7 @@ const Profile = () => {
             alt={user.name}
             style={{
               alignItems: "center",
-              width: "100%",
+              width: "50px",
               height: "auto",
               borderRadius: "50%",
               border: "5px solid white",
@@ -55,6 +56,7 @@ const Profile = () => {
         <Card.Body>
           <Card.Title style={{ margin: 0 }}>{user.name}</Card.Title>
           <Card.Text style={{ color: "gray" }}>{user.email}</Card.Text>
+          <LogoutButton />
         </Card.Body>
       </Card>
     </Container>

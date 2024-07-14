@@ -95,28 +95,76 @@ function HomePage() {
 
       <Container fluid className="Welcome p-0">
         <div className="welcome-overlay">
-          <div className="logo-container text-center">
+          <Container fluid className="text-center py-2">
+            {" "}
             <LogoDiamond
-              size={2.3}
+              size={2}
               sizeUnit="rem"
               color="white"
               textColor="white"
-              textFontSize={2.3}
+              textFontSize={2}
               textFontSizeUnit="rem"
               className=""
             />
-            <h4 className="welcome-title text-white mt-3">
+            <h5 className="welcome-title text-white">
               South Jersey's destination for{" "}
               <span className="Highlight">premier car detailing</span>.
               Experience <span className="Highlight">unparalleled shine</span>,
               inside and out!
-            </h4>
-          </div>
-
-          <Button as={Link} to="/services" variant="primary" className="btn-lg">
-            View Our Services
-          </Button>
-          <h5 className="my-2 text-white">Starting at ONLY $149.99</h5>
+            </h5>
+          </Container>
+          <Container className="text-center w-50 align-self-center">
+            <Carousel className="testimonials-carousel">
+              <Carousel.Item>
+                <Card>
+                  <Card.Body>
+                    "Attention to Detail Auto did an amazing job on my car! It
+                    looks brand new."
+                  </Card.Body>
+                  <Card.Subtitle className="bg-dark text-white">
+                    {" "}
+                    - Jane Smith
+                  </Card.Subtitle>
+                </Card>
+              </Carousel.Item>
+              <Carousel.Item>
+                <Card>
+                  <Card.Body className="text-center">
+                    "I highly recommend their services. Professional and
+                    thorough."
+                  </Card.Body>
+                  <Card.Subtitle className="bg-dark text-white">
+                    {" "}
+                    - Jane Smith
+                  </Card.Subtitle>
+                </Card>
+              </Carousel.Item>
+              <Carousel.Item>
+                <Card>
+                  <Card.Body>
+                    "Excellent service and great attention to detail. My car
+                    looks fantastic!"
+                  </Card.Body>
+                  <Card.Subtitle className="bg-dark text-white">
+                    {" "}
+                    - Jane Smith
+                  </Card.Subtitle>
+                </Card>
+              </Carousel.Item>
+            </Carousel>
+          </Container>
+          <Container fluid className="text-center py-2">
+            {" "}
+            <Button
+              as={Link}
+              to="/services"
+              variant="primary"
+              className="btn-lg"
+            >
+              View Our Services
+            </Button>
+            <h5 className="my-1 text-white">Starting at ONLY $149.99</h5>
+          </Container>
         </div>
       </Container>
 
@@ -136,45 +184,6 @@ function HomePage() {
         </Row>
       </Container>
 
-      <Container className="text-center my-5">
-        <h2 className="mb-4">What Our Customers Say</h2>
-        <Carousel className="testimonials-carousel">
-          <Carousel.Item>
-            <Card className="shadow">
-              <Card.Body>
-                <p className="mb-0">
-                  "Attention to Detail Auto did an amazing job on my car! It
-                  looks brand new."
-                </p>
-                <footer className="blockquote-footer mt-3">John Doe</footer>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Card className="shadow">
-              <Card.Body>
-                <p className="mb-0">
-                  "I highly recommend their services. Professional and
-                  thorough."
-                </p>
-                <footer className="blockquote-footer mt-3">Jane Smith</footer>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Card className="shadow">
-              <Card.Body>
-                <p className="mb-0">
-                  "Excellent service and great attention to detail. My car looks
-                  fantastic!"
-                </p>
-                <footer className="blockquote-footer mt-3">Mark Wilson</footer>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-        </Carousel>
-      </Container>
-
       <Container fluid className="text-center my-5 bg-light py-5">
         <Row className="g-4">
           {additionalFeatures.map((feature, index) => (
@@ -192,5 +201,4 @@ function HomePage() {
     </Container>
   );
 }
-
 export default HomePage;

@@ -75,15 +75,14 @@ const Rewards = () => {
           className="text-center shadow-lg mb-4 w-100"
           style={{ maxWidth: "900px", borderRadius: "15px" }}
         >
-          <Card.Body>
-            <Row className="mb-4">
+          <Card.Body className="align-items-center text-center">
+            <Row className="mb-4 text-center align-content-center">
               <Col>
-                <Profile />
-                <LogoutButton />
-                <h1 className="display-5" style={{ color: "#4f83cc" }}>
+                <h1 className="display-6" style={{ color: "#6baed6" }}>
                   Rewards Program <FaGift style={{ color: "#6baed6" }} />
                 </h1>
               </Col>
+              <Profile />
             </Row>
             <Row className="mb-4">
               <Col md={6}>
