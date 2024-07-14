@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
-import { Container, Row, Col, Alert, Button, Card } from "react-bootstrap";
-import CarouselComp from "../CarouselComp.js";
+import {
+  Container,
+  Row,
+  Col,
+  Alert,
+  Button,
+  Card,
+  Carousel,
+} from "react-bootstrap";
 import LogoDiamond from "../LogoDiamond/LogoDiamond";
 import before from "../../before.jpeg";
 import after from "../../after.jpeg";
@@ -22,10 +29,7 @@ function HomePage() {
       title: "Hassle-Free Online Booking",
       detail: "Book in less than 30 seconds!",
     },
-    {
-      title: "Flat Rates",
-      detail: "Same price for all sizes! Cars & Trucks.",
-    },
+    { title: "Flat Rates", detail: "Same price for all sizes! Cars & Trucks." },
     {
       title: "Price Match Guarantee",
       detail:
@@ -88,9 +92,10 @@ function HomePage() {
           10% off - GRAND OPENING!
         </Alert>
       )}
+
       <Container fluid className="Welcome p-0">
-        <Card className="bg-transparent border-0 py-0 mx-2">
-          <Card.Title>
+        <div className="welcome-overlay">
+          <div className="logo-container text-center">
             <LogoDiamond
               size={2.3}
               sizeUnit="rem"
@@ -100,49 +105,82 @@ function HomePage() {
               textFontSizeUnit="rem"
               className=""
             />
-            <Card.Subtitle className="my-1">
+            <h4 className="welcome-title text-white mt-3">
               South Jersey's destination for{" "}
               <span className="Highlight">premier car detailing</span>.
               Experience <span className="Highlight">unparalleled shine</span>,
               inside and out!
-            </Card.Subtitle>
-          </Card.Title>
-        </Card>
-        <CarouselComp />
-        <Row className="mx-5">
+            </h4>
+          </div>
+
+          <Button as={Link} to="/services" variant="primary" className="btn-lg">
+            View Our Services
+          </Button>
+          <h5 className="my-2 text-white">Starting at ONLY $149.99</h5>
+        </div>
+      </Container>
+
+      <Container className="my-5">
+        <Row className="text-center">
           {features.map((feature, index) => (
-            <Col key={index} sm={6} xs={12} md={4} lg={2} className="my-1">
-              <Card className="h-100 w-100 justify-content-center">
-                {" "}
-                <Card.Title className="fs-6">
-                  <FaCheck className="text-success fs-5 m-1 my-0" />
-                  {feature.title}
-                </Card.Title>
-                {/* <Card.Text className="fs-6"> {feature.detail}</Card.Body> */}
+            <Col key={index} sm={6} xs={12} md={4} lg={2} className="mb-3">
+              <Card className="feature-card h-100">
+                <Card.Body>
+                  <FaCheck className="text-success fs-5 mb-2" />
+                  <Card.Title>{feature.title}</Card.Title>
+                  <Card.Text>{feature.detail}</Card.Text>
+                </Card.Body>
               </Card>
             </Col>
           ))}
-          <Col>
-            <Button
-              as={Link}
-              to="/services"
-              variant="primary"
-              className="btn-lg my-1"
-            >
-              View Our Services
-            </Button>
-          </Col>
-
-          <h5 className="my-1">Starting at ONLY $149.99</h5>
-        </Row>{" "}
+        </Row>
       </Container>
 
-      <Container fluid className="text-center my-2">
-        <Row className="g-4 m-1">
+      <Container className="text-center my-5">
+        <h2 className="mb-4">What Our Customers Say</h2>
+        <Carousel className="testimonials-carousel">
+          <Carousel.Item>
+            <Card className="shadow">
+              <Card.Body>
+                <p className="mb-0">
+                  "Attention to Detail Auto did an amazing job on my car! It
+                  looks brand new."
+                </p>
+                <footer className="blockquote-footer mt-3">John Doe</footer>
+              </Card.Body>
+            </Card>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Card className="shadow">
+              <Card.Body>
+                <p className="mb-0">
+                  "I highly recommend their services. Professional and
+                  thorough."
+                </p>
+                <footer className="blockquote-footer mt-3">Jane Smith</footer>
+              </Card.Body>
+            </Card>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Card className="shadow">
+              <Card.Body>
+                <p className="mb-0">
+                  "Excellent service and great attention to detail. My car looks
+                  fantastic!"
+                </p>
+                <footer className="blockquote-footer mt-3">Mark Wilson</footer>
+              </Card.Body>
+            </Card>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
+
+      <Container fluid className="text-center my-5 bg-light py-5">
+        <Row className="g-4">
           {additionalFeatures.map((feature, index) => (
             <Col key={index} md={4}>
-              <Card className="h-100 shadow feature-card rounded-sm">
-                <Card.Body className="bg-light">
+              <Card className="h-100 shadow-sm">
+                <Card.Body>
                   <Card.Title className="text-dark">{feature.title}</Card.Title>
                   <Card.Text>{feature.description}</Card.Text>
                 </Card.Body>
@@ -154,4 +192,5 @@ function HomePage() {
     </Container>
   );
 }
+
 export default HomePage;

@@ -1,0 +1,45 @@
+/* Footer.css */
+
+footer {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+footer p,
+footer a {
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #007acc;
+}
+
+footer .social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #007acc;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer .mt-3 {
+  margin-top: 1rem !important;
+}

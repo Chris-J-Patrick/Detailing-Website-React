@@ -4,7 +4,7 @@ import "./ContactForm.css"; // Assume you have a CSS file for additional styles
 
 function ContactForm() {
   return (
-    <Container fluid id="contact" className=" contact-form-container">
+    <Container fluid id="contact" className="contact-form-container">
       <h2 className="text-center mb-3">Contact Us</h2>
       <Row className="justify-content-center">
         <Col md={6}>

@@ -1,8 +1,10 @@
+/* HomePage.css */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400;700&display=swap");
 
 :root {
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --highlight-color: rgb(0, 4, 255);
 }
 
 .homepage-content {
@@ -11,49 +13,111 @@
 }
 
 .Welcome {
-  background-image: linear-gradient(to bottom, #a4eeff, #2193b0);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-attachment: local;
-  position: relative;
-  text-align: center;
-  display: inline-flex;
-  flex-direction: column;
+  background-image: url("../../../public/mbenz.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  align-content: space-between;
+  justify-content: center;
+  position: relative;
 }
 
-/*
-.Welcome::before,
-.Welcome::after {
-  content: "";
+.welcome-overlay {
   position: absolute;
-  height: 100%;
-  width: 15%;
-  opacity: 0.9;
-  z-index: 0;
-}
-
-.Welcome::before {
   top: 0;
-  right: 0;
-  background: linear-gradient(to left, #ffb75e, #ffffff);
-  clip-path: polygon(100% 0, 80% 50%, 100% 100%);
-  z-index: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.Welcome::after {
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, #a2e6ff, #ffffff);
-  clip-path: polygon(0 100%, 20% 50%, 0 0);
-  z-index: 0;
+.logo-container {
+  max-width: 80%;
+  margin: 0 auto;
 }
-*/
+
+.welcome-title {
+  font-weight: bold;
+  color: white;
+}
+
 .Highlight {
-  color: rgb(0, 4, 255);
+  color: var(--highlight-color);
   font-weight: 600;
 }
 
-.compareContainer {
-  flex-direction: row;
+.alert-dismissible.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.features-row {
+  margin-top: 2rem;
+}
+
+.features-row .card {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.features-row .card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.features-row .fa-check {
+  margin-right: 0.5rem;
+}
+
+.testimonials-carousel .carousel-item {
+  padding: 2rem 0;
+}
+
+.testimonials-carousel .card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-carousel .blockquote-footer {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item {
+    padding: 1rem 0;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+  }
+
+  .h2 {
+    font-size: 1.8rem;
+  }
 }
