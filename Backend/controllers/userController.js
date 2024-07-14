@@ -45,6 +45,7 @@ const getUserRewardsByEmail = async (req, res) => {
 };
 const addUser = async (req, res) => {
   const user = new User({
+    Auth0Id: req.body.Auth0Id,
     name: req.body.name,
     email: req.body.email,
     address: req.body.address,

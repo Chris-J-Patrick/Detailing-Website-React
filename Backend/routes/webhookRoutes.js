@@ -1,4 +1,3 @@
-// routes/webhookRoutes.js
 const express = require("express");
 const { handleAcuityWebhook } = require("../controllers/webhookController");
 

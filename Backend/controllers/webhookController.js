@@ -1,4 +1,3 @@
-// controllers/webhookController.js
 const User = require("../models/User");
 
 const handleAcuityWebhook = async (req, res) => {
