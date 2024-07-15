@@ -1,40 +1,94 @@
+/* ContactForm.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --card-bg-color: #ffffff;
+  --highlight-color: #ffca2c;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow-color: rgba(0, 0, 0, 0.15);
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
+
 .contact-form-container {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 1rem;
-  min-height: 80dvh;
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  min-height: 100vh;
 }
 
-.contact-form-container h2 {
-  color: #333;
+.section-title {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.card .card-title {
+  font-family: var(--font-secondary);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-family: var(--font-primary);
   font-weight: bold;
 }
 
-.contact-form-container .card {
-  background-color: #fff;
+.form-control {
   border-radius: 0.5rem;
-}
-
-.contact-form-container .card-title {
-  color: #007bff;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.contact-form-container .form-label {
-  font-weight: bold;
-}
-
-.contact-form-container .form-control {
-  border-radius: 0.25rem;
   border: 1px solid #ced4da;
 }
 
-.contact-form-container .btn-primary {
-  background-color: #007bff;
+.btn-primary {
+  font-family: var(--font-secondary);
+  font-size: 1.25rem;
+  background-color: var(--primary-color);
   border: none;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form-container .btn-primary:hover {
+.btn-primary:hover {
   background-color: #0056b3;
+}
+
+.contact-info-card {
+  background-color: var(--card-bg-color);
+  padding: 30px;
+}
+
+.contact-info {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card .card-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
 }

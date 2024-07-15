@@ -1,0 +1,81 @@
+/* Rewards.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --card-bg-color: #ffffff;
+  --highlight-color: #ffca2c;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow-color: rgba(0, 0, 0, 0.15);
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
+
+.rewards-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #4f83cc, #6baed6);
+}
+
+.rewards-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  background-color: var(--card-bg-color);
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.rewards-title {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 2rem;
+}
+
+.rewards-icon {
+  color: #6baed6;
+  margin-left: 10px;
+}
+
+.rewards-progress {
+  height: 20px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  font-family: var(--font-secondary);
+  font-size: 1.25rem;
+  background-color: var(--primary-color);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  margin-top: 2rem;
+}
+
+.table th,
+.table td {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .rewards-title {
+    font-size: 2rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}
