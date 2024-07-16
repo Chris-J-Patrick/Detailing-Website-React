@@ -34,6 +34,15 @@ This website includes both a frontend and a backend, developed using modern web 
   2. Update documentation to match current project structure and functionalities.
   3. Utilize peer reviews to improve coding practices and discover potential issues early.
 
+### Adjust Global CSS File to Remove Redundant CSS Files and Classes
+
+- **Objective**: Streamline CSS to improve maintainability and performance.
+- **Steps**:
+  1. Review and list all current CSS files and classes.
+  2. Remove unused or redundant styles.
+  3. Update `index.css` and ensure functionality remains intact.
+  4. Test for visual consistency and document the changes.
+
 ### Frontend
 
 The frontend is built with React and styled using React-Bootstrap to ensure a responsive and professional look. Key features include:
