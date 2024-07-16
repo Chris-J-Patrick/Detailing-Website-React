@@ -106,8 +106,10 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 - `node_modules/` - Contains all npm dependencies.
 - `public/` - Static assets like images and icons.
 - `src/` - Source files for the React application.
-  - `components/` - Reusable UI components.
-  - `services/` - Services and business logic.
+  - `components/` - Houses reusable UI components for the application.
+  - `App.js` - Main React component for UI routing and layout.
+  - `index.css` - Global stylesheet for the application.
+  - `index.js` - Entry point for the React app, handling DOM rendering.
 - `.gitignore` - Specifies intentionally untracked files to ignore.
 - `package-lock.json` - Automatically generated for any operations where npm modifies either the node_modules tree or package.json.
 - `package.json` - Manifest file for the project, defines project dependencies.
