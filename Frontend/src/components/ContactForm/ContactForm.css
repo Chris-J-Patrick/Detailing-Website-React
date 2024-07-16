@@ -16,8 +16,8 @@
 
 .contact-form-container {
   background-color: var(--background-color);
-  padding: 20px 10px;
-  min-height: 80vh;
+  padding: 10px;
+  min-height: 70vh;
 }
 
 .section-title {

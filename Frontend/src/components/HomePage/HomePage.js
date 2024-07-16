@@ -68,8 +68,8 @@ function HomePage() {
           <Container fluid className="hero-content">
             <div className="top-left-content">
               <h1 className="hero-title">
-                South Jersey's destination for{" "}
-                <span className="highlight2">premier car detailing</span>.
+                South Jersey's{" "}
+                <span className="highlight2">Premier Car Detailer</span>.
               </h1>
               <p className="hero-subtitle">
                 Experience{" "}
@@ -86,12 +86,13 @@ function HomePage() {
               >
                 View Our Services
               </Button>
-              Starting at $149.99
+              <p className="hero-price">Starting at $149.99</p>
             </div>
           </Container>
         </div>
       </Container>
-      <Container fluid className="features-section py-1 my-1">
+
+      <Container fluid className="features-section py-3">
         <Row className="text-center justify-content-center">
           {features.map((feature, index) => (
             <Col key={index} xs={12} sm={6} md={5} lg={4} className="mb-4">
@@ -112,10 +113,8 @@ function HomePage() {
           ))}
         </Row>
       </Container>
-      <Container fluid className="testimonials-section py-2 bg-light">
-        <Row className="text-center mb-1">
-          <h2 className="section-title">Testimonials</h2>
-        </Row>
+      <Container fluid className="testimonials-section py-1 bg-light">
+        <h4 className="section-title text-center m-1">Testimonials</h4>
         <Carousel data-bs-theme="dark">
           <Carousel.Item>
             <Card className="testimonial-card">

@@ -7,7 +7,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import styles from "./About.module.css";
 import "./About.css";
 
 function About() {
@@ -28,17 +27,17 @@ function About() {
       id: "Three",
       question: "How long does a detailing session take?",
       answer:
-        "Depends on how much love your car needs. It's like a spa day for your car - you can't rush perfection or a good facial, can you? Expect us to be pampering your ride for a few hours, more if it's been living the off-road dream. ",
+        "Depends on how much love your car needs. It's like a spa day for your car - you can't rush perfection or a good facial, can you? Expect us to be pampering your ride for a few hours, more if it's been living the off-road dream.",
     },
     {
       id: "Four",
-      question: " Is car detailing really worth it?",
+      question: "Is car detailing really worth it?",
       answer:
         "Is a freshly baked pizza better than a frozen one? Absolutely. Detailing not only keeps your car looking snazzy but also helps maintain its value. It's like anti-aging cream, but for your car.",
     },
     {
       id: "Five",
-      question: " Do I need to prepare anything before your arrival?",
+      question: "Do I need to prepare anything before your arrival?",
       answer:
         "Just make sure your car is there, and maybe remove any ancient artifacts or gym bags from the backseat. We bring the magic, you bring the canvas (your car, that is).",
     },
@@ -46,8 +45,8 @@ function About() {
 
   return (
     <Container fluid className="about-container">
-      <Row className="mb-4">
-        <Col className="text-center bg-light border rounded p-3">
+      <Row className="mb-1">
+        <Col className="text-center bg-light border rounded p-1">
           <h4 className="mb-2">We're Almost There!</h4>
           <p className="mb-0">
             Finalizing details and getting ready to serve you with the best car
@@ -101,11 +100,9 @@ function About() {
       </VerticalTimeline>
 
       <Container fluid className="mt-4">
-        <section className={styles.section}>
-          <h3 className={styles.h3}>
-            Exceptional Value, Uncompromised Quality
-          </h3>
-          <p className={styles.p}>
+        <section className="about-section">
+          <h3>Exceptional Value, Uncompromised Quality</h3>
+          <p>
             At Attention to Detail Auto, located in Pennsville NJ, we redefine
             what it means to get top-notch car detailing at an honest value. Our
             journey began with a clear vision: to offer the highest quality
@@ -115,9 +112,9 @@ function About() {
           </p>
         </section>
 
-        <section className={styles.section}>
-          <h3 className={styles.h3}>Transparent, Fair Pricing</h3>
-          <p className={styles.p}>
+        <section className="about-section">
+          <h3>Transparent, Fair Pricing</h3>
+          <p>
             We believe in transparent pricing. No surprises, no hidden fees. Our
             rates are clear and available – you book, you pay, and you get the
             exceptional results you expect. No need for on-site quotations; we
@@ -125,11 +122,9 @@ function About() {
           </p>
         </section>
 
-        <section className={styles.section}>
-          <h3 className={styles.h3}>
-            Revolutionizing Booking in Car Detailing
-          </h3>
-          <p className={styles.p}>
+        <section className="about-section">
+          <h3>Revolutionizing Booking in Car Detailing</h3>
+          <p>
             We're proud to offer the only fully online, hassle-free booking
             system in the local car detailing industry. With just a few clicks,
             you can schedule your car's transformation from the comfort of your
@@ -138,16 +133,16 @@ function About() {
           </p>
         </section>
 
-        <section className={styles.section}>
-          <h3 className={styles.h3}>Our Commitment to Excellence</h3>
-          <p className={styles.p}>
+        <section className="about-section">
+          <h3>Our Commitment to Excellence</h3>
+          <p>
             Our team comprises professionals who are not just skilled but also
             deeply passionate about automobiles. Whether you own a vintage
             classic or a modern marvel, your vehicle will receive the
             specialized care it deserves, enhancing both its aesthetics and
             longevity.
           </p>
-          <p className={styles.p}>
+          <p>
             From ceramic coatings to paint protection, our services are a
             testament to our pursuit of perfection. Step into the world of
             Attention to Detail Auto, and experience car care that goes beyond
@@ -155,9 +150,9 @@ function About() {
           </p>
         </section>
 
-        <section className={styles.section}>
-          <h3 className={styles.h3}>Join Our Satisfied Customers</h3>
-          <p className={styles.p}>
+        <section className="about-section">
+          <h3>Join Our Satisfied Customers</h3>
+          <p>
             We invite you to join the ranks of our satisfied customers.
             Experience the unparalleled value and care that Attention to Detail
             Auto provides. It’s not just detailing; it’s a commitment to
@@ -166,7 +161,7 @@ function About() {
         </section>
       </Container>
 
-      <h2 className={styles.h2}>FAQ</h2>
+      <h2 className="faq-title">FAQ</h2>
       <Accordion defaultActiveKey="none" className="my-4">
         {faqData.map((faq, index) => (
           <Accordion.Item eventKey={index.toString()} key={faq.id}>

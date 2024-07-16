@@ -34,12 +34,14 @@ function ServiceTable({ services }) {
                 </Card.Header>
               )}
               <Card.Body className="d-flex flex-column">
-                <div className="flex-grow-1 mb-2">
-                  <Card.Title className="fw-bold">{service.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
+                <div className="flex-grow-1 mb-1">
+                  <Card.Title className="fw-bold mb-1">
+                    {service.title}
+                  </Card.Title>
+                  <Card.Subtitle className="mb-3 text-muted">
                     {service.description}
                   </Card.Subtitle>
-                  <h5 className="my-3">
+                  <h5 className="my-1">
                     {service.salePrice ? (
                       <>
                         <span className="text-muted text-decoration-line-through">
@@ -58,7 +60,7 @@ function ServiceTable({ services }) {
                       <ListGroup.Item key={index} className="border-0">
                         <FontAwesomeIcon
                           icon={faCheckCircle}
-                          className="text-success me-2"
+                          className="text-success me-1"
                         />
                         {inclusion}
                       </ListGroup.Item>

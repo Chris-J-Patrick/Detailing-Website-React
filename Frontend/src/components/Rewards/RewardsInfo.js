@@ -6,6 +6,7 @@ import RewardsTable from "./RewardsTable";
 const RewardsInfo = () => {
   return (
     <Container
+      fluid
       className="d-flex align-items-center flex-column justify-content-center p-1"
       style={{
         minHeight: "1vh",
