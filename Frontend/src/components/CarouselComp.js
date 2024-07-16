@@ -12,7 +12,7 @@ import {
 function CarouselComp() {
   return (
     <Container fluid className="my-3">
-      <Carousel>
+      <Carousel data-bs-theme="dark">
         <Carousel.Item>
           <img
             width="700px"
