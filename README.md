@@ -38,10 +38,13 @@ This website includes both a frontend and a backend, developed using modern web 
 
 - **Objective**: Streamline CSS to improve maintainability and performance.
 - **Steps**:
+
   1. Review and list all current CSS files and classes.
   2. Remove unused or redundant styles.
   3. Update `index.css` and ensure functionality remains intact.
   4. Test for visual consistency and document the changes.
+
+  ## End TODO
 
 ### Frontend
 
