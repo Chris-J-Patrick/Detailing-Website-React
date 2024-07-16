@@ -17,6 +17,7 @@ import LogoutButton from "../LogoutButton";
 import Profile from "../Profile";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
+import RewardsInfo from "./RewardsInfo";
 
 const Rewards = () => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
@@ -29,7 +30,7 @@ const Rewards = () => {
   useEffect(() => {
     const fetchRewards = async () => {
       if (isAuthenticated) {
-        const rewardsPoints = 123; // Example value, replace with actual API call
+        const rewardsPoints = 123;
         setPoints(rewardsPoints);
 
         const progressValue = rewardsPoints % 100;
@@ -69,7 +70,7 @@ const Rewards = () => {
       }}
     >
       {!isAuthenticated ? (
-        <LoginButton />
+        <RewardsInfo />
       ) : (
         <Card
           className="text-center shadow-lg mb-4 w-100"
