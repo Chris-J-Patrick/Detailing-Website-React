@@ -68,26 +68,22 @@ const ServiceCompare = () => {
 
   return (
     <Container fluid className="services-compare-container">
-      <h2 className="text-center mb-2">Service Comparison</h2>
-      <Table
-        responsive
-        striped
-        bordered
-        hover
-        className="services-compare-table"
-      >
+      <h2 className="text-center mt-5">Service Comparison</h2>
+      <Table responsive striped hover className="services-compare-table ">
         <thead className="thead-dark">
           <tr>
             <th>Features</th>
             {services.map((service, index) => (
-              <th key={index}>{service.title}</th>
+              <th className="fs-6" key={index}>
+                {service.title}
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>
           {allInclusions.map((inclusion, index) => (
             <tr key={index}>
-              <td>{inclusion}</td>
+              <td className="fs-6">{inclusion}</td>
               {services.map((service, serviceIndex) => (
                 <td key={serviceIndex} className="text-center">
                   {includesFeature(service, inclusion) ? (

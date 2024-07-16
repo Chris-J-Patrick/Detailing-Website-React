@@ -10,7 +10,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -31,7 +31,10 @@
 .services-compare-table th,
 .services-compare-table td {
   vertical-align: middle;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
   text-align: left;
   border: none;
 }

@@ -74,26 +74,9 @@ function ServiceTable({ services }) {
           </Col>
         ))}
       </Row>
-      <Row className="mt-3">
-        <Col>
-          <ServicesCompare />
-        </Col>
-      </Row>
+      <ServicesCompare />
     </Container>
   );
 }
-
-ServiceTable.propTypes = {
-  services: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      salePrice: PropTypes.string,
-      inclusions: PropTypes.arrayOf(PropTypes.string).isRequired,
-      schedulingUrl: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
 
 export default ServiceTable;
