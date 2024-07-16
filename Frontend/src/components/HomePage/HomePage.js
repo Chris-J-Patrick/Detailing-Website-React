@@ -33,7 +33,8 @@ function HomePage() {
       detail:
         "Best Price & Service Guarantee - if you find a better price, we will beat it!",
     },
-    {
+
+    /* {
       title: "Fully Insured",
       detail: "Full Coverage Insurance for your peace of mind",
     },
@@ -44,7 +45,7 @@ function HomePage() {
     {
       title: "Ceramic Coatings",
       detail: "Offering Industry leading paint protection",
-    },
+    }, */
   ];
 
   return (
@@ -62,46 +63,44 @@ function HomePage() {
           10% off - GRAND OPENING!
         </Alert>
       )}
-
       <Container fluid className="hero-section">
         <div className="hero-overlay">
-          <Container className="text-center hero-content">
-            <h1 className="hero-title">
-              South Jersey's destination for{" "}
-              <span className="highlight">premier car detailing</span>.
-            </h1>
-            <p className="hero-subtitle">
-              Experience <span className="highlight">unparalleled shine</span>,
-              inside and out!
-            </p>
-            <Button
-              as={Link}
-              to="/services"
-              variant="primary"
-              className="cta-button"
-            >
-              View Our Services
-            </Button>
-            <p className="hero-price">Starting at ONLY $149.99</p>
+          <Container fluid className="hero-content">
+            <div className="top-left-content">
+              <h1 className="hero-title">
+                South Jersey's destination for{" "}
+                <span className="highlight2">premier car detailing</span>.
+              </h1>
+              <p className="hero-subtitle">
+                Experience{" "}
+                <span className="highlight2">unparalleled shine</span>, inside
+                and out!
+              </p>
+            </div>
+            <div className="bottom-left-content">
+              <Button
+                as={Link}
+                to="/services"
+                variant="primary"
+                className="cta-button"
+              >
+                View Our Services
+              </Button>
+              Starting at $149.99
+            </div>
           </Container>
         </div>
       </Container>
-
-      <Container fluid className="features-section py-5">
-        <Row className="text-center mb-4">
-          <Col>
-            <h2 className="section-title">Why Choose Us?</h2>
-          </Col>
-        </Row>
+      <Container fluid className="features-section py-1 my-1">
         <Row className="text-center justify-content-center">
           {features.map((feature, index) => (
-            <Col key={index} sm={6} md={4} lg={3} className="mb-4">
-              <Card className="feature-card h-100">
+            <Col key={index} xs={12} sm={6} md={5} lg={4} className="mb-4">
+              <Card responsive className="feature-card h-100">
                 <Card.Body>
-                  <div className="icon-wrapper mb-3">
-                    <FaCheck className="text-success fs-1" />
+                  <div className="icon-wrapper mb-1">
+                    <FaCheck className="text-success fs-2" />
                   </div>
-                  <Card.Title className="feature-title">
+                  <Card.Title className="feature-title title-sm">
                     {feature.title}
                   </Card.Title>
                   <Card.Text className="feature-detail">
@@ -113,14 +112,11 @@ function HomePage() {
           ))}
         </Row>
       </Container>
-
-      <Container fluid className="testimonials-section py-5">
-        <Row className="text-center mb-4">
-          <Col>
-            <h2 className="section-title">Testimonials</h2>
-          </Col>
+      <Container fluid className="testimonials-section py-2 bg-light">
+        <Row className="text-center mb-1">
+          <h2 className="section-title">Testimonials</h2>
         </Row>
-        <Carousel data-bs-theme="dark" className="">
+        <Carousel data-bs-theme="dark">
           <Carousel.Item>
             <Card className="testimonial-card">
               <Card.Body className="text-center text-dark">

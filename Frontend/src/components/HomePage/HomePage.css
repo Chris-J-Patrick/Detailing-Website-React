@@ -1,4 +1,3 @@
-/* HomePage.css */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
@@ -7,7 +6,7 @@
   --secondary-color: #6c757d;
   --background-color: #f8f9fa;
   --card-bg-color: #ffffff;
-  --highlight-color: #ffca2c;
+  --highlight-color2: #ffb300;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --hover-shadow-color: rgba(0, 0, 0, 0.15);
   --font-primary: "Roboto", sans-serif;
@@ -23,10 +22,7 @@
   background-image: url("../../../public/mbenz.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 84dvh;
   position: relative;
   color: #ffffff;
 }
@@ -39,22 +35,44 @@
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.hero-title,
+.hero-subtitle {
+  text-align: left;
 }
 
 .hero-title {
   font-family: var(--font-secondary);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -62,17 +80,20 @@
   font-family: var(--font-secondary);
   font-size: 1.25rem;
   padding: 0.75rem 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.1rem;
+  align-self: flex-start;
 }
-
+/* "Starts at xxx" Price under hero CTA Button*/
 .hero-price {
   font-family: var(--font-secondary);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
+  margin-top: 0.5rem;
+  text-align: left;
 }
 
-.highlight {
-  color: var(--highlight-color);
+.highlight2 {
+  color: var(--highlight-color2);
 }
 
 .features-section {
@@ -109,7 +130,7 @@
 .feature-title {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -135,20 +156,28 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 1.75rem;
-  }
-
-  .hero-subtitle {
     font-size: 1rem;
+    padding: 0;
+  }
+  .icon-wrapper {
+    background-color: #e9f7ef;
+    border-radius: 50%;
+    display: inline-flex;
+    padding: 2px;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+    padding: 0;
   }
 
   .cta-button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 2rem;
   }
 
   .hero-price {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 0;
   }
 
   .section-title {
@@ -156,11 +185,11 @@
   }
 
   .feature-card {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   .feature-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .feature-detail {
