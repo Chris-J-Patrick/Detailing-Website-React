@@ -7,6 +7,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import "./Rewards.css";
+
 const RewardsTable = () => {
   const rewardTiers = [
     { points: 100, discount: "10%" },

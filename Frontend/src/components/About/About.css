@@ -1,3 +1,5 @@
+/* About.css */
+
 .about-page {
   font-family: "Roboto", sans-serif;
 }
@@ -8,16 +10,34 @@
 }
 
 .values-section {
-  background: #f8f9fa;
+  background: #c6c7c7;
+  padding: 1rem 0;
 }
 
 .value-card {
   background: #ffffff;
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  transition: transform 0.3s ease;
-  top: -120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: rem 1rem;
+  top: -125px;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.value-card .card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.value-card .card-text {
+  font-size: 1.1rem;
+  color: #666;
 }
 
 .commitment-section {
@@ -25,27 +45,28 @@
   color: #ffffff;
 }
 
-.faq-section {
-  background: #ffffff;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
-.cta-section {
-  background: #007bff;
-  padding: 5rem 0;
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-.cta-section .btn-light {
-  background: #ffffff;
+.commitment-section .btn-primary {
+  background-color: #007bff;
   border: none;
-  color: #007bff;
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cta-section .btn-light:hover {
-  background: #0056b3;
-  color: #ffffff;
+.commitment-section .btn-primary:hover {
+  background-color: #0056b3;
 }
 
 .img-fluid {
@@ -54,7 +75,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero-section {
+  .hero-section-about {
     padding: 3rem 0;
   }
 
@@ -67,6 +88,18 @@
   }
 
   .cta-section .btn-light {
+    font-size: 1rem;
+  }
+
+  .values-section {
+    padding: 3rem 1rem;
+  }
+
+  .value-card .card-title {
+    font-size: 1.5rem;
+  }
+
+  .value-card .card-text {
     font-size: 1rem;
   }
 }

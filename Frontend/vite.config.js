@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   esbuildOptions: {
     loader: { ".js": "jsx" },
+    base: "./",
   },
 });
