@@ -7,10 +7,9 @@ const RewardsInfo = () => {
   return (
     <Container
       fluid
-      className="d-flex align-items-center flex-column justify-content-center p-1"
+      className="d-flex align-items-center flex-column justify-content-center"
       style={{
         minHeight: "1vh",
-        background: "linear-gradient(to right, #4f83cc, #6baed6)",
       }}
     >
       <Card
@@ -30,8 +29,8 @@ const RewardsInfo = () => {
             style={{
               fontSize: "2rem",
               fontWeight: "bold",
-              color: "#007bff",
-              marginBottom: "30px",
+              color: "black",
+              marginBottom: "0px",
             }}
           >
             Join Our Rewards Program!
@@ -39,25 +38,27 @@ const RewardsInfo = () => {
           <Card.Text
             style={{
               fontSize: "1.2rem",
-              marginBottom: "30px",
+              marginBottom: "2rem",
               color: "#333",
             }}
+            className="text-secondary mt-0"
           >
-            Earn points with every dollar you spend:
+            Earn points with every dollar you spend
           </Card.Text>
-
           <Card.Text
             style={{
               fontSize: "1.1rem",
               marginBottom: "30px",
               color: "#333",
             }}
-          >
-            Sign up or log in to start earning rewards today!
-          </Card.Text>
+          ></Card.Text>
           <RewardsTable />
+
           <LoginButton />
         </Card.Body>
+        <Card.Subtitle className="p-1">
+          Sign up or log in to start earning rewards today!
+        </Card.Subtitle>
       </Card>
     </Container>
   );

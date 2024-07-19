@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import HomePage from "./components/HomePage/HomePage";
 import Rewards from "./components/Rewards/Rewards";
+import ServiceCompare from "./components/ServiceCompare/ServiceCompare";
 
 function App() {
   return (

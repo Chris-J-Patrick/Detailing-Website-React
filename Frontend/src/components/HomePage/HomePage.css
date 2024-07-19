@@ -106,7 +106,9 @@
   font-size: 2rem;
   color: var(--primary-color);
 }
-
+.alert-dismissible {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 .feature-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 15px;

@@ -3,13 +3,18 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselComp from "../CarouselComp";
 import "./Testimonials.css";
+import PageTitle from "../PageTitle";
 
 const testimonialsData = [];
 
 function Testimonials() {
   return (
-    <Container fluid className="testimonials-page">
-      <h2 className="text-center section-title">What Our Customers Say</h2>
+    <Container fluid className="testimonials-page bg-transparent">
+      <PageTitle
+        title="Explore the stories behind our shine—direct from our valued clients."
+        subtitle="Real Feedback from Real Customers"
+      />
+
       {testimonialsData.length > 0 ? (
         <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {testimonialsData.map((testimonial) => (

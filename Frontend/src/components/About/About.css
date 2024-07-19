@@ -1,109 +1,72 @@
-.about-container {
-  padding: 10px;
-  background-color: #f9f9f9;
+.about-page {
+  font-family: "Roboto", sans-serif;
 }
 
-.about-container .bg-light {
-  background-color: #ffffff !important;
-}
-.about-content {
-  max-width: 70vw;
-  margin: 0 auto;
-  text-align: left;
+.hero-section-about {
+  background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+  padding: 5rem 0;
 }
 
-.about-item {
-  margin-bottom: 40px;
-  padding: 20px;
+.values-section {
+  background: #f8f9fa;
+}
+
+.value-card {
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-item h3 {
-  font-size: 2rem;
-  color: #35404d;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.about-item p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #4d4d4d;
-}
-.faq-title {
-  font-size: 2rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.accordion {
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.accordion-item {
-  background-color: #fff;
-  margin: 0;
-}
-
-.accordion-button {
-  background-color: #1a5276;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 1em 1.5em;
   border: none;
-  text-align: left;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  top: -120px;
 }
 
-.accordion-button.collapsed {
-  background-color: #eeeeee;
-  color: #333333;
-}
-
-.accordion-button:not(.collapsed) {
-  color: #fff;
-  background-color: #145a7a;
-  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
-}
-
-.accordion-button:hover {
-  background-color: #166088;
+.commitment-section {
+  background: linear-gradient(135deg, #343a40 0%, #495057 100%);
   color: #ffffff;
 }
 
-.accordion-collapse {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+.faq-section {
+  background: #ffffff;
 }
 
-.accordion-body {
-  font-size: 1.1em;
-  line-height: 1.6;
-  padding: 1em 1.5em;
-  color: #3d4349;
-  background-color: #f1f1f1;
+.cta-section {
+  background: #007bff;
+  padding: 5rem 0;
+}
+
+.cta-section .btn-light {
+  background: #ffffff;
+  border: none;
+  color: #007bff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+  background: #0056b3;
+  color: #ffffff;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
-  .accordion {
-    margin: 1em;
-    max-width: 100%;
+  .hero-section {
+    padding: 3rem 0;
   }
-  .accordion-button {
-    padding: 0.75em 1em;
+
+  .commitment-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .commitment-section p {
     font-size: 1rem;
   }
-  .accordion-body {
-    padding: 0.75em 1em;
-  }
-  .faq-title {
-    font-size: 1.8em;
+
+  .cta-section .btn-light {
+    font-size: 1rem;
   }
 }

@@ -49,10 +49,10 @@ function HomePage() {
   ];
 
   return (
-    <Container fluid className="homepage-content p-0">
+    <Container fluid className="homepage-content p-0 ">
       {showBanner && (
         <Alert
-          variant="warning"
+          variant="info"
           className={`alert-dismissible fade m-1 ${
             bannerTransition ? "fade-out" : "show"
           }`}
@@ -92,7 +92,7 @@ function HomePage() {
         </div>
       </Container>
 
-      <Container fluid className="features-section py-3">
+      <Container fluid className="features-section py-2 bg-transparent">
         <Row className="text-center justify-content-center">
           {features.map((feature, index) => (
             <Col key={index} xs={12} sm={6} md={5} lg={4} className="mb-4">
@@ -113,7 +113,7 @@ function HomePage() {
           ))}
         </Row>
       </Container>
-      <Container fluid className="testimonials-section py-1 bg-light">
+      <Container fluid className="testimonials-section bg-transparent">
         <h4 className="section-title text-center m-1">Testimonials</h4>
         <Carousel data-bs-theme="dark">
           <Carousel.Item>

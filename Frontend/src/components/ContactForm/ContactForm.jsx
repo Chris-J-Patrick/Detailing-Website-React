@@ -1,11 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
-import "./ContactForm.css"; // Assume you have a CSS file for additional styles
+import "./ContactForm.css";
+import PageTitle from "../PageTitle";
 
 function ContactForm() {
   return (
-    <Container fluid className="contact-form-container">
-      <h2 className="text-center mb-1 section-title">Contact Us</h2>
+    <Container fluid className="contact-form-container bg-transparent">
+      <PageTitle
+        title={"We're Here to Help"}
+        subtitle={"Have questions? Our team is just a message away."}
+      />
       <Row className="justify-content-center p-2">
         <Col md={6} className="mb-1">
           <Card className="p-1 shadow-lg border-0 rounded-lg">

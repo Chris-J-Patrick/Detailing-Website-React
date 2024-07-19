@@ -1,7 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.services-page {
+  background: #f5f7fa;
+}
+
+.hero-section-services {
+  background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+  padding: 5rem 0;
+}
+
 .service-table-container {
-  padding: 15px;
+  padding: 2rem 1rem;
 }
 
 .service-card {
@@ -26,7 +39,7 @@
 }
 
 .service-card .card-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -36,11 +49,12 @@
 }
 
 .service-card h5 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .service-card .list-group-item {
-  padding: 5px 0;
+  padding: 0.5rem 0;
 }
 
 .service-card .list-group-item:not(:last-child) {
@@ -55,10 +69,22 @@
   margin-left: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1.5rem;
+.mt-5 {
+  margin-top: 3rem;
 }
 
 .mb-4 {
   margin-bottom: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.scroll-to-compare {
+  margin-top: 2rem;
+}
+
+#services-compare {
+  padding-top: 4rem;
 }
