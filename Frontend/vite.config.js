@@ -7,4 +7,7 @@ export default defineConfig({
   esbuildOptions: {
     loader: { ".js": "jsx" },
   },
+  build: {
+    outDir: "build", // Change output directory to 'build'
+  },
 });
