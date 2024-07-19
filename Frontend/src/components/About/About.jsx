@@ -123,7 +123,7 @@ function About() {
             </Col>
             <Col md={6}>
               <img
-                src="./aboutimg.jpeg"
+                src="../../../aboutimg.jpeg"
                 alt="Commitment to Excellence"
                 className="img-fluid rounded shadow"
               />
