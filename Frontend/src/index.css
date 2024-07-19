@@ -19,7 +19,6 @@ body {
   opacity: 1;
   overflow-x: hidden;
   z-index: 1;
-  background: linear-gradient(to right, #cdd0d4, #a3b0b8);
 }
 
 a {
