@@ -1,6 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import App from "./App.js";
+import App from "./App.jsx";
 import { createRoot } from "react-dom/client";
 import { Auth0Provider } from "@auth0/auth0-react";
 const root = createRoot(document.getElementById("root"));

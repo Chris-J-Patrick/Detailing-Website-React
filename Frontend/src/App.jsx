@@ -1,7 +1,3 @@
-import React from "react";
-import "font-awesome/css/font-awesome.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Scroll from "./components/Scroll";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
