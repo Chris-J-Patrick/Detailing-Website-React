@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceTable from "../ServiceTable/ServiceTable"; // Importing the new ServicesTable component
+import ServiceTable from "../ServiceTable/ServiceTable";
 import "./Services.css";
 import {
   FaCarSide,
@@ -7,8 +7,7 @@ import {
   FaPaintBrush,
   FaMedal,
   FaMagic,
-} from "react-icons/fa"; // Choose the appropriate icons here
-
+} from "react-icons/fa";
 function Services() {
   return <ServiceTable services={servicesData}></ServiceTable>;
 }

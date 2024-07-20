@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaCheck } from "react-icons/fa";
+import { FaCalendarCheck, FaDollarSign, FaAward } from "react-icons/fa";
+import LoginButton from "../LoginButton";
 import {
   Container,
   Row,
@@ -26,30 +27,23 @@ function HomePage() {
     {
       title: "Hassle-Free Online Booking",
       detail: "Book in less than 30 seconds!",
+      icon: <FaCalendarCheck className="feature-icon text-primary fs-1" />,
     },
-    { title: "Flat Rates", detail: "Same price for all sizes! Cars & Trucks." },
+    {
+      title: "Flat Rates",
+      detail: "Same price for all sizes! Cars & Trucks.",
+      icon: <FaDollarSign className="feature-icon text-success fs-1" />,
+    },
     {
       title: "Price Match Guarantee",
       detail:
         "Best Price & Service Guarantee - if you find a better price, we will beat it!",
+      icon: <FaAward className="feature-icon text-warning fs-1" />,
     },
-
-    /* {
-      title: "Fully Insured",
-      detail: "Full Coverage Insurance for your peace of mind",
-    },
-    {
-      title: "Paint Correction",
-      detail: "Process of removing imperfections to create the ultimate shine.",
-    },
-    {
-      title: "Ceramic Coatings",
-      detail: "Offering Industry leading paint protection",
-    }, */
   ];
 
   return (
-    <Container fluid className="homepage-content p-0 ">
+    <Container fluid className="homepage-content p-0">
       {showBanner && (
         <Alert
           variant="info"
@@ -67,52 +61,40 @@ function HomePage() {
         <div className="hero-overlay">
           <Container fluid className="hero-content">
             <div className="top-left-content">
-              <h1 className="hero-title">
+              <h1 className="hero-title ">
                 South Jersey's{" "}
                 <span className="highlight2">Premier Car Detailer</span>.
               </h1>
-              <p className="hero-subtitle">
-                Experience{" "}
-                <span className="highlight2">unparalleled shine</span>, inside
-                and out!
+              <p className="hero-subtitle mt-0">
+                Experience unparalleled shine, inside and out!
               </p>
+
+              <div className="align-items-evenly">
+                <Button
+                  as={Link}
+                  to="/services"
+                  variant="primary"
+                  className="btn-primary btn-lg cta-button mx-1"
+                >
+                  View Our Services
+                </Button>
+                <LoginButton />
+              </div>
             </div>
-            <div className="bottom-left-content">
-              <Button
-                as={Link}
-                to="/services"
-                variant="primary"
-                className="cta-button"
-              >
-                View Our Services
-              </Button>
-              <p className="hero-price">Starting at $149.99</p>
+
+            <p className="hero-price"></p>
+            <div className="bottom-features">
+              {features.map((feature, index) => (
+                <div key={index} className="d-flex align-items-center mb-3">
+                  {feature.icon}
+                  <h5 className="feature-title">{feature.title}</h5>
+                </div>
+              ))}
             </div>
           </Container>
         </div>
       </Container>
 
-      <Container fluid className="features-section py-2 bg-transparent">
-        <Row className="text-center justify-content-center">
-          {features.map((feature, index) => (
-            <Col key={index} xs={12} sm={6} md={5} lg={4} className="mb-4">
-              <Card responsive className="feature-card h-100">
-                <Card.Body>
-                  <div className="icon-wrapper mb-1">
-                    <FaCheck className="text-success fs-2" />
-                  </div>
-                  <Card.Title className="feature-title title-sm">
-                    {feature.title}
-                  </Card.Title>
-                  <Card.Text className="feature-detail">
-                    {feature.detail}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
       <Container fluid className="testimonials-section bg-transparent">
         <h4 className="section-title text-center m-1">Testimonials</h4>
         <Carousel data-bs-theme="dark">
