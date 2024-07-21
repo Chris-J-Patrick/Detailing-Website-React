@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
-  --navbar-background: #333;
+  --navbar-background: #1a1a1a;
   --navbar-text-color: #f0f0f0;
-  --navbar-hover-color: #007acc;
-  --navbar-active-color: #006aff;
+  --navbar-hover-color: #00bcd4;
+  --navbar-active-color: #03a9f4;
   --navbar-border-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
@@ -18,31 +18,31 @@ body {
   background-color: var(--navbar-background);
   font-size: large;
   margin: 0;
-  border-bottom: 1px solid var(--navbar-border-color);
+  padding: 0.7rem;
 }
 
 .navbar-shrink {
   padding: 0;
   font-size: medium;
-  background-color: rgba(51, 51, 51, 0.9);
+  background-color: rgba(26, 26, 26, 0.9);
 }
 
 .navbar-brand {
   transition: transform 0.3s ease-out;
-  margin-left: 0.5em;
 }
 
 .nav-link {
   color: var(--navbar-text-color);
   margin-left: 0em;
   transition: color 0.3s ease;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--navbar-hover-color);
   text-decoration: none;
+  transform: scale(1.1);
 }
 
 .nav-link.active {
@@ -52,7 +52,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color: #404040;
+  background-color: #303030;
   font-size: medium;
   margin-right: 0.2em;
   border: none;

@@ -22,11 +22,6 @@ function LogoDiamond({
       >
         Attention to Detail
       </div>
-      <IoDiamondOutline
-        color={color}
-        size={`${size}${sizeUnit}`}
-        className="logoIcon"
-      />
     </Container>
   );
 }

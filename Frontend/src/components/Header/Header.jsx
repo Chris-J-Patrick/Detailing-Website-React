@@ -45,12 +45,12 @@ function Header() {
       <Container fluid>
         <Navbar.Brand as={RouterNavLink} to="/">
           <LogoDiamond
-            size={isShrunk ? 0.8 : 1.1}
-            sizeUnit="em"
+            size={isShrunk ? 0.8 : 1.2}
+            sizeUnit="rem"
             color="#ffffff"
             textColor="#ffffff"
-            textFontSize={isShrunk ? 0.8 : 1.1}
-            textFontSizeUnit="em"
+            textFontSize={isShrunk ? 0.8 : 1.5}
+            textFontSizeUnit="rem"
           />
         </Navbar.Brand>
 

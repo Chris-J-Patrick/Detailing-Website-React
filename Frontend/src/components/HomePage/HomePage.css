@@ -6,8 +6,8 @@
   --highlight-color2: rgb(0, 170, 255);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --hover-shadow-color: rgba(0, 0, 0, 0.15);
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Montserrat", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
 }
 
 .homepage-content {
@@ -19,7 +19,7 @@
   background-image: url("../../../mbenz.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 83vh;
+  min-height: 80vh;
   position: relative;
   color: #eaeaea;
 }
@@ -60,7 +60,6 @@
 .hero-title {
   font-family: var(--font-secondary);
   font-size: 4.5vw;
-  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
@@ -97,19 +96,14 @@
   color: var(--highlight-color2);
 }
 
-.section-title {
-  font-family: var(--font-secondary);
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
 .alert-dismissible {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .feature-title {
   color: white;
-  margin-left: 10px;
+  margin-left: 1px;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 
 .feature-icon {
@@ -118,9 +112,6 @@
   padding: 5px;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .feature-detail {
@@ -131,7 +122,7 @@
 }
 
 .testimonials-section {
-  background-color: var(--background-color);
+  min-width: 100%;
 }
 
 .testimonial-card {
@@ -140,7 +131,7 @@
   box-shadow: 0 4px 8px var(--shadow-color);
   background-color: var(--card-bg-color);
   overflow: hidden;
-  padding: 2.5rem;
+  padding: 6rem;
 }
 
 @media (max-width: 768px) {
@@ -165,7 +156,7 @@
   }
 
   .feature-title {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   .feature-detail {
