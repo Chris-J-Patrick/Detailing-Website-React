@@ -3,7 +3,8 @@
 .services-compare-container {
   padding: 0px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0 0;
+  overflow-x: hidden;
 }
 
 .services-compare-container h2 {
@@ -31,8 +32,8 @@
 .services-compare-table th,
 .services-compare-table td {
   vertical-align: middle;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 3px;
   padding-right: 3px;
   text-align: left;

@@ -66,9 +66,11 @@ const ServiceCompare = () => {
   ];
 
   return (
-    <Container fluid className="services-compare-container">
-      <h2 className="text-center mt-5">Service Comparison</h2>
-      <Table responsive striped hover className="services-compare-table ">
+    <div fluid className="services-compare-container">
+      <h2 className="text-center mt-1 bg-primary py-5 text-white">
+        Service Comparison
+      </h2>
+      <Table responsive striped hover className="services-compare-table p-1">
         <thead className="thead-dark">
           <tr>
             <th>Features</th>
@@ -96,7 +98,7 @@ const ServiceCompare = () => {
           ))}
         </tbody>
       </Table>
-    </Container>
+    </div>
   );
 };
 

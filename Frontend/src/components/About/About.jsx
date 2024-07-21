@@ -76,7 +76,7 @@ function About() {
               <Col key={idx} lg={4} className="mb-4">
                 <Card className="value-card text-center h-100">
                   <Card.Body>
-                    <Card.Title>{value.title}</Card.Title>
+                    <Card.Title className="text-dark">{value.title}</Card.Title>
                     <Card.Text>{value.text}</Card.Text>
                   </Card.Body>
                 </Card>

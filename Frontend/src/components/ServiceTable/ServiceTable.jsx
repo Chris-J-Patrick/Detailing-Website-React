@@ -51,13 +51,14 @@ function ServiceTable({ services }) {
                     <Card.Subtitle className="mb-3 text-muted">
                       {service.description}
                     </Card.Subtitle>
-                    <h5 className="my-1">
+
+                    <h5 className="m-1">
                       {service.salePrice ? (
                         <>
                           <span className="text-muted text-decoration-line-through">
                             {service.price}
                           </span>
-                          <span className="fw-bold text-danger ms-2">
+                          <span className="fw-bold text-success ms-2">
                             {service.salePrice}
                           </span>
                         </>
@@ -67,10 +68,10 @@ function ServiceTable({ services }) {
                     </h5>
                     <ListGroup variant="flush">
                       {service.inclusions.map((inclusion, index) => (
-                        <ListGroup.Item key={index} className="border-0">
+                        <ListGroup.Item key={index} className="">
                           <FontAwesomeIcon
                             icon={faCheckCircle}
-                            className="text-success me-1"
+                            className="text-success mx-1"
                           />
                           {inclusion}
                         </ListGroup.Item>
@@ -86,24 +87,10 @@ function ServiceTable({ services }) {
             </Col>
           ))}
         </Row>
-        <ServicesCompare />
       </Container>
+      <ServicesCompare />
     </div>
   );
 }
-
-ServiceTable.propTypes = {
-  services: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      salePrice: PropTypes.string,
-      inclusions: PropTypes.arrayOf(PropTypes.string).isRequired,
-      schedulingUrl: PropTypes.string.isRequired,
-      isMostPopular: PropTypes.bool,
-    })
-  ).isRequired,
-};
 
 export default ServiceTable;

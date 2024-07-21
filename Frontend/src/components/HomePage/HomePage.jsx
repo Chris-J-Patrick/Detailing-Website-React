@@ -60,17 +60,17 @@ function HomePage() {
                 Experience unparalleled shine, inside and out!
               </p>
             </div>
-
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="d-flex align-self-left align-items-center  p-1"
-              >
-                {feature.icon}
-                <h5 className="feature-title">{feature.title}</h5>
-              </div>
-            ))}
           </Container>
+
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="d-block align-self-left justify-items-end align-items-center p-1"
+            >
+              {feature.icon}
+              {feature.title}
+            </div>
+          ))}
           <Button
             as={Link}
             to="/services"
@@ -97,7 +97,7 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Footer className="text-center text-white bg-dark w-50 align-self-center">
+              <Card.Footer className="text-center text-white bg-dark align-self-center">
                 - Jane Smith
               </Card.Footer>
             </Card>

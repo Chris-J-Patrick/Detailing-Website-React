@@ -126,12 +126,11 @@
 }
 
 .testimonial-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 15px;
   box-shadow: 0 4px 8px var(--shadow-color);
   background-color: var(--card-bg-color);
   overflow: hidden;
-  padding: 6rem;
+  padding: 5rem;
 }
 
 @media (max-width: 768px) {
@@ -164,7 +163,6 @@
   }
 
   .bottom-features {
-    flex-direction: column;
-    align-items: center;
+    padding: 0;
   }
 }
