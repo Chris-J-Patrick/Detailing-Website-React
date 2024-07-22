@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button, Modal, Container } from "react-bootstrap";
+import { Button, Modal, Container, ModalHeader } from "react-bootstrap";
 import "./ShApp.css";
-
+import Footer from "../Footer/Footer";
 const ShApp = ({ serviceUrl, buttonText }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -34,7 +34,7 @@ const ShApp = ({ serviceUrl, buttonText }) => {
         backdrop="static"
         size="fullscreen"
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="text-white bg-primary">
           <Modal.Title id="contained-modal-title">
             Appointment Scheduler
           </Modal.Title>
@@ -48,6 +48,7 @@ const ShApp = ({ serviceUrl, buttonText }) => {
             style={{ border: "none" }}
           ></iframe>
         </Modal.Body>
+        <Modal.Footer></Modal.Footer>
       </Modal>
     </Container>
   );

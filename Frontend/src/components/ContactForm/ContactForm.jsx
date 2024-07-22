@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import { Row, Col, Form, Button, Card } from "react-bootstrap";
 import "./ContactForm.css";
 import PageTitle from "../PageTitle";
 

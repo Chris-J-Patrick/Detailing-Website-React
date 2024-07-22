@@ -15,6 +15,7 @@
 .testimonials-page {
   background-color: var(--background-color);
   min-height: 80vh;
+  overflow-x: hidden;
 }
 
 .section-title {

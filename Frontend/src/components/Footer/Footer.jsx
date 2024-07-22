@@ -1,12 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {
@@ -16,8 +12,14 @@ function Footer() {
         <Row>
           <Col md={4} className="text-md-left mb-3 mb-md-0">
             <h5>Contact Us</h5>
-            <p>Email: info@attentiontodetail.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>
+              <FaEnvelope className="mx-1" />
+              <a href="mailto:info@atdauto.com">info@atdauto.net</a>
+            </p>
+            <p>
+              <FaPhone className="mx-1" />
+              <a href="tel:1234567890">(123) 456-7890</a>
+            </p>
           </Col>
           <Col md={4} className="mb-3 mb-md-0">
             <h5>Follow Us</h5>
@@ -25,14 +27,8 @@ function Footer() {
               <a href="https://facebook.com" className="text-white mx-2">
                 <FaFacebookF />
               </a>
-              <a href="https://twitter.com" className="text-white mx-2">
-                <FaTwitter />
-              </a>
               <a href="https://instagram.com" className="text-white mx-2">
                 <FaInstagram />
-              </a>
-              <a href="https://linkedin.com" className="text-white mx-2">
-                <FaLinkedin />
               </a>
             </div>
           </Col>
@@ -40,24 +36,24 @@ function Footer() {
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="/" className="text-white">
+                <Link to="/" className="text-white">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-white">
+                <Link to="/about" className="text-white">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="text-white">
+                <Link to="/services" className="text-white">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-white">
-                  Contact
-                </a>
+                <Link to="/contact" className="text-white">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </Col>

@@ -40,7 +40,7 @@ function Header() {
       variant="dark"
       expanded={expanded}
       onToggle={setExpanded}
-      className={`Header ${isShrunk ? "navbar-shrink" : ""}`}
+      className={`Header bg-dark ${isShrunk ? "navbar-shrink" : ""}`}
     >
       <Container fluid>
         <Navbar.Brand as={RouterNavLink} to="/">
@@ -49,7 +49,7 @@ function Header() {
             sizeUnit="rem"
             color="#ffffff"
             textColor="#ffffff"
-            textFontSize={isShrunk ? 0.8 : 1.5}
+            textFontSize={isShrunk ? 1 : 1.5}
             textFontSizeUnit="rem"
           />
         </Navbar.Brand>

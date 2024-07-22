@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselComp from "../CarouselComp";
 import "./Testimonials.css";
@@ -11,7 +11,7 @@ function Testimonials() {
   return (
     <div fluid className="testimonials-page bg-transparent">
       <PageTitle
-        title="Explore the stories behind our shine—direct from our valued clients."
+        title="Explore the stories behind our shine."
         subtitle="Real Feedback from Real Customers"
       />
       {testimonialsData.length > 0 ? (
@@ -34,7 +34,7 @@ function Testimonials() {
           ))}
         </Row>
       ) : (
-        <div className="text-center">
+        <div className="text-center align-items-center ">
           <CarouselComp />
           <p className="no-testimonials-message">
             We currently have no testimonials. Be the first to leave a review!

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { FaCheck } from "react-icons/fa";
 import "./ServiceCompare.css";
 const ServiceCompare = () => {

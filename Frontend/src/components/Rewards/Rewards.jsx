@@ -7,7 +7,6 @@ import {
   Container,
   Row,
   Col,
-  Tooltip,
 } from "react-bootstrap";
 
 import Profile from "../Profile";

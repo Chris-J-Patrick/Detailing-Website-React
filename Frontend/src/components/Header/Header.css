@@ -15,16 +15,15 @@ body {
 .navbar {
   transition: padding 0.3s ease-out, background-color 0.3s ease,
     font-size 0.3s ease;
-  background-color: var(--navbar-background);
   font-size: large;
   margin: 0;
   padding: 0.7rem;
 }
 
 .navbar-shrink {
-  padding: 0;
+  padding: 0.3rem;
   font-size: medium;
-  background-color: rgba(26, 26, 26, 0.9);
+  opacity: 0.9;
 }
 
 .navbar-brand {

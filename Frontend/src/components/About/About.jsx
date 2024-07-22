@@ -138,7 +138,7 @@ function About() {
       </section>
       <section className="faq-section py-5">
         <Container>
-          <h2 className="text-center mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-center py-5">Frequently Asked Questions</h2>
           <Accordion defaultActiveKey="none">
             {faqData.map((faq, index) => (
               <Accordion.Item eventKey={index.toString()} key={faq.id}>

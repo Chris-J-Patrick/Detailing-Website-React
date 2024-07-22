@@ -1,18 +1,9 @@
-import {
-  Container,
-  Row,
-  Col,
-  Alert,
-  Button,
-  Card,
-  Carousel,
-  CarouselItem,
-} from "react-bootstrap";
+import { Container, Carousel, CarouselItem } from "react-bootstrap";
 
 function CarouselComp() {
   return (
-    <Container fluid className="my-3">
-      <Carousel data-bs-theme="dark">
+    <Container className="text-center">
+      <Carousel className="">
         <Carousel.Item>
           <img
             width="700px"

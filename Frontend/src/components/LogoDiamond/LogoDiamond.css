@@ -10,12 +10,10 @@
 
 .logoText {
   font-family: "Roboto";
-  font-weight: 400;
+  font-weight: 500;
   padding: 0em;
-}
-
-.logoIcon {
-  margin-left: 0em;
+  transition: padding 0.3s ease-out, background-color 0.3s ease,
+    font-size 0.3s ease;
 }
 
 .navbar .navbar-brand.active {

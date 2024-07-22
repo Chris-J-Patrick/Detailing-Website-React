@@ -7,10 +7,7 @@ import {
   Button,
   Card,
   Carousel,
-  Col,
-  Row,
   AlertHeading,
-  AlertLink,
 } from "react-bootstrap";
 import "./HomePage.css";
 
@@ -47,7 +44,7 @@ function HomePage() {
       {showBanner && (
         <Alert
           variant="warning"
-          className={`alert-dismissible fade fs-6 m-1 ${
+          className={`alert-dismissible fade fs-6 p-2 m-1 ${
             bannerTransition ? "fade-out" : "show"
           }`}
           onClose={handleCloseBanner}
@@ -107,7 +104,7 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
+              <Card.Subtitle className="text-center w-50 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
               </Card.Subtitle>
             </Card>
@@ -122,7 +119,7 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
+              <Card.Subtitle className="text-center w-50 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
               </Card.Subtitle>
             </Card>
@@ -137,7 +134,8 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
+
+              <Card.Subtitle className="text-center w-50 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
               </Card.Subtitle>
             </Card>

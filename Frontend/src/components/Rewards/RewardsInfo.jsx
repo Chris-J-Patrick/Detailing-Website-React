@@ -33,7 +33,7 @@ const RewardsInfo = () => {
             }}
             className="mb-0"
           >
-            Join Our Rewards Program!
+            Join Our Rewards Program
           </Card.Title>
           <Card.Text
             style={{

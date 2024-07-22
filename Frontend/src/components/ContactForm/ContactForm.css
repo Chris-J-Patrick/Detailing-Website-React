@@ -16,6 +16,7 @@
 .contact-form-container {
   background-color: var(--background-color);
   height: auto;
+  overflow-x: hidden;
 }
 
 .cardAbout {
