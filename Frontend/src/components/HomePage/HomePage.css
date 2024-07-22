@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
 :root {
   --primary-color: #007bff;
   --secondary-color: #dbdbdb;
@@ -19,7 +22,7 @@
   background-image: url("../../../mbenz.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 80vh;
+  min-height: 85vh;
   position: relative;
   color: #eaeaea;
 }
@@ -46,10 +49,8 @@
 
 .bottom-features {
   display: flex;
-  justify-content: space-around;
-  width: 90%;
+  justify-content: space-between;
   margin-top: auto;
-  padding-bottom: 20px;
 }
 
 .hero-title,
@@ -59,14 +60,15 @@
 
 .hero-title {
   font-family: var(--font-secondary);
-  font-size: 4.5vw;
-  margin-bottom: 0.5rem;
+  font-size: 5vw;
+  font-weight: 600;
 }
 
 .hero-subtitle {
   font-family: var(--font-primary);
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  font-family: 500;
   color: #c6c4c4;
 }
 
@@ -96,9 +98,6 @@
   color: var(--highlight-color2);
 }
 
-.alert-dismissible {
-}
-
 .feature-title {
   color: white;
   margin-left: 1px;
@@ -107,7 +106,7 @@
 }
 
 .feature-icon {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(69, 69, 69);
   border-radius: 50%;
   padding: 5px;
   width: 40px;
@@ -130,7 +129,7 @@
   box-shadow: 0 4px 8px var(--shadow-color);
   background-color: var(--card-bg-color);
   overflow: hidden;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 @media (max-width: 768px) {

@@ -21,11 +21,11 @@ const RewardsTable = () => {
     <Container className="mt-3">
       <Card className="shadow-sm bg-white rounded">
         {" "}
-        <Card.Header as="h5" className="text-center bg-primary text-white">
+        <Card.Header as="h5" className="text-center bg-primary text-white mb-0">
           Rewards Tiering
         </Card.Header>
         <Card.Text>
-          <Table striped bordered hover responsive className="text-center">
+          <Table striped bordered hover responsive className="text-center m-0">
             <thead>
               <tr className="bg-light">
                 <th>Points</th>

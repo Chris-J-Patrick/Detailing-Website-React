@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCalendarCheck, FaDollarSign, FaAward } from "react-icons/fa";
-import { Container, Alert, Button, Card, Carousel } from "react-bootstrap";
+import {
+  Container,
+  Alert,
+  Button,
+  Card,
+  Carousel,
+  Col,
+  Row,
+  AlertHeading,
+  AlertLink,
+} from "react-bootstrap";
 import "./HomePage.css";
 
 function HomePage() {
@@ -17,18 +27,18 @@ function HomePage() {
     {
       title: "Hassle-Free Online Booking",
       detail: "Book in less than 30 seconds!",
-      icon: <FaCalendarCheck className="feature-icon text-primary fs-1" />,
+      icon: <FaCalendarCheck className="feature-icon text-primary" />,
     },
     {
       title: "Flat Rates",
       detail: "Same price for all sizes! Cars & Trucks.",
-      icon: <FaDollarSign className="feature-icon text-success fs-1" />,
+      icon: <FaDollarSign className="feature-icon text-success" />,
     },
     {
       title: "Price Match Guarantee",
       detail:
         "Best Price & Service Guarantee - if you find a better price, we will beat it!",
-      icon: <FaAward className="feature-icon text-warning fs-1" />,
+      icon: <FaAward className="feature-icon text-warning" />,
     },
   ];
 
@@ -37,22 +47,22 @@ function HomePage() {
       {showBanner && (
         <Alert
           variant="warning"
-          className={`alert-dismissible text-dark fade fs-5 m-1 ${
+          className={`alert-dismissible fade fs-6 m-1 ${
             bannerTransition ? "fade-out" : "show"
           }`}
           onClose={handleCloseBanner}
           dismissible
         >
           {" "}
-          <strong>Grand Opening Sale!</strong> Enter Code: "Grand10" for an
-          extra 10% off
+          <AlertHeading>Grand Opening Sale!</AlertHeading>
+          Enter Code: "<strong>Grand10</strong>" for an extra 10% off
         </Alert>
       )}
       <Container fluid className="hero-section">
         <div className="hero-overlay">
           <Container fluid className="hero-content">
             <div className="top-left-content">
-              <h1 className="hero-title ">
+              <h1 className="hero-title mb-0">
                 South Jersey's{" "}
                 <span className="highlight2">Premier Car Detailer</span>.
               </h1>
@@ -65,10 +75,10 @@ function HomePage() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="d-block align-self-left justify-items-end align-items-center p-1"
+              className="d-flex justify-items-center align-items-center py-3"
             >
               {feature.icon}
-              {feature.title}
+              <h6 className="my-0 mx-1">{feature.title}</h6>
             </div>
           ))}
           <Button
@@ -97,9 +107,9 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Footer className="text-center text-white bg-dark align-self-center">
+              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
-              </Card.Footer>
+              </Card.Subtitle>
             </Card>
           </Carousel.Item>
           <Carousel.Item>
@@ -112,9 +122,9 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Footer className="text-center text-white bg-dark w-50 align-self-center">
+              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
-              </Card.Footer>
+              </Card.Subtitle>
             </Card>
           </Carousel.Item>
           <Carousel.Item>
@@ -127,9 +137,9 @@ function HomePage() {
                   </p>
                 </blockquote>
               </Card.Body>
-              <Card.Footer className="text-center text-white bg-dark w-50 align-self-center">
+              <Card.Subtitle className="text-center w-25 align-self-center text-white bg-dark py-2 rounded-5">
                 - Jane Smith
-              </Card.Footer>
+              </Card.Subtitle>
             </Card>
           </Carousel.Item>
         </Carousel>

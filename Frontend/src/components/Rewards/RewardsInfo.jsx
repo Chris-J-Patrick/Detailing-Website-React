@@ -29,16 +29,16 @@ const RewardsInfo = () => {
             style={{
               fontSize: "2rem",
               fontWeight: "bold",
-              color: "black",
               marginBottom: "0px",
             }}
+            className="mb-0"
           >
             Join Our Rewards Program!
           </Card.Title>
           <Card.Text
             style={{
               fontSize: "1.2rem",
-              marginBottom: "2rem",
+              marginBottom: "0rem",
               color: "#333",
             }}
             className="text-secondary mt-0"
@@ -51,12 +51,14 @@ const RewardsInfo = () => {
               marginBottom: "30px",
               color: "#333",
             }}
-          ></Card.Text>
-          <RewardsTable />
+          >
+            {" "}
+            <RewardsTable />
+          </Card.Text>
 
           <LoginButton />
         </Card.Body>
-        <Card.Subtitle className="p-1">
+        <Card.Subtitle>
           Sign up or log in to start earning rewards today!
         </Card.Subtitle>
       </Card>

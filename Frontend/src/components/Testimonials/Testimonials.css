@@ -15,7 +15,6 @@
 .testimonials-page {
   background-color: var(--background-color);
   min-height: 80vh;
-  padding: 10px;
 }
 
 .section-title {
@@ -35,11 +34,6 @@
   background-color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--hover-shadow-color);
 }
 
 .testimonial-avatar {

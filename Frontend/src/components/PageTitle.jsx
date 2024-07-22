@@ -1,9 +1,17 @@
+import React from "react";
+import { Container } from "react-bootstrap";
+
 const PageTitle = ({ title, subtitle }) => {
   return (
-    <div className="mb-2 p-3 text-center ">
-      <h1 className="fs-1 fw-bold mb-0">{title}</h1>
-      <p className="mb-0 fs-5 text-muted text-align-center">{subtitle}</p>
+    <div className="mb-2 text-center w-100">
+      <section className="hero-section-about w-100">
+        <Container fluid className="text-center text-light py-5 w-100">
+          <h1 className="display-4">{title}</h1>
+          <p className="lead">{subtitle}</p>
+        </Container>
+      </section>
     </div>
   );
 };
+
 export default PageTitle;

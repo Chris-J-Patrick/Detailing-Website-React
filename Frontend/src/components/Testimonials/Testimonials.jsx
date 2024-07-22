@@ -9,12 +9,11 @@ const testimonialsData = [];
 
 function Testimonials() {
   return (
-    <Container fluid className="testimonials-page bg-transparent">
+    <div fluid className="testimonials-page bg-transparent">
       <PageTitle
         title="Explore the stories behind our shine—direct from our valued clients."
         subtitle="Real Feedback from Real Customers"
       />
-
       {testimonialsData.length > 0 ? (
         <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {testimonialsData.map((testimonial) => (
@@ -84,7 +83,7 @@ function Testimonials() {
           </Row>
         </div>
       )}
-    </Container>
+    </div>
   );
 }
 

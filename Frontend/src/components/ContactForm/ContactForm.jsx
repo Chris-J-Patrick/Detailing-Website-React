@@ -5,14 +5,14 @@ import PageTitle from "../PageTitle";
 
 function ContactForm() {
   return (
-    <Container fluid className="contact-form-container bg-transparent">
+    <div className="contact-form-container bg-transparent">
       <PageTitle
         title={"We're Here to Help"}
         subtitle={"Have questions? Our team is just a message away."}
       />
       <Row className="justify-content-center p-2">
         <Col md={6} className="mb-1">
-          <Card className="p-1 shadow-lg border-0 rounded-lg">
+          <Card className="cardAbout p-1 shadow-lg border-0 rounded-lg">
             <Card.Body>
               <Form>
                 <Form.Group className="mb-2">
@@ -44,7 +44,7 @@ function ContactForm() {
         </Col>
 
         <Col md={5} className="mb-4">
-          <Card className="p-4 shadow-lg border-0 rounded-lg contact-info-card">
+          <Card className="cardAbout p-4 shadow-lg border-0 rounded-lg contact-info-card">
             <Card.Body>
               <Card.Title className="mb-4">Contact Information</Card.Title>
               <Card.Text className="contact-info">
@@ -60,7 +60,7 @@ function ContactForm() {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

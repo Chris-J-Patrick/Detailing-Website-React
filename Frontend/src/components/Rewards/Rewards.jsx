@@ -44,10 +44,7 @@ const Rewards = () => {
   }, [isAuthenticated]);
 
   return (
-    <Container
-      fluid
-      className="rewards-container d-flex align-items-center flex-column justify-content-center"
-    >
+    <Container className="rewards-container d-flex align-items-center flex-column justify-content-center">
       {!isAuthenticated ? (
         <RewardsInfo />
       ) : (
@@ -87,7 +84,6 @@ const Rewards = () => {
             >
               Redeem Rewards
             </Button>
-            <hr />
             <RewardsTable />
           </Card.Body>
         </Card>

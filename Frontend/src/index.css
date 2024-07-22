@@ -7,23 +7,13 @@
   padding: 0;
 }
 
-:root {
-  --primary-color: #0099ff;
-  --hover-color: #005b99;
-  --background-light: #00000000;
-  --text-muted: #555;
-}
-
 body {
-  font-family: "Roboto";
   opacity: 1;
   overflow-x: hidden;
   z-index: 1;
   margin: 0;
   background: linear-gradient(135deg, #ffffff 0%, #c3cfe2 100%);
   color: #ffffff;
-
-  font-family: "Arial", sans-serif;
 }
 
 a {

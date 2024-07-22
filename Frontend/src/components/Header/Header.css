@@ -42,7 +42,6 @@ body {
 .nav-link:focus {
   color: var(--navbar-hover-color);
   text-decoration: none;
-  transform: scale(1.1);
 }
 
 .nav-link.active {

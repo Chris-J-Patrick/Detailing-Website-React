@@ -6,7 +6,7 @@ import {
   Card,
   Accordion,
   Button,
-  CardBody,
+  Image,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./About.css";
@@ -68,15 +68,14 @@ function About() {
           <p className="lead">Learn more about Attention to Detail Auto</p>
         </Container>
       </section>
-
-      <section className="values-section py-5">
+      <section className="values-section">
         <Container>
           <Row>
             {valuesData.map((value, idx) => (
               <Col key={idx} lg={4} className="mb-4">
                 <Card className="value-card text-center h-100">
                   <Card.Body>
-                    <Card.Title className="text-dark">{value.title}</Card.Title>
+                    <Card.Title>{value.title}</Card.Title>
                     <Card.Text>{value.text}</Card.Text>
                   </Card.Body>
                 </Card>
@@ -90,7 +89,9 @@ function About() {
         <Container>
           <Row className="align-items-center">
             <Col md={6} className="mb-4 mb-md-0">
-              <h2 className="section-title">Our Commitment to Excellence</h2>
+              <h5 className="section-title text-white mb-2">
+                Our Commitment to Excellence
+              </h5>
               <p className="lead">
                 Our team comprises professionals who are not just skilled but
                 also deeply passionate about automobiles. Whether you own a
@@ -109,8 +110,8 @@ function About() {
                 Learn More
               </Button>
             </Col>
-            <Col md={6}>
-              <img
+            <Col>
+              <Image
                 src="./aboutimg.jpeg"
                 alt="Commitment to Excellence"
                 className="img-fluid rounded shadow"

@@ -29,8 +29,8 @@ function ServiceTable({ services }) {
           </p>
         </Container>
       </section>
-      <Container fluid className="service-table-container py-5">
-        <Row className="justify-content-center">
+      <Container fluid className="service-table-container py-2">
+        <Row className="justify-content-start">
           {services.map((service, idx) => (
             <Col key={idx} md={6} lg={4} className="mb-4">
               <Card
