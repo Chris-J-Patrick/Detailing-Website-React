@@ -104,25 +104,23 @@ function HomePage() {
           </Button>
         </div>
       </Container>
-      <section className="values-section my-0 bg-light">
-        <div>
+      <div className="my-0 bg-light">
+        <Row className="mt-0">
           <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
             Why Choose Us?
           </h4>
-          <Row>
-            {valuesData.map((value, idx) => (
-              <Col key={idx} lg={4} className="my-5">
-                <Card className="value-card text-center h-100 shadow-sm">
-                  <Card.Body>
-                    <Card.Title>{value.title}</Card.Title>
-                    <Card.Text>{value.text}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </section>
+          {valuesData.map((value, idx) => (
+            <Col key={idx} lg={4} className="m-2">
+              <Card className="value-card text-center h-100 shadow-sm">
+                <Card.Body>
+                  <Card.Title>{value.title}</Card.Title>
+                  <Card.Text>{value.text}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
       <div className="testimonials-section bg-white py-2 text-center">
         <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
           Testimonials
