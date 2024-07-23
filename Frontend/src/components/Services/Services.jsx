@@ -86,15 +86,6 @@ const servicesData = [
     schedulingUrl:
       "https://AttentiontoDetailAuto.as.me/?appointmentType=56802761",
   },
-  {
-    title: "Custom Detail",
-    icon: <FaMagic />,
-    description: "Protective waxing.",
-    price: "$$$$$$$$",
-    inclusions: ["Buffing", "High-quality wax", "Protective sealant"],
-    schedulingUrl:
-      "https://app.acuityscheduling.com/schedule.php?owner=31108192&ref=booking_button",
-  },
 ];
 
 export default Services;

@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col, Card, ListGroup, Button } from "react-bootstrap";
-import { Link } from "react-scroll";
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 import ShApp from "../ShApp/ShApp";
 import ServicesCompare from "../ServiceCompare/ServiceCompare";
 import SmoothScroll from "smooth-scroll";
@@ -29,63 +28,67 @@ function ServiceTable({ services }) {
           </p>
         </Container>
       </section>
-      <Container fluid className="service-table-container py-2">
+      <Container fluid className="service-table-container p-4">
         <Row className="justify-content-start">
-          {services.map((service, idx) => (
-            <Col key={idx} md={6} lg={4} className="mb-4">
-              <Card
-                className={`h-100 service-card ${
-                  service.isMostPopular ? "border-primary" : ""
-                }`}
-              >
-                {service.isMostPopular && (
-                  <Card.Header className="bg-primary text-white text-center fs-5">
-                    Most Popular
-                  </Card.Header>
-                )}
-                <Card.Body className="d-flex flex-column">
-                  <div className="flex-grow-1 mb-1">
-                    <Card.Title className="fw-bold mb-1">
-                      {service.title}
-                    </Card.Title>
-                    <Card.Subtitle className="mb-3 text-muted">
-                      {service.description}
-                    </Card.Subtitle>
+          {services.map((service, idx) => {
+            const {
+              title,
+              description,
+              price,
+              salePrice,
+              inclusions,
+              isMostPopular,
+              schedulingUrl,
+            } = service;
 
-                    <h5 className="m-1">
-                      {service.salePrice ? (
-                        <>
-                          <span className="text-muted text-decoration-line-through">
-                            {service.price}
-                          </span>
-                          <span className="fw-bold text-success ms-2">
-                            {service.salePrice}
-                          </span>
-                        </>
-                      ) : (
-                        <span className="fw-bold">{service.price}</span>
-                      )}
-                    </h5>
-                    <ListGroup variant="flush">
-                      {service.inclusions.map((inclusion, index) => (
-                        <ListGroup.Item key={index} className="">
-                          <FontAwesomeIcon
-                            icon={faCheckCircle}
-                            className="text-success mx-1"
-                          />
-                          {inclusion}
-                        </ListGroup.Item>
-                      ))}
-                    </ListGroup>
-                  </div>
-                  <ShApp
-                    serviceUrl={service.schedulingUrl}
-                    buttonText="Schedule"
-                  />
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
+            return (
+              <Col key={idx} md={6} lg={4} className="mb-2">
+                <div className="service-card-wrapper h-100">
+                  {isMostPopular && (
+                    <div className="most-popular-tag">Most Popular</div>
+                  )}
+                  <Card className="h-100 service-card">
+                    <Card.Body className="h-100 d-flex flex-column">
+                      <div className="flex-grow-1 mb-1">
+                        <Card.Title className="fw-bold my-1">
+                          {title}
+                        </Card.Title>
+                        <Card.Subtitle className="mb-3 text-muted">
+                          {description}
+                        </Card.Subtitle>
+                        <h5 className="m-1">
+                          {salePrice ? (
+                            <>
+                              <span className="text-muted text-decoration-line-through">
+                                {price}
+                              </span>
+                              <span className="fw-bold text-success ms-2">
+                                {salePrice}
+                              </span>
+                            </>
+                          ) : (
+                            <span className="fw-bold">{price}</span>
+                          )}
+                        </h5>
+                        <ListGroup variant="flush">
+                          {inclusions.map((inclusion, index) => (
+                            <ListGroup.Item key={index}>
+                              <FontAwesomeIcon
+                                icon={faCheckCircle}
+                                className="text-success mx-1"
+                              />
+                              {inclusion}
+                            </ListGroup.Item>
+                          ))}
+                        </ListGroup>
+                      </div>
+                      <ShApp serviceUrl={schedulingUrl} buttonText="Schedule" />
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
       <ServicesCompare />

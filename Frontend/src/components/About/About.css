@@ -3,13 +3,14 @@
 }
 
 .hero-section-about {
-  background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+  background: linear-gradient(180deg, #007bff 0%, #6610f2 100%);
   padding: 5rem 0;
 }
 
 .values-section {
   background: #4e6363;
   padding: 0rem 0;
+  display: flex;
 }
 
 .value-card {
@@ -20,11 +21,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: rem 1rem;
   top: -50%;
-}
-
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .value-card .card-title {

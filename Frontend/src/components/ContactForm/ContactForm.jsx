@@ -11,7 +11,7 @@ function ContactForm() {
         title={"We're Here to Help"}
         subtitle={"Have questions? Our team is just a message away."}
       />
-      <Row className="justify-content-center p-3">
+      <Row className="justify-content-center p-1">
         <Col md={6} className="mb-1">
           <Card className="cardAbout p-2 shadow-lg border-0 rounded-lg">
             <Card.Body>
