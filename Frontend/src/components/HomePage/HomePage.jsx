@@ -175,8 +175,10 @@ function HomePage() {
             </Card>
           </Carousel.Item>
         </Carousel>
-        <Button href="/testimonials" className="">
-          Read More Reviews
+        <Button>
+          <Link to="/testimonials" className="text-white text-decoration-none">
+            Read More Reviews
+          </Link>
         </Button>
       </div>
     </Container>
