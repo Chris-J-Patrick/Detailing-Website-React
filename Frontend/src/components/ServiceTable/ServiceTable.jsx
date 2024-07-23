@@ -47,32 +47,18 @@ function ServiceTable({ services }) {
                   {isMostPopular && (
                     <div className="most-popular-tag">Most Popular</div>
                   )}
-                  <Card className="h-100 service-card">
+                  <Card className="h-100 service-card p-2">
                     <Card.Body className="h-100 d-flex flex-column">
                       <div className="flex-grow-1 mb-1">
-                        <Card.Title className="fw-bold my-1">
+                        <Card.Title className="fw-bold mb-1">
                           {title}
                         </Card.Title>
-                        <Card.Subtitle className="mb-3 text-muted">
+                        <Card.Subtitle className="mb-2 text-secondary">
                           {description}
                         </Card.Subtitle>
-                        <h5 className="m-1">
-                          {salePrice ? (
-                            <>
-                              <span className="text-muted text-decoration-line-through">
-                                {price}
-                              </span>
-                              <span className="fw-bold text-success ms-2">
-                                {salePrice}
-                              </span>
-                            </>
-                          ) : (
-                            <span className="fw-bold">{price}</span>
-                          )}
-                        </h5>
                         <ListGroup variant="flush">
                           {inclusions.map((inclusion, index) => (
-                            <ListGroup.Item key={index}>
+                            <ListGroup.Item className="mx-0 px-0" key={index}>
                               <FontAwesomeIcon
                                 icon={faCheckCircle}
                                 className="text-success mx-1"
@@ -82,7 +68,27 @@ function ServiceTable({ services }) {
                           ))}
                         </ListGroup>
                       </div>
-                      <ShApp serviceUrl={schedulingUrl} buttonText="Schedule" />
+                      <div className="align-items-center d-flex mt-2">
+                        {" "}
+                        <ShApp
+                          serviceUrl={schedulingUrl}
+                          buttonText="Schedule"
+                        />{" "}
+                        <h5 className="m-1">
+                          {salePrice ? (
+                            <>
+                              <span className="text-muted text-decoration-line-through">
+                                {price}
+                              </span>
+                              <span className="fw-bold text ms-2">
+                                {salePrice}
+                              </span>
+                            </>
+                          ) : (
+                            <span className="fw-bold">{price}</span>
+                          )}
+                        </h5>{" "}
+                      </div>
                     </Card.Body>
                   </Card>
                 </div>

@@ -67,7 +67,7 @@ const ServiceCompare = () => {
 
   return (
     <div fluid className="services-compare-container">
-      <h2 className="text-center  bg-primary py-5 text-white">
+      <h2 className="text-center bg-primary py-5 text-white">
         Service Comparison
       </h2>
       <Table
