@@ -28,7 +28,7 @@ function ServiceTable({ services }) {
           </p>
         </Container>
       </section>
-      <Container fluid className="service-table-container p-4">
+      <Container fluid className="service-table-container ">
         <Row className="justify-content-start">
           {services.map((service, idx) => {
             const {
@@ -42,12 +42,12 @@ function ServiceTable({ services }) {
             } = service;
 
             return (
-              <Col key={idx} md={6} lg={4} className="mb-2">
+              <Col key={idx} md={6} lg={4} className="mb-1 mt-0">
                 <div className="service-card-wrapper h-100">
                   {isMostPopular && (
                     <div className="most-popular-tag">Most Popular</div>
                   )}
-                  <Card className="h-100 service-card p-2">
+                  <Card className="h-100 service-card py-1">
                     <Card.Body className="h-100 d-flex flex-column">
                       <div className="flex-grow-1 mb-1">
                         <Card.Title className="fw-bold mb-1">
