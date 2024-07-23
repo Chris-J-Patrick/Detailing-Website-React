@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCalendarCheck, FaDollarSign, FaAward } from "react-icons/fa";
+import CarouselComp from "../CarouselComp";
 import {
   Container,
   Alert,
@@ -110,7 +111,7 @@ function HomePage() {
             Why Choose Us?
           </h4>
           {valuesData.map((value, idx) => (
-            <Col key={idx} lg={4} className="m-2">
+            <Col key={idx} className="m-2">
               <Card className="value-card text-center h-100 shadow-sm">
                 <Card.Body>
                   <Card.Title>{value.title}</Card.Title>

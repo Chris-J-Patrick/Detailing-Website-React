@@ -3,7 +3,7 @@ import { Container, Carousel, CarouselItem } from "react-bootstrap";
 function CarouselComp() {
   return (
     <Container className="text-center">
-      <Carousel className="">
+      <Carousel data-bs-theme="dark" className="">
         <Carousel.Item>
           <img
             width="700px"

@@ -74,15 +74,13 @@ function ServiceTable({ services }) {
                           serviceUrl={schedulingUrl}
                           buttonText="Schedule"
                         />{" "}
-                        <h5 className="m-1">
+                        <h5 className="">
                           {salePrice ? (
                             <>
                               <span className="text-muted text-decoration-line-through">
                                 {price}
                               </span>
-                              <span className="fw-bold text ms-2">
-                                {salePrice}
-                              </span>
+                              <span className="fw-bold ms-2">{salePrice}</span>
                             </>
                           ) : (
                             <span className="fw-bold">{price}</span>

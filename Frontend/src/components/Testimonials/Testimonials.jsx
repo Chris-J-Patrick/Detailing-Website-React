@@ -1,10 +1,9 @@
 import React from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Image, Container, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CarouselComp from "../CarouselComp";
 import "./Testimonials.css";
 import PageTitle from "../PageTitle";
-
+import CarouselComp from "../CarouselComp";
 const testimonialsData = [
   {
     id: 1,
@@ -58,27 +57,36 @@ function Testimonials() {
         subtitle="Real Feedback from Real Customers"
       />
       {testimonialsData.length > 0 ? (
-        <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 mx-3">
-          {testimonialsData.map((testimonial) => (
-            <Col key={testimonial.id} className="mb-4">
-              <div className="testimonial-card">
-                <img
-                  src={testimonial.avatar}
-                  alt={`${testimonial.name}'s avatar`}
-                  className="testimonial-avatar"
-                  onError={(e) => (e.target.src = "path/to/default-avatar.jpg")}
-                />
-                <div className="testimonial-content">
-                  <p className="testimonial-comment">{testimonial.comment}</p>
-                  <p className="testimonial-name">- {testimonial.name}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      ) : (
-        <div className="text-center align-items-center ">
+        <Container className="py-4">
+          <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {testimonialsData.map((testimonial) => (
+              <Col key={testimonial.id} className="mb-4">
+                <Card className="testimonial-card h-100">
+                  <Card.Img
+                    variant="top"
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name}'s avatar`}
+                    onError={(e) =>
+                      (e.target.src = "path/to/default-avatar.jpg")
+                    }
+                    className="testimonial-avatar align-self-center"
+                  />
+                  <Card.Body>
+                    <Card.Text className="testimonial-comment">
+                      {testimonial.comment}
+                    </Card.Text>
+                    <Card.Subtitle className="text-muted testimonial-name">
+                      - {testimonial.name}
+                    </Card.Subtitle>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
           <CarouselComp />
+        </Container>
+      ) : (
+        <div className="text-center align-items-center">
           <p className="no-testimonials-message">
             We currently have no testimonials. Be the first to leave a review!
           </p>
