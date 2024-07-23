@@ -11,21 +11,6 @@ import {
 import { Link } from "react-router-dom";
 import "./About.css";
 
-const valuesData = [
-  {
-    title: "Exceptional Value",
-    text: "Offering top-notch car detailing at affordable prices, starting at just $299.99. Quality services without breaking the bank.",
-  },
-  {
-    title: "Transparent Pricing",
-    text: "No hidden fees or surprises. Clear and honest pricing with every service. Book, pay, and receive exceptional results.",
-  },
-  {
-    title: "Innovative Booking",
-    text: "Fully online, hassle-free booking system. Schedule your car's transformation easily from the comfort of your home.",
-  },
-];
-
 const faqData = [
   {
     id: "One",
@@ -63,33 +48,72 @@ function About() {
   return (
     <div className="about-page">
       <section className="hero-section-about">
-        <Container className="text-center text-light py-5">
+        <Container className="text-center text-light py-">
           <h1 className="display-4">About Us</h1>
           <p className="lead">Learn more about Attention to Detail Auto</p>
         </Container>
       </section>
-      <section className="values-section">
+
+      <section className="commitment-section py-5 mb-5">
         <Container>
-          <Row>
-            {valuesData.map((value, idx) => (
-              <Col key={idx} lg={4} className="mb-4">
-                <Card className="value-card text-center h-100">
-                  <Card.Body>
-                    <Card.Title>{value.title}</Card.Title>
-                    <Card.Text>{value.text}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
+          <Row className="align-items-center">
+            <Col md={6} className="mb-4 mb-md-0">
+              <h5 className="section-title mb-2">Who We Are</h5>
+              <p className="lead">
+                Attention to Detail Auto is your premier mobile car detailing
+                service located in the heart of southern New Jersey. Founded out
+                of a passion for impeccable vehicle care and a desire to offer
+                unparalleled customer service, we are dedicated to transforming
+                your car into its best version.
+              </p>
+              <Button variant="primary" className="mt-3">
+                Learn More
+              </Button>
+            </Col>
+            <Col>
+              <Image
+                src="./AboutPic.jpg"
+                alt="Who We Are"
+                className="img-fluid rounded shadow"
+              />
+            </Col>
           </Row>
         </Container>
       </section>
 
-      <section className="commitment-section py-5 text-light">
+      <section className="our-story-section py-5 my-5">
+        <Container>
+          <Row className="align-items-center">
+            <Col>
+              <Image
+                src="./AboutJourney.jpg"
+                alt="Our Story"
+                className="img-fluid rounded shadow"
+              />
+            </Col>
+            <Col md={6} className="mb-4 mb-md-0">
+              <h5 className="section-title mb-2">Our Story</h5>
+              <p className="lead">
+                Our journey began with a simple mission: to provide exceptional
+                car detailing services that exceed expectations. As car
+                enthusiasts, we understand the joy of driving a pristine vehicle
+                and the confidence it brings. That's why we decided to turn our
+                passion into a profession, offering top-notch detailing services
+                that cater to every car owner's needs.
+              </p>
+              <Button variant="primary" className="mt-3">
+                Learn More
+              </Button>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="commitment-section py-5 mt-5">
         <Container>
           <Row className="align-items-center">
             <Col md={6} className="mb-4 mb-md-0">
-              <h5 className="section-title text-white mb-2">
+              <h5 className="section-title mb-2">
                 Our Commitment to Excellence
               </h5>
               <p className="lead">
@@ -120,6 +144,7 @@ function About() {
           </Row>
         </Container>
       </section>
+
       <section className="cta-section text-center py-5 bg-primary text-light">
         <Container>
           <h2>Join Our Satisfied Customers</h2>
@@ -136,9 +161,10 @@ function About() {
           </Link>
         </Container>
       </section>
+
       <section className="faq-section py-5">
         <Container>
-          <h2 className="text-center py-5">Frequently Asked Questions</h2>
+          <h2 className="text-center mb-3">Frequently Asked Questions</h2>
           <Accordion defaultActiveKey="none">
             {faqData.map((faq, index) => (
               <Accordion.Item eventKey={index.toString()} key={faq.id}>
@@ -149,6 +175,7 @@ function About() {
           </Accordion>
         </Container>
       </section>
+
       <section className="more-questions-section">
         <Container className="text-center py-5">
           <h2 className="mb-3">More Questions?</h2>

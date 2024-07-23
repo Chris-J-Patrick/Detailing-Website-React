@@ -8,6 +8,8 @@ import {
   Card,
   Carousel,
   AlertHeading,
+  Row,
+  Col,
 } from "react-bootstrap";
 import "./HomePage.css";
 
@@ -36,6 +38,20 @@ function HomePage() {
       detail:
         "Best Price & Service Guarantee - if you find a better price, we will beat it!",
       icon: <FaAward className="feature-icon text-warning" />,
+    },
+  ];
+  const valuesData = [
+    {
+      title: "Exceptional Value",
+      text: "We believe in offering high-quality services at prices that won't break the bank. Our detailing packages start at just $299.99, ensuring you get the best value for your money.",
+    },
+    {
+      title: "Transparent Pricing",
+      text: "With Attention to Detail Auto, there are no hidden fees or surprises. Our pricing is clear and honest, so you know exactly what you're paying for. Book, pay, and enjoy exceptional results with peace of mind.",
+    },
+    {
+      title: "Innovative Booking",
+      text: "We've made it easier than ever to schedule your car's transformation. Our fully online, hassle-free booking system allows you to arrange your detailing appointment from the comfort of your home. Experience convenience and efficiency with just a few clicks.",
     },
   ];
 
@@ -88,8 +104,26 @@ function HomePage() {
           </Button>
         </div>
       </Container>
-
-      <div className="testimonials-section bg-transparent">
+      <section className="values-section my-0 bg-light">
+        <div>
+          <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
+            Why Choose Us?
+          </h4>
+          <Row>
+            {valuesData.map((value, idx) => (
+              <Col key={idx} lg={4} className="my-5">
+                <Card className="value-card text-center h-100 shadow-sm">
+                  <Card.Body>
+                    <Card.Title>{value.title}</Card.Title>
+                    <Card.Text>{value.text}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </section>
+      <div className="testimonials-section bg-white py-2 text-center">
         <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
           Testimonials
         </h4>
@@ -141,6 +175,9 @@ function HomePage() {
             </Card>
           </Carousel.Item>
         </Carousel>
+        <Button href="/testimonials" className="">
+          Read More Reviews
+        </Button>
       </div>
     </Container>
   );

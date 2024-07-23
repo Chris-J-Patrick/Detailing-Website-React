@@ -7,33 +7,6 @@
   padding: 5rem 0;
 }
 
-.values-section {
-  background: #4e6363;
-  padding: 0rem 0;
-  display: flex;
-}
-
-.value-card {
-  background: #ffffff;
-  border: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: rem 1rem;
-  top: -50%;
-}
-
-.value-card .card-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.value-card .card-text {
-  font-size: 1.1rem;
-  color: #666;
-}
-
 .commitment-section {
   background: linear-gradient(135deg, #343a40 0%, #495057 100%);
   color: #ffffff;
@@ -64,6 +37,25 @@
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.cta-section {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.faq-section {
+  background-color: #f8f9fa;
+}
+
+.more-questions-section {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.contact-button {
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 @media (max-width: 768px) {
