@@ -109,24 +109,26 @@ function HomePage() {
         <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
           Why Choose Us?
         </h4>
-        <Row className="px-2 bg-light">
+        <Row className="px-5 bg-dark justify-content-start text-left py-5">
           {valuesData.map((value, idx) => (
-            <Col key={idx} sm={12} md={12} lg={4} className="my-2">
-              <Card className="value-card text-center h-100 shadow-sm ">
-                <Card.Body className="px-0 mx-0">
-                  <Card.Title>{value.title}</Card.Title>
-                  <Card.Text className="px-0 mx-0">{value.text}</Card.Text>
+            <Col key={idx} sm={12} md={12} lg={6} xl={4} className="px-5 py-1">
+              <Card className="value-card h-100 shadow-sm ">
+                <Card.Title className="font-weight-bold">
+                  {value.title}
+                </Card.Title>
+                <Card.Body className="px-0 mx-0 ">
+                  <Card.Text className="text-dark">{value.text}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
       </div>
-      <div className="testimonials-section bg-light py-2 text-center">
+      <div className="testimonials-section text-center">
         <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
           Testimonials
         </h4>
-        <Carousel data-bs-theme="dark" className="my-0">
+        <Carousel data-bs-theme="dark" className="">
           <Carousel.Item>
             <Card className="testimonial-card">
               <Card.Body className="text-center text-dark">
@@ -174,7 +176,7 @@ function HomePage() {
             </Card>
           </Carousel.Item>
         </Carousel>
-        <Button>
+        <Button className="my-1">
           <Link to="/testimonials" className="text-white text-decoration-none">
             Read More Reviews
           </Link>

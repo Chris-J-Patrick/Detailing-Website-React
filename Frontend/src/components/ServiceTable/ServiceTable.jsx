@@ -28,7 +28,7 @@ function ServiceTable({ services }) {
           </p>
         </Container>
       </section>
-      <Container fluid className="service-table-container ">
+      <Container fluid className="service-table-container my-2">
         <Row className="justify-content-start">
           {services.map((service, idx) => {
             const {

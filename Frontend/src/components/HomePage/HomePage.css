@@ -22,7 +22,7 @@
   background-image: url("../../../mbenz.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 85vh;
+  min-height: 80vh;
   position: relative;
   color: #eaeaea;
 }
@@ -127,9 +127,9 @@
 .testimonial-card {
   border-radius: 15px;
   box-shadow: 0 4px 8px var(--shadow-color);
-  background-color: var(--card-bg-color);
+  background-color: #c9c9c9;
   overflow: hidden;
-  padding: 3rem;
+  padding: 5rem;
 }
 
 .values-section {
@@ -143,17 +143,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-}
-
-.value-card .card-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .value-card .card-text {
   font-size: 1.1rem;
   color: #666;
+  line-height: 2rem;
 }
 
 @media (max-width: 768px) {

@@ -9,7 +9,7 @@ root.render(
     clientId="YjUXTDjeKwvj5C471rsak54365k0V0Wi"
     cacheLocation="localstorage"
     authorizationParams={{
-      redirect_uri: window.location.origin + "/rewards",
+      redirect_uri: window.location.origin,
     }}
   >
     <App />

@@ -23,7 +23,7 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 4px 8px var(--shadow-color);
-  top: -25%;
+  top: -15%;
 }
 
 .card .card-title {
