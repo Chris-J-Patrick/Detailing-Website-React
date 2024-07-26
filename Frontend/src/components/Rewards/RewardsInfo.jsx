@@ -8,14 +8,11 @@ const RewardsInfo = () => {
     <Container
       fluid
       className="d-flex align-items-center flex-column justify-content-center"
-      style={{
-        minHeight: "1vh",
-      }}
+      style={{ minHeight: "1vh" }}
     >
       <Card
         className="shadow-lg"
         style={{
-          width: "",
           textAlign: "center",
           padding: "20px",
           borderRadius: "15px",
@@ -29,38 +26,35 @@ const RewardsInfo = () => {
             style={{
               fontSize: "2rem",
               fontWeight: "bold",
-              marginBottom: "0px",
             }}
-            className="mb-0"
           >
             Join Our Rewards Program
           </Card.Title>
-          <Card.Text
+          <div
             style={{
               fontSize: "1.2rem",
-              marginBottom: "0rem",
               color: "#333",
             }}
             className="text-secondary mt-0"
           >
             Earn points with every dollar you spend
-          </Card.Text>
-          <Card.Text
+          </div>
+          <div
             style={{
               fontSize: "1.1rem",
               marginBottom: "30px",
               color: "#333",
             }}
           >
-            {" "}
             <RewardsTable />
-          </Card.Text>
-
+          </div>
           <LoginButton />
         </Card.Body>
-        <Card.Subtitle>
-          Sign up or log in to start earning rewards today!
-        </Card.Subtitle>
+        <Card.Footer>
+          <Card.Subtitle>
+            Sign up or log in to start earning rewards today!
+          </Card.Subtitle>
+        </Card.Footer>
       </Card>
     </Container>
   );

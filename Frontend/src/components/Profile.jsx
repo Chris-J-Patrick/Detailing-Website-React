@@ -39,7 +39,6 @@ const Profile = () => {
       >
         <Container>
           <Card.Img
-            fluid
             variant="top"
             src={user.picture}
             alt={user.name}

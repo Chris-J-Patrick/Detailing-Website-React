@@ -7,6 +7,7 @@ const {
   getUserByEmail,
   getUserIdByEmail,
   getUserRewardsByEmail,
+  checkOrCreateUser,
 } = require("../controllers/userController");
 
 const router = express.Router();
@@ -18,5 +19,5 @@ router.get("/:email/rewards/email", getUserRewardsByEmail);
 router.post("/:id/rewards", addRewardsById);
 router.get("/email", getUserByEmail);
 router.get("/id", getUserIdByEmail);
-
+router.post("/check-or-create", checkOrCreateUser);
 module.exports = router;

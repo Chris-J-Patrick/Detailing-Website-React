@@ -109,9 +109,9 @@ function HomePage() {
         <h4 className="section-title py-5 my-0 text-center bg-primary text-white">
           Why Choose Us?
         </h4>
-        <Row className="px-5 bg-dark justify-content-start text-left py-5">
+        <Row className="px-2 bg-dark justify-content-start text-left py-2">
           {valuesData.map((value, idx) => (
-            <Col key={idx} sm={12} md={12} lg={6} xl={4} className="px-5 py-1">
+            <Col key={idx} sm={12} md={12} lg={6} xl={4} className="px-3 py-2">
               <Card className="value-card h-100 shadow-sm ">
                 <Card.Title className="font-weight-bold">
                   {value.title}

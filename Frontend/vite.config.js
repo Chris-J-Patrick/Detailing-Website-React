@@ -1,11 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  esbuildOptions: {
-    loader: { ".js": "jsx" },
-    base: "./",
+  test: {
+    globals: true, // Enable globals
+    environment: "jsdom", // Set the test environment to jsdom
+    setupFiles: "./src/SetupTests.jsx", // Path to setup file
   },
 });

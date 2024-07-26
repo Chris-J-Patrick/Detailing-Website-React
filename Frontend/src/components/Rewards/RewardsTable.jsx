@@ -20,11 +20,10 @@ const RewardsTable = () => {
   return (
     <Container className="mt-3">
       <Card className="shadow-sm bg-white rounded">
-        {" "}
-        <Card.Header as="h5" className="text-center bg-primary text-white mb-0">
-          Rewards Tiering
+        <Card.Header className="text-center bg-primary text-white mb-0">
+          <h5>Rewards Tiering</h5>
         </Card.Header>
-        <Card.Text>
+        <Card.Body>
           <Table striped bordered hover responsive className="text-center m-0">
             <thead>
               <tr className="bg-light">
@@ -33,7 +32,7 @@ const RewardsTable = () => {
               </tr>
             </thead>
             <tbody>
-              {rewardTiers.map((reward, index) => (
+              {rewardTiers.map((reward) => (
                 <tr key={reward.points}>
                   <OverlayTrigger
                     placement="top"
@@ -55,7 +54,7 @@ const RewardsTable = () => {
               ))}
             </tbody>
           </Table>
-        </Card.Text>
+        </Card.Body>
       </Card>
     </Container>
   );
