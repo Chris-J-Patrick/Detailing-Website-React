@@ -1,4 +1,4 @@
-### Attention to Detail Auto Website
+# Attention to Detail Auto Website
 
 Welcome to the GitHub repository for the Attention to Detail Auto website! This project is a dynamic and responsive web application built to showcase and manage services for a premier car detailing business based in Southern New Jersey.
 
@@ -13,40 +13,28 @@ This website includes both a frontend and a backend, developed using modern web 
 - **Objective**: Ensure that the webhooks from Acuity Scheduling are correctly capturing data and updating it in the MongoDB database.
 - **Details**: Verify that data such as email addresses and purchase amounts from bookings are accurately captured and stored.
 - **Steps**:
-  1. Review webhook responses to ensure they contain the required data.
-  2. Create tests to simulate various booking scenarios to check data consistency.
-  3. Debug any issues found during testing to ensure reliable data handling.
-
-### Connect Frontend with Backend API Calls
-
-- **Objective**: Make sure the frontend can effectively communicate with the backend services.
-- **Details**: Implement and test API calls for fetching and sending data to the backend.
-- **Steps**:
-  1. Define necessary API endpoints in the backend.
-  2. Develop frontend logic to make API calls and handle responses.
-  3. Test frontend interactions to ensure data is handled correctly.
+  - Review webhook responses to ensure they contain the required data.
+  - Create tests to simulate various booking scenarios to check data consistency.
+  - Debug any issues found during testing to ensure reliable data handling.
 
 ### Maintain Code and Documentation Quality
 
 - **Objective**: Keep the project's codebase and documentation clear and up-to-date.
 - **Steps**:
-  1. Regularly review and refactor code for clarity and efficiency.
-  2. Update documentation to match current project structure and functionalities.
-  3. Utilize peer reviews to improve coding practices and discover potential issues early.
+  - Regularly review and refactor code for clarity and efficiency.
+  - Update documentation to match the current project structure and functionalities.
+  - Utilize peer reviews to improve coding practices and discover potential issues early.
 
 ### Adjust Global CSS File to Remove Redundant CSS Files and Classes
 
 - **Objective**: Streamline CSS to improve maintainability and performance.
 - **Steps**:
+  - Review and list all current CSS files and classes.
+  - Remove unused or redundant styles.
+  - Update `index.css` and ensure functionality remains intact.
+  - Test for visual consistency and document the changes.
 
-  1. Review and list all current CSS files and classes.
-  2. Remove unused or redundant styles.
-  3. Update `index.css` and ensure functionality remains intact.
-  4. Test for visual consistency and document the changes.
-
-  ## End TODO
-
-### Frontend
+## Frontend
 
 The frontend is built with React and styled using React-Bootstrap to ensure a responsive and professional look. Key features include:
 
@@ -55,7 +43,7 @@ The frontend is built with React and styled using React-Bootstrap to ensure a re
 - **User Authentication**: Auth0 is used to manage user authentication and secure access to user-specific features.
 - **Rewards Program**: Customers can view and redeem rewards points based on their spending.
 
-### Backend
+## Backend
 
 The backend is developed using Node.js and Express.js, with MongoDB and Mongoose handling data storage and retrieval. Key functionalities include:
 
@@ -65,7 +53,7 @@ The backend is developed using Node.js and Express.js, with MongoDB and Mongoose
 
 ## Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). To get started, clone the repo and install the dependencies.
+This project uses Vite for frontend development. To get started, clone the repo and install the dependencies.
 
 ```bash
 git clone <repository-url>
@@ -73,30 +61,30 @@ cd attention-to-detail-auto
 npm install
 ```
 
-# Available Scripts
+## Available Scripts
 
 In the project directory, you can run the following scripts:
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload if you make edits, and you will also see any lint errors in the console.
+Runs the app in development mode with Vite.  
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser. The page will reload if you make edits, and you will also see any lint errors in the console.
+
+### `npm run dev-all`
+
+Runs both the frontend and backend concurrently in development mode. This is useful for development when you need both the frontend and backend servers running.
 
 ### `npm test`
 
-Launches the test runner in interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode. See the section about running tests for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include the hashes. Your app is ready to be deployed!
+Builds the app for production. It optimizes the build for the best performance. The build is minified, and the filenames include the hashes. Your app is ready to be deployed!
 
-### `npm run eject`
+### `npm run preview`
 
-**Note:** This is a one-way operation. Once you eject, you can't go back! This command will remove the single build dependency from your project and copy all the configuration files and transitive dependencies (webpack, Babel, ESLint, etc.) directly into your project. This is generally only necessary if you need full control over the configuration settings.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started). To learn React, check out the [React documentation](https://reactjs.org/).
+Serves the built app for preview purposes.
 
 ## Project Structure
 
@@ -109,7 +97,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 - `.env` - Environment variables for configuration settings.
 - `.gitignore` - Specifies intentionally untracked files to ignore.
 - `checkJwt.js` - Middleware for JWT authentication.
-- `package-lock.json` - Automatically generated for any operations where npm modifies either the node_modules tree or package.json.
+- `package-lock.json` - Automatically generated for any operations where npm modifies either the `node_modules` tree or `package.json`.
 - `package.json` - Manifest file for Node.js projects, includes metadata about the project.
 - `server.js` - Entry point for the Node.js server.
 
@@ -122,8 +110,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
   - `App.js` - Main React component for UI routing and layout.
   - `index.css` - Global stylesheet for the application.
   - `index.js` - Entry point for the React app, handling DOM rendering.
+  - `api.js` - Contains API calls for frontend-backend communication.
 - `.gitignore` - Specifies intentionally untracked files to ignore.
-- `package-lock.json` - Automatically generated for any operations where npm modifies either the node_modules tree or package.json.
+- `package-lock.json` - Automatically generated for any operations where npm modifies either the `node_modules` tree or `package.json`.
 - `package.json` - Manifest file for the project, defines project dependencies.
 
 ## Deployment
