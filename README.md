@@ -109,8 +109,8 @@ Future plans for the backend include adding more sophisticated analytics, enhanc
 This project uses Vite for frontend development. To get started, clone the repo and install the dependencies.
 
 ```bash
-git clone <repository-url>
-cd attention-to-detail-auto
+git clone https://github.com/Chris-J-Patrick/Detailing-Website-React
+cd Detailing-Website-React
 npm install
 ```
 
