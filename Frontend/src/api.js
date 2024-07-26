@@ -69,11 +69,11 @@ export const getRewardsById = async (userId) => {
   }
 };
 
-export const redeemRewards = async (userId, points) => {
+export const redeemRewards = async (Auth0Id) => {
   try {
     const response = await axios.post(
-      `${BASE_URL}/api/users/${userId}/rewards`,
-      { points },
+      `${BASE_URL}/api/users/redeem`,
+      { Auth0Id },
       {
         headers: {
           "Content-Type": "application/json",

@@ -53,7 +53,7 @@ const Rewards = () => {
 
   const fetchRewardsData = async (token, email) => {
     try {
-      const rewardsData = await getUserRewardsByEmail(email);
+      const rewardsData = await getUserRewardsByEmail(user.email);
       const rewardsPoints = rewardsData.rewardsPoints || 0;
       setPoints(rewardsPoints);
 
@@ -72,8 +72,27 @@ const Rewards = () => {
 
   const handleRedeemRewards = async () => {
     try {
-      await redeemRewards(user.sub, points);
-      fetchRewardsData(user.email);
+      if (typeof points !== "number") {
+        console.error("Points is not defined or not a number");
+        return;
+      }
+
+      const maxPointsToRedeem = Math.min(Math.floor(points / 100) * 100, 500);
+      console.log(`Redeeming ${maxPointsToRedeem} points for user ${user.sub}`);
+
+      if (maxPointsToRedeem > 0) {
+        const response = await redeemRewards(user.sub, maxPointsToRedeem);
+
+        if (response && response.couponCode) {
+          console.log("Coupon code generated:", response.couponCode);
+        } else {
+          console.log("No coupon code received");
+        }
+
+        fetchRewardsData(user.sub.email);
+      } else {
+        console.log("No points available to redeem");
+      }
     } catch (error) {
       console.error("Error redeeming rewards:", error);
     }
