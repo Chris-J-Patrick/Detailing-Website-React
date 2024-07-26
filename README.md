@@ -74,8 +74,15 @@ The backend handles user authentication and management using Auth0, a third-part
 The rewards system is a key feature that incentivizes customer loyalty by awarding points for various actions.
 
 - **Points Tracking**: Each user has an associated rewards balance that is updated based on their spending.
-- **Redeeming Points**: Users can redeem their accumulated points for discounts on services.
-- **Tier Management**: The system includes tiered rewards, where users earn different discounts based on the number of points accumulated.
+- **Redeeming Points**: Users can redeem their accumulated points for discounts on services. When a user opts to redeem their points, the following process occurs:
+
+  1. **API Call to Acuity Scheduling**: The frontend triggers an API call to the backend, which then communicates with the Acuity Scheduling API. The backend sends a request to generate a discount coupon code based on the user's redeemed points.
+
+  2. **Coupon Generation**: The Acuity API processes the request and returns a unique coupon code. The discount value corresponds to the number of points the user has redeemed.
+
+  3. **Database Update**: The backend updates the user's record in MongoDB, adding the newly generated coupon code to the user's account. This ensures the user can view and utilize the coupon in future transactions.
+
+  4. **User Notification**: The frontend provides the user with feedback, confirming the successful redemption of points and displaying the new coupon code along with its applicable discount. The user can then use this coupon during their next booking or purchase.- **Tier Management**: The system includes tiered rewards, where users earn different discounts based on the number of points accumulated.
 
 #### 3. **Appointment Integration**
 
