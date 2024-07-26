@@ -4,7 +4,7 @@ Welcome to the GitHub repository for the Attention to Detail Auto website! This 
 
 ## Project Overview
 
-This website includes both a frontend and a backend, developed using modern web technologies to provide a seamless user experience for both customers and administrators.
+This website includes both a frontend and a backend, developed using modern web technologies to provide a seamless user experience for customers.
 
 ## TODO
 
@@ -12,27 +12,16 @@ This website includes both a frontend and a backend, developed using modern web 
 
 - **Objective**: Ensure that the webhooks from Acuity Scheduling are correctly capturing data and updating it in the MongoDB database.
 - **Details**: Verify that data such as email addresses and purchase amounts from bookings are accurately captured and stored.
-- **Steps**:
-  - Review webhook responses to ensure they contain the required data.
-  - Create tests to simulate various booking scenarios to check data consistency.
-  - Debug any issues found during testing to ensure reliable data handling.
 
 ### Maintain Code and Documentation Quality
 
 - **Objective**: Keep the project's codebase and documentation clear and up-to-date.
 - **Steps**:
   - Regularly review and refactor code for clarity and efficiency.
-  - Update documentation to match the current project structure and functionalities.
-  - Utilize peer reviews to improve coding practices and discover potential issues early.
 
 ### Adjust Global CSS File to Remove Redundant CSS Files and Classes
 
 - **Objective**: Streamline CSS to improve maintainability and performance.
-- **Steps**:
-  - Review and list all current CSS files and classes.
-  - Remove unused or redundant styles.
-  - Update `index.css` and ensure functionality remains intact.
-  - Test for visual consistency and document the changes.
 
 ## Frontend
 
@@ -74,7 +63,7 @@ The backend for the Attention to Detail Auto website is a robust and scalable sy
 
 #### 1. **User Management**
 
-The backend handles user authentication and management using Auth0, a third-party authentication service. Key aspects include:
+The backend handles user authentication and management using Auth0, a third-party authentication service.
 
 - **Authentication**: Secure login and registration processes using JWT (JSON Web Tokens) provided by Auth0.
 - **User Data Handling**: Secure storage and management of user data such as email, name, and rewards points.
@@ -82,7 +71,7 @@ The backend handles user authentication and management using Auth0, a third-part
 
 #### 2. **Rewards System**
 
-The rewards system is a key feature that incentivizes customer loyalty by awarding points for various actions. Core aspects include:
+The rewards system is a key feature that incentivizes customer loyalty by awarding points for various actions.
 
 - **Points Tracking**: Each user has an associated rewards balance that is updated based on their spending.
 - **Redeeming Points**: Users can redeem their accumulated points for discounts on services.
@@ -90,7 +79,7 @@ The rewards system is a key feature that incentivizes customer loyalty by awardi
 
 #### 3. **Appointment Integration**
 
-Integration with Acuity Scheduling allows the backend to handle scheduling data seamlessly. Key functionalities include:
+Integration with Acuity Scheduling allows the backend to handle scheduling data seamlessly.
 
 - **Webhook Processing**: The backend listens to webhooks from Acuity Scheduling to receive real-time updates about appointments.
 - **Data Synchronization**: Appointment details such as email addresses, booking times, and services booked are synchronized with the backend.
