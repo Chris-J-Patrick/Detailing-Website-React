@@ -13,8 +13,17 @@
   --font-secondary: "Montserrat", sans-serif;
 }
 
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+}
+
 .rewards-container {
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rewards-card {
@@ -22,21 +31,23 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px var(--shadow-color);
   background-color: var(--card-bg-color);
-  padding: 10px;
+  padding: 20px;
   max-width: 900px;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .rewards-title {
   font-family: var(--font-secondary);
   font-size: 2.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .rewards-icon {
-  color: #6baed6;
+  color: var(--secondary-color);
   margin-left: 10px;
 }
 
@@ -50,7 +61,11 @@
   font-size: 1.25rem;
   background-color: var(--primary-color);
   border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
 .btn-primary:hover {
@@ -58,13 +73,19 @@
 }
 
 .table {
+  width: 100%;
   margin-top: 2rem;
+  border-collapse: separate;
+  border-spacing: 0 15px;
 }
 
 .table th,
 .table td {
   font-family: var(--font-primary);
   font-size: 1.1rem;
+  padding: 10px;
+  background-color: var(--card-bg-color);
+  border-bottom: 1px solid var(--shadow-color);
 }
 
 @media (max-width: 768px) {

@@ -25,6 +25,7 @@ const Rewards = () => {
   const [progress, setProgress] = useState(0);
   const [currentDiscount, setCurrentDiscount] = useState(0);
   const [nextRewardText, setNextRewardText] = useState("");
+  const [couponCode, setCouponCode] = useState("");
 
   useEffect(() => {
     const initializeUser = async () => {
@@ -35,7 +36,7 @@ const Rewards = () => {
             Auth0Id: user.sub,
             name: user.name || user.nickname || user.email,
             email: user.email,
-            address: "", // Address can be added if available or needed
+            address: "",
           };
 
           await checkOrCreateUser(userData);
@@ -53,7 +54,7 @@ const Rewards = () => {
 
   const fetchRewardsData = async (token, email) => {
     try {
-      const rewardsData = await getUserRewardsByEmail(user.email);
+      const rewardsData = await getUserRewardsByEmail(email);
       const rewardsPoints = rewardsData.rewardsPoints || 0;
       setPoints(rewardsPoints);
 
@@ -65,6 +66,10 @@ const Rewards = () => {
       setNextRewardText(
         `You need ${100 - progressValue} more points for the next discount.`
       );
+      intervalId = setInterval(
+        () => fetchRewardsData(token, user.email),
+        60000
+      );
     } catch (error) {
       console.error("Error fetching rewards data:", error);
     }
@@ -72,8 +77,8 @@ const Rewards = () => {
 
   const handleRedeemRewards = async () => {
     try {
-      if (typeof points !== "number") {
-        console.error("Points is not defined or not a number");
+      if (points < 100) {
+        console.log("Not enough points to redeem");
         return;
       }
 
@@ -84,12 +89,11 @@ const Rewards = () => {
         const response = await redeemRewards(user.sub, maxPointsToRedeem);
 
         if (response && response.couponCode) {
-          console.log("Coupon code generated:", response.couponCode);
+          setCouponCode(response.couponCode);
+          fetchRewardsData(await getAccessTokenSilently(), user.email);
         } else {
           console.log("No coupon code received");
         }
-
-        fetchRewardsData(user.sub.email);
       } else {
         console.log("No points available to redeem");
       }
@@ -140,6 +144,12 @@ const Rewards = () => {
             >
               Redeem Rewards
             </Button>
+            {couponCode && (
+              <div className="mt-3">
+                <h5>Your Coupon Code:</h5>
+                <p className="font-weight-bold">{couponCode}</p>
+              </div>
+            )}
             <RewardsTable />
           </Card.Body>
         </Card>
