@@ -1,15 +1,14 @@
 import Scroll from "./components/Scroll";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Services from "./components/Services/Services";
+import Services from "./pages/Services/Services";
 import Header from "./components/Header/Header";
-import Testimonials from "./components/Testimonials/Testimonials";
-import ContactForm from "./components/ContactForm/ContactForm";
+import Testimonials from "./pages/Testimonials/Testimonials";
+import ContactForm from "./pages/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
-import HomePage from "./components/HomePage/HomePage";
-import Rewards from "./components/Rewards/Rewards";
-import ServiceCompare from "./components/ServiceCompare/ServiceCompare";
+import About from "./pages/About/About";
+import HomePage from "./pages/HomePage/HomePage";
+import Rewards from "./pages/Rewards/Rewards";
 
 function App() {
   return (

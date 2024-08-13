@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Form, Button, Card } from "react-bootstrap";
 import "./ContactForm.css";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../components/PageTitle";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 function ContactForm() {

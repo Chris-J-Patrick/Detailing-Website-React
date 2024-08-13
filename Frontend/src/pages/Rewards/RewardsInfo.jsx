@@ -1,5 +1,5 @@
 import React from "react";
-import LoginButton from "../LoginButton";
+import LoginButton from "../../components/LoginButton";
 import { Card, Container } from "react-bootstrap";
 import RewardsTable from "./RewardsTable";
 

@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Button, Image, Container, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Testimonials.css";
-import PageTitle from "../PageTitle";
-import CarouselComp from "../CarouselComp";
+import PageTitle from "../../components/PageTitle";
+import CarouselComp from "../../components/CarouselComp";
 const testimonialsData = [
   {
     id: 1,

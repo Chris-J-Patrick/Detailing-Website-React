@@ -8,7 +8,7 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import Profile from "../Profile";
+import Profile from "../../components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import RewardsInfo from "./RewardsInfo";
 import RewardsTable from "./RewardsTable";

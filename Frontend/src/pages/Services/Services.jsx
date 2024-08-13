@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceTable from "../ServiceTable/ServiceTable";
+import ServiceTable from "../../components/ServiceTable/ServiceTable";
 import "./Services.css";
 import {
   FaCarSide,
