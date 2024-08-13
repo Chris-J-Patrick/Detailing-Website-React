@@ -25,7 +25,7 @@ body {
 }
 
 .hero-section {
-  background-image: url("mbez.jpg");
+  background-image: url("../../../public/mbez.jpg");
   background-size: cover;
   background-position: center;
   min-height: 85vh;
