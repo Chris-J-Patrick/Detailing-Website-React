@@ -25,15 +25,17 @@ body {
 }
 
 .hero-section {
-  background-image: url("../../../public/mbez.jpg");
+  background-image: url("../../assets/Background.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 85vh;
+  min-height: 95vh;
   position: relative;
   color: #ffffff;
   width: 100vw;
   margin: 0;
   padding: 0;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .hero-overlay {
@@ -41,11 +43,11 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 85vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .hero-title {
