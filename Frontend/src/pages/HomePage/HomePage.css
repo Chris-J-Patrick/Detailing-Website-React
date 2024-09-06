@@ -86,9 +86,7 @@ body {
 
 .bottom-features {
   display: flex;
-  justify-content: space-between;
-  margin-top: auto;
-  padding: 20px;
+  justify-content: space-around;
 }
 
 .feature-icon {

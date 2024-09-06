@@ -130,30 +130,29 @@ function HomePage() {
               View Our Services
             </Button>
           </Container>
-          <Row className="justify-content-end mb-5">
-            {features.map((feature, index) => (
-              <Col
-                key={index}
-                xs={12}
-                md={4}
-                className="d-flex justify-content-center align-items-stretch mb-4"
-              >
-                <div className="feature-card bg-dark rounded-4 text-center p-4 d-flex align-items-center justify-content-center flex-column">
-                  {" "}
-                  {feature.icon}
-                  <h6 className="feature-title font-weight-bold mt-3">
-                    {feature.title}
-                  </h6>
-                  <p className="feature-detail small text-white">
-                    {feature.detail}
-                  </p>
-                </div>
-              </Col>
-            ))}
-          </Row>
         </div>
       </Container>
-
+      <Row className="justify-content-start bg-dark gap-0 py-3">
+        {features.map((feature, index) => (
+          <Col
+            key={index}
+            xs={12}
+            md={4}
+            className="d-flex border-bottom border-5  justify-content-center align-items-stretch mb-4"
+          >
+            <div className="feature-card  bg-dark rounded-4 text-center p-4 d-flex align-items-center justify-content-center flex-column">
+              {" "}
+              {feature.icon}
+              <h6 className="feature-title font-weight-bold mt-3">
+                {feature.title}
+              </h6>
+              <p className="feature-detail small text-white">
+                {feature.detail}
+              </p>
+            </div>
+          </Col>
+        ))}
+      </Row>
       <div className="bg-dark py-5 position-relative">
         <Container fluid={true} className="position-relative">
           <h4 className="section-title">Why Choose Us?</h4>
