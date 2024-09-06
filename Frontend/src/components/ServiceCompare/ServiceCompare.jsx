@@ -76,11 +76,11 @@ const ServiceCompare = () => {
         hover
         className="services-compare-table px-1 my-1"
       >
-        <thead className="thead-dark">
-          <tr>
-            <th>Features</th>
+        <thead className="text-dark">
+          <tr className="text-dark">
+            <th className="text-dark">Features</th>
             {services.map((service, index) => (
-              <th className="fs-6" key={index}>
+              <th className="fs-6 text-dark" key={index}>
                 {service.title}
               </th>
             ))}

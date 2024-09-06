@@ -75,23 +75,23 @@ function HomePage() {
     {
       text: "Attention to Detail Auto did an amazing job on my car! It looks brand new.",
       name: "Jane Smith",
-      image: "https://via.placeholder.com/150", // Placeholder for user image
+      image: "https://via.placeholder.com/150",
     },
     {
       text: "I highly recommend their services. Professional and thorough.",
       name: "John Doe",
-      image: "https://via.placeholder.com/150", // Placeholder for user image
+      image: "https://via.placeholder.com/150",
     },
     {
       text: "Excellent service and great attention to detail. My car looks fantastic!",
       name: "Emily Johnson",
-      image: "https://via.placeholder.com/150", // Placeholder for user image
+      image: "https://via.placeholder.com/150",
     },
   ];
 
   return (
     <Container fluid className="homepage-content p-0">
-      {showBanner && (
+      {/*{showBanner && (
         <Alert
           variant="warning"
           className={`alert-dismissible fade fs-6 p-2 m-1 ${
@@ -103,38 +103,58 @@ function HomePage() {
           <Alert.Heading>Grand Opening Sale!</Alert.Heading>
           Enter Code: "<strong>Grand10</strong>" for an extra 10% off
         </Alert>
-      )}
-      <Container fluid className="hero-section">
+      )}*/}
+      <Container
+        fluid
+        className="hero-section d-flex justify-content-center align-items-center"
+      >
         <div className="hero-overlay">
-          <Container fluid className="hero-content">
-            <h1 className="hero-title my-0 ">
-              South Jersey's <span className="highlight2"> Car Detailer</span>.
+          <Container
+            fluid
+            className="hero-content text-center px-5 py-5 align-items-center justify-content-center"
+          >
+            <h1 className="hero-title display-3 font-weight-bold mb-3">
+              South Jersey's <span className="highlight2">Car Detailer</span>
             </h1>
-            <p className="hero-subtitle mb-5 mt-0">
+            <p className="hero-subtitle lead mb-4">
               Experience unparalleled shine, inside and out!
             </p>
-            {features.map((feature, index) => (
-              <div key={index} className="d-flex align-items-center mb-3">
-                {feature.icon}
-                <div className="my-1">
-                  <h6 className="feature-title mb-1">{feature.title}</h6>
-                  <p className="feature-detail mb-0">{feature.detail}</p>
-                </div>
-              </div>
-            ))}
+
             <Button
               as={Link}
               to="/services"
               variant="primary"
-              className="cta-button my-5"
+              size="lg"
+              className="cta-button px-5 py-3"
             >
               View Our Services
             </Button>
           </Container>
+          <Row className="justify-content-center mb-5">
+            {features.map((feature, index) => (
+              <Col
+                key={index}
+                xs={12}
+                md={4}
+                className="d-flex justify-content-center align-items-stretch mb-4"
+              >
+                <div className="feature-card bg-dark rounded-4 text-center p-4 d-flex align-items-center justify-content-center flex-column">
+                  {" "}
+                  {feature.icon}
+                  <h6 className="feature-title font-weight-bold mt-3">
+                    {feature.title}
+                  </h6>
+                  <p className="feature-detail small text-white">
+                    {feature.detail}
+                  </p>
+                </div>
+              </Col>
+            ))}
+          </Row>
         </div>
       </Container>
 
-      <div className="bg-light py-5 position-relative">
+      <div className="bg-dark py-5 position-relative">
         <Container fluid={true} className="position-relative">
           <h4 className="section-title">Why Choose Us?</h4>
           <Row className="px-1 justify-content-center">
@@ -155,23 +175,23 @@ function HomePage() {
         </Container>
       </div>
 
-      <div className="testimonials-section text-center py-5">
+      <div className="testimonials-section text-center bg-white py-5">
         <h4 className="section-title">Testimonials</h4>
         <Carousel data-bs-theme="dark">
           {testimonials.map((testimonial, index) => (
             <Carousel.Item key={index}>
-              <Card className="testimonial-card mx-auto">
-                <Card.Body className="text-center">
+              <Card className="testimonial-card mx-auto bg-dark">
+                <Card.Body className="text-center text-white">
                   <Image
                     src={testimonial.image}
                     roundedCircle
                     className="testimonial-image mb-3"
                     alt={testimonial.name}
                   />
-                  <blockquote className="blockquote mb-4">
+                  <blockquote className="blockquote mb-4 text-white">
                     <p className="mb-0">{testimonial.text}</p>
                   </blockquote>
-                  <Card.Subtitle className="text-center text-dark">
+                  <Card.Subtitle className="text-center text-white">
                     {testimonial.name}
                   </Card.Subtitle>
                 </Card.Body>
