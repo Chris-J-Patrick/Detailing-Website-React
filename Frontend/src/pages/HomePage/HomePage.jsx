@@ -106,7 +106,7 @@ function HomePage() {
       )}*/}
       <Container
         fluid
-        className="hero-section d-flex justify-content-center align-items-center"
+        className="hero-section  justify-content-center align-items-center"
       >
         <div className="hero-overlay">
           <Container
@@ -130,7 +130,7 @@ function HomePage() {
               View Our Services
             </Button>
           </Container>
-          <Row className="justify-content-center mb-5">
+          <Row className="justify-content-end mb-5">
             {features.map((feature, index) => (
               <Col
                 key={index}
